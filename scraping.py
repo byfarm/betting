@@ -1,37 +1,41 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-import time
+from bs4 import BeautifulSoup
+import requests
 
-# Path to the ChromeDriver executable
-webdriver_service = Service(r'C:\Users\bucks\Downloads\chromedriver_win32\chromedriver.exe')
+def scrape_dk_mlb(url):
+	""""""
+	response = requests.get(url).text
+	soup = BeautifulSoup(response, 'html.parser')
 
-# Configure Chrome options
-options = webdriver.ChromeOptions()
-options.add_argument('--headless')  # Run Chrome in headless mode
+	tbody = soup.tbody
+	tbrs = tbody.contents
 
-# Initialize ChromeDriver with the configured options
-driver = webdriver.Chrome(service=webdriver_service, options=options)
+	bet_list = []
+	for tr in tbrs:
+		odds = tr.contents[3]
+		odds_info = odds.div.span.string
+		name = tr.contents[0]
+		name_info = name.div.find('div', class_='event-cell__name-text').string
 
-# Navigate to the webpage
-url = 'https://betway.com/en/sports/grp/baseball/usa/mlb'
-driver.get(url)
+		# make the odds info able to convert to int
+		lis = list(odds_info)
+		if lis[0] != '+':
+			lis[0] = '-'
+		od = ''.join(lis)
 
-# Wait for the page to load (adjust the sleep time if needed)
-time.sleep(5)
+		# append into the betting list
+		betting = (name_info, int(od))
+		bet_list.append(betting)
 
-# Find the desired element using its class name
-class_name = 'odds'
-element = driver.find_element(By.CLASS_NAME, class_name)
+	return bet_list
 
-# Extract the text within the element
-line = element.text
+def scrape_bet365_mlb(url):
+	response = requests.get(url).text
+	print(response)
 
-# Print the extracted line
-print(line)
 
-# Quit the browser
-driver.quit()
+url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
+r = scrape_dk_mlb(url)
+print(r)
 
 
 
