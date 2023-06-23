@@ -9,3 +9,5 @@ for i in tags:
 	i.strip()
 	print(i)
 print(tags)
+
+r'C:\Users\bucks\Downloads\chromedriver_win32\chromedriver.exe'
