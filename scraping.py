@@ -1,6 +1,12 @@
 from bs4 import BeautifulSoup
 import requests
 
+
+def allow_access(url):
+	response = requests.get(url)
+	print(response.status_code)
+
+
 def scrape_dk_mlb(url):
 	""""""
 	response = requests.get(url).text
@@ -28,14 +34,30 @@ def scrape_dk_mlb(url):
 
 	return bet_list
 
-def scrape_bet365_mlb(url):
-	response = requests.get(url).text
-	print(response)
+
+def scrape_unibet_mlb(url):
+	"""
+	scraped the unibet mlb site for its betting data
+	:param url: request url to the api, named matches.json?lan=en_US...
+	'https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687557915663&useCombined=true&useCombinedLive=true'
+	:return bet_list: the list of teams and their odds
+	"""
+
+	response = requests.get(url).json()
+
+	bet_list = []
+	for event in response['events']:
+		offers = event['betOffers'][0]
+		outcomes = offers['outcomes'][0]
+		name = outcomes['label']
+		od = int(outcomes['oddsAmerican'])
+		betting = (name, od)
+		bet_list.append(betting)
+
+	return bet_list
 
 
-url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
-r = scrape_dk_mlb(url)
-print(r)
-
+url = 'https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687557915663&useCombined=true&useCombinedLive=true'
+scrape_unibet_mlb(url)
 
 
