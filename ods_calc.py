@@ -6,6 +6,23 @@ def odd_to_prob(odd: int):
 		prob = abs(odd) / (abs(odd) + 100)
 	return prob
 
+
+def prob_to_int_odds(prob: float):
+	int_odd = 1 / prob
+	return int_odd
+
+
+def winnings_prob(prob: float, stake: float):
+	winning = stake / prob
+	return winning
+
+
+def det_max_in(max_in: float, p1: float, p2: float):
+	stake2 = (p2 * max_in) / (p1 + p1)
+	stake1 = max_in - stake2
+	return stake1, stake2
+
+
 def arrange_odds(probs: dict, games: list[set]):
 	"""
 	arranges the odds
@@ -30,11 +47,41 @@ def arrange_odds(probs: dict, games: list[set]):
 					arr_dic[n_key][i][key] = probs[key][i]
 	return arr_dic
 
+
 def arr_od_to_prob(arr_odd: dict):
+	"""
+	changes the arranged odds to arranged probabilites
+	:param arr_odd:
+	:return: updates the input
+	"""
 	for games in arr_odd.keys():
 		for teams in arr_odd[games].keys():
 			for sites in arr_odd[games][teams]:
 				arr_odd[games][teams][sites] = odd_to_prob(arr_odd[games][teams][sites])
+	return arr_odd
 
-	print()
 
+def find_arb(arr_prob: dict):
+	# the list of opportunities
+	opps = []
+	# navigate to the probibilites while saving important info
+	for keys in arr_prob.keys():
+		game = arr_prob[keys]
+		teams = list(game.keys())
+		for team in game.values():
+			sites = list(team.keys())
+			sum_prob = []
+			for club in teams:
+				mp = game[club][sites[0]]
+
+				# find the max probability and add into the list
+				for i in range(1, len(sites)):
+					p2 = game[club][sites[i]]
+					mp = max(p2, mp)
+				sum_prob.append(mp)
+
+			# if the sum of the list is less than 1 then there is an arbitrage opportunity
+			if sum(sum_prob) < 1:
+				team_prob = list(zip(sum_prob, teams))
+				opps.append([keys, team_prob])
+	return opps

@@ -61,4 +61,8 @@ def test_odds_to_arr_prob():
 	oc.arr_od_to_prob(p)
 	print(p)
 
-
+def test_find_arb():
+	odds, games = ctf.read_from_file()
+	p = oc.arrange_odds(odds, games)
+	oc.arr_od_to_prob(p)
+	oc.find_arb(p)
