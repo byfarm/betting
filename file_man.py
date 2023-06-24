@@ -41,7 +41,7 @@ def read_from_file():
 		# reformat the games
 		games = fp.readline().strip().split(':')[:-1]
 		for i in range(len(games)):
-			games[i] = games[i][1:-1].replace("'", "").split(',')
+			games[i] = games[i][1:-1].replace("'", "").split(', ')
 		for q in range(len(games)):
 			games[q] = set(games[q])
 

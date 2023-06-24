@@ -45,11 +45,20 @@ def test_read_from_file():
 
 
 def test_ods_to_percent():
-	r, q = ctf.read_from_file()
-	p = r
-	print(r)
-	print()
-	for i in r.keys():
-		oc.odds_to_prob(r[i])
-	print(r)
-	assert len(p) == len(r)
+	prob = oc.odd_to_prob(-400)
+	assert prob == 0.8
+
+
+def test_arr_odes():
+	odds, games = ctf.read_from_file()
+	p = oc.arrange_odds(odds, games)
+	assert len(p.values()) == 11
+
+
+def test_odds_to_arr_prob():
+	odds, games = ctf.read_from_file()
+	p = oc.arrange_odds(odds, games)
+	oc.arr_od_to_prob(p)
+	print(p)
+
+
