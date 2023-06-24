@@ -2,7 +2,7 @@ import scraping as sc
 import datetime
 
 
-def write_new_table_dk_uni(dk_mlb: tuple, uni_mlb: tuple, games: set):
+def write_new_table_dk_uni(dk_mlb: tuple, uni_mlb: tuple, pin_mlb: tuple=None, games: set=None):
 	"""
 	writes the odds and games to a txt file
 	:param dk_mlb: (team, odds)
@@ -17,7 +17,7 @@ def write_new_table_dk_uni(dk_mlb: tuple, uni_mlb: tuple, games: set):
 		for i in games:
 			fp.write(f'{i}:')
 		# write in the dk info
-		fp.write('\nDK\n')
+		fp.write('\nDK \n')
 		for i in range(len(dk_mlb)):
 			team = str(dk_mlb[i][0])
 			odds = str(dk_mlb[i][1])
@@ -29,6 +29,13 @@ def write_new_table_dk_uni(dk_mlb: tuple, uni_mlb: tuple, games: set):
 			team = str(uni_mlb[i][0])
 			odds = str(uni_mlb[i][1])
 			fp.write(team + ',' + odds + '\n')
+
+		if pin_mlb is not None:
+			fp.write('PIN\n')
+			for i in range(len(pin_mlb)):
+				team = str(pin_mlb[i][0])
+				odds = str(pin_mlb[i][1])
+				fp.write(team + ',' + odds + '\n')
 		fp.write('')
 
 

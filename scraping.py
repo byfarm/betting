@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from bs4 import Comment
 import requests
 import datetime
 import math
@@ -107,8 +106,6 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 	chrome_options = Options()
 	chrome_options.add_argument("--headless")  # Run Chrome in headless mode
 
-	# Set path to Chromedriver executable
-	chromedriver_path = r"C:\Users\bucks\Downloads\chromedriver_win32\chromedriver.exe"
 
 	# Initialize Chrome WebDriver
 	driver = webdriver.Chrome(options=chrome_options)

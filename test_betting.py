@@ -1,8 +1,9 @@
-import file_man as ctf
+import file_man as fm
 import scraping as sc
 import pytest
 import ods_calc as oc
 import betting_calcs as bc
+
 
 
 def test_website_access():
@@ -22,7 +23,7 @@ def test_file_open():
 		if i not in games_u:
 			games_d.remove(i)
 
-	ctf.write_new_table_dk_uni(dk, uni, games_u)
+	fm.write_new_table_dk_uni(dk, uni, games_u)
 	assert len(games_d) == len(games_u)
 
 
@@ -40,7 +41,7 @@ def test_uni_scrape():
 
 
 def test_read_from_file():
-	r = ctf.read_from_file()
+	r = fm.read_from_file()
 	print(r)
 	assert len(r) == 2
 
@@ -60,43 +61,43 @@ def test_perc_to_odds():
 
 
 def test_arr_odes():
-	odds, games = ctf.read_from_file()
-	p = oc.arrange_odds(odds, games)
+	odds, games = fm.read_from_file()
+	p = bc.arrange_odds(odds, games)
 	assert len(p.values()) == 11
 
 
 def test_odds_to_arr_prob():
-	odds, games = ctf.read_from_file()
-	p = oc.arrange_odds(odds, games)
-	oc.arr_od_to_prob(p)
+	odds, games = fm.read_from_file()
+	p = bc.arrange_odds(odds, games)
+	bc.arr_od_to_prob(p)
 	print(p)
 
 
 def test_find_arb():
-	odds, games = ctf.read_from_file()
-	p = oc.arrange_odds(odds, games)
-	oc.arr_od_to_prob(p)
-	arbs = oc.find_arb(p)
+	odds, games = fm.read_from_file()
+	p = bc.arrange_odds(odds, games)
+	bc.arr_od_to_prob(p)
+	arbs = bc.find_arb(p)
 	print(arbs)
 	assert len(arbs) == 0
 
 
 def test_max_bet():
-	odds, games = ctf.read_from_file()
-	p = oc.arrange_odds(odds, games)
-	oc.arr_od_to_prob(p)
-	arbs = oc.find_arb(p)
+	odds, games = fm.read_from_file()
+	p = bc.arrange_odds(odds, games)
+	bc.arr_od_to_prob(p)
+	arbs = bc.find_arb(p)
 	res = bc.add_stake(arbs, 100)
 	assert len(res) == len(arbs)
 
 
 def test_write_results():
-	odds, games = ctf.read_from_file()
-	p = oc.arrange_odds(odds, games)
-	oc.arr_od_to_prob(p)
-	arbs = oc.find_arb(p)
+	odds, games = fm.read_from_file()
+	p = bc.arrange_odds(odds, games)
+	bc.arr_od_to_prob(p)
+	arbs = bc.find_arb(p)
 	res = bc.add_stake(arbs, 100)
-	ctf.write_results(res)
+	fm.write_results(res)
 
 
 def test_scrape_pin():

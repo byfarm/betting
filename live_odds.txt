@@ -1,52 +1,71 @@
-Betting odds as of 2023-06-25 10:26:29.536508
-{'BAL Orioles', 'SEA Mariners'}:{'SF Giants', 'ARI Diamondbacks'}:{'NY Mets', 'PHI Phillies'}:{'OAK Athletics', 'TOR Blue Jays'}:{'NY Yankees', 'TEX Rangers'}:{'TB Rays', 'KC Royals'}:{'CIN Reds', 'ATL Braves'}:{'MIA Marlins', 'PIT Pirates'}:{'CLE Guardians', 'MIL Brewers'}:{'CHI White Sox', 'BOS Red Sox'}:{'DET Tigers', 'MIN Twins'}:{'LA Dodgers', 'HOU Astros'}:{'WAS Nationals', 'SD Padres'}:{'COL Rockies', 'LA Angels'}:
-DK
-TEX Rangers,240
-NY Yankees,-305
-NY Mets,-440
-PHI Phillies,330
-SEA Mariners,295
-BAL Orioles,-390
-ARI Diamondbacks,750
-SF Giants,-1300
-ATL Braves,-810
-CIN Reds,540
-BOS Red Sox,600
-CHI White Sox,-950
-PIT Pirates,600
-MIA Marlins,-1150
-MIL Brewers,330
-CLE Guardians,-440
-MIN Twins,-165
-DET Tigers,140
-HOU Astros,155
-LA Dodgers,-180
+Betting odds as of 2023-06-25 11:47:09.605778
+{'MIN Twins', 'DET Tigers'}:{'LA Dodgers', 'HOU Astros'}:{'WAS Nationals', 'SD Padres'}:{'LA Angels', 'COL Rockies'}:{'MIN Twins', 'DET Tigers'}:{'TEX Rangers', 'NY Yankees'}:{'PHI Phillies', 'NY Mets'}:{'SEA Mariners', 'BAL Orioles'}:{'OAK Athletics', 'TOR Blue Jays'}:{'MIL Brewers', 'CLE Guardians'}:{'PIT Pirates', 'MIA Marlins'}:{'KC Royals', 'TB Rays'}:{'LA Angels', 'COL Rockies'}:{'SF Giants', 'ARI Diamondbacks'}:{'WAS Nationals', 'SD Padres'}:{'LA Dodgers', 'HOU Astros'}:
+DK 
+MIN Twins,220
+DET Tigers,-280
+HOU Astros,575
+LA Dodgers,-875
 UNI
-BAL Orioles,-500
-SEA Mariners,350
-SF Giants,-2500
-ARI Diamondbacks,950
-PHI Phillies,410
-NY Mets,-625
-TOR Blue Jays,128
-OAK Athletics,-165
-NY Yankees,-335
-TEX Rangers,245
-TB Rays,205
-KC Royals,-315
-CIN Reds,650
-ATL Braves,-1250
-MIA Marlins,-1667
-PIT Pirates,750
-CLE Guardians,-770
-MIL Brewers,480
-CHI White Sox,-1667
-BOS Red Sox,750
-DET Tigers,138
-MIN Twins,-162
-LA Dodgers,-180
-HOU Astros,150
-SD Padres,-195
-WAS Nationals,163
+DET Tigers,-250
+MIN Twins,190
+LA Dodgers,-1115
+HOU Astros,600
+SD Padres,-200
+WAS Nationals,170
 COL Rockies,135
 LA Angels,-159
+DET Tigers,128
+MIN Twins,-150
+NY Yankees,-114
+TEX Rangers,-103
+PHI Phillies,-167
+NY Mets,143
+BAL Orioles,110
+SEA Mariners,-129
+TOR Blue Jays,-295
+OAK Athletics,245
+CLE Guardians,-110
+MIL Brewers,-107
+MIA Marlins,-167
+PIT Pirates,143
+TB Rays,-275
+KC Royals,220
+COL Rockies,123
+LA Angels,-148
+SF Giants,-129
+ARI Diamondbacks,110
+SD Padres,-205
+WAS Nationals,175
+LA Dodgers,-136
+HOU Astros,115
+PIN
+Minnesota Twins,-125
+Detroit Tigers,102
+Houston Astros,603
+Los Angeles Dodgers,-970
+Washington Nationals,161
+San Diego Padres,-176
+Los Angeles Angels,-147
+Colorado Rockies,135
+Texas Rangers,-101
+New York Yankees,-107
+New York Mets,146
+Philadelphia Phillies,-159
+Oakland Athletics,243
+Toronto Blue Jays,-273
+Pittsburgh Pirates,150
+Miami Marlins,-165
+Kansas City Royals,218
+Tampa Bay Rays,-243
+Minnesota Twins,-135
+Detroit Tigers,125
+Milwaukee Brewers,-105
+Cleveland Guardians,-103
+Los Angeles Angels,-142
+Colorado Rockies,129
+Arizona Diamondbacks,116
+San Francisco Giants,-126
+Washington Nationals,170
+San Diego Padres,-187
+Houston Astros,122
+Los Angeles Dodgers,-132
