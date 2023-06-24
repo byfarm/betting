@@ -67,7 +67,7 @@ def scrape_unibet_mlb(url):
 			state = event['event']['state']
 			game_date = event['event']['start'][:10]
 			# take all the games that have not started and is today
-			if state[:3] == 'NOT' and game_date == str(datetime.datetime.now())[:10]:
+			if state[:3] == 'NOT' or len(state[:3]) == 3:
 				# find the games, and their gamestate
 				ht = event['event']['homeName']
 				at = event['event']['awayName']

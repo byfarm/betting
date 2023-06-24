@@ -1,12 +1,13 @@
 import file_man as fm
 import ods_calc as oc
 import scraping as sc
+import betting_calcs as bc
 
 
 max_stake = 100
 # initialize urls
 dk_url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
-uni_url = 'https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687557915663&useCombined=true&useCombinedLive=true'
+uni_url = "https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687638600154&useCombined=true&useCombinedLive=true"
 
 # scrape the websites
 dk, games_d = sc.scrape_dk_mlb(dk_url)
@@ -33,15 +34,10 @@ oc.arr_od_to_prob(p)
 arbs = oc.find_arb(p)
 
 if len(arbs) > 0:
-	for games in arbs:
-		teams_ods = games[1]
-		g1 = teams_ods[:len(teams_ods)//2]
-		g2 = teams_ods[len(teams_ods)//2:]
-		p1 = oc.odd_to_prob(g1[0])
-		p2 = oc.odd_to_prob(g2[0])
-		s1, s2 = oc.det_max_in(max_stake, p1, p2)
-		g1.append(s1)
-		g2.append(s2)
-		games[1] = g1 + g2
+	results = bc.add_stake(arbs, max_stake)
+	fm.write_results(results)
+	print('New Results in!')
+else:
+	print('No opportunities')
 
 
