@@ -1,35 +1,50 @@
-Betting odds as of 2023-06-24 11:07:11.209734
+Betting odds as of 2023-06-24 19:06:12.835753
+{'STL Cardinals', 'CHI Cubs'}:{'TEX Rangers', 'NY Yankees'}:{'BAL Orioles', 'SEA Mariners'}:{'NY Mets', 'PHI Phillies'}:{'OAK Athletics', 'TOR Blue Jays'}:{'PIT Pirates', 'MIA Marlins'}:{'MIL Brewers', 'CLE Guardians'}:{'CHI White Sox', 'BOS Red Sox'}:{'CIN Reds', 'ATL Braves'}:{'MIN Twins', 'DET Tigers'}:{'LA Dodgers', 'HOU Astros'}:
 DK
-KC Royals,170
-TB Rays,-210
-ATL Braves,-1200
-CIN Reds,700
-PIT Pirates,340
-MIA Marlins,-450
-MIN Twins,-490
-DET Tigers,360
-NY Mets,-105
-PHI Phillies,-125
-TEX Rangers,-115
-NY Yankees,-115
-OAK Athletics,310
-TOR Blue Jays,-410
-MIL Brewers,110
-CLE Guardians,-130
-SEA Mariners,-115
-BAL Orioles,-105
+CHI Cubs,-135
+STL Cardinals,115
+TEX Rangers,-130
+NY Yankees,110
+NY Mets,-130
+PHI Phillies,110
+SEA Mariners,-110
+BAL Orioles,-110
+OAK Athletics,235
+TOR Blue Jays,-280
+ATL Braves,-140
+CIN Reds,120
+PIT Pirates,130
+MIA Marlins,-150
+MIL Brewers,105
+CLE Guardians,-125
+BOS Red Sox,-115
+CHI White Sox,-105
+KC Royals,230
+TB Rays,-275
+MIN Twins,-155
+DET Tigers,135
+HOU Astros,150
+LA Dodgers,-175
 UNI
-TB Rays,-200
-CIN Reds,850
-DET Tigers,400
-MIA Marlins,-420
-NY Yankees,-110
-PHI Phillies,-117
-CLE Guardians,-136
-TOR Blue Jays,-315
-BAL Orioles,-108
-CHI White Sox,-106
-COL Rockies,132
-SD Padres,-295
-LA Dodgers,-148
-SF Giants,-182
+STL Cardinals,110
+CHI Cubs,-130
+NY Yankees,108
+TEX Rangers,-127
+BAL Orioles,-107
+SEA Mariners,-110
+PHI Phillies,108
+NY Mets,-127
+TOR Blue Jays,-286
+OAK Athletics,235
+MIA Marlins,-162
+PIT Pirates,138
+CLE Guardians,-127
+MIL Brewers,108
+CHI White Sox,102
+BOS Red Sox,-121
+CIN Reds,125
+ATL Braves,-148
+DET Tigers,138
+MIN Twins,-162
+LA Dodgers,-182
+HOU Astros,155

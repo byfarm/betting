@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import datetime
+import math
 
 
 def allow_access(url):
@@ -38,7 +39,15 @@ def scrape_dk_mlb(url):
 		betting = (name_info, int(od))
 		bet_list.append(betting)
 
-	return bet_list
+	games = []
+	rn = math.floor(len(bet_list) / 2)
+	for i in range(rn):
+		t1 = bet_list[2*i][0]
+		t2 = bet_list[2*i + 1][0]
+		game = (t1, t2)
+		games.append(set(game))
+
+	return bet_list, games
 
 
 def scrape_unibet_mlb(url):
@@ -60,16 +69,18 @@ def scrape_unibet_mlb(url):
 			# take all the games that have not started and is today
 			if state[:3] == 'NOT' and game_date == str(datetime.datetime.now())[:10]:
 				# find the games, and their gamestate
-				game = event['event']['name'].split(' @ ')
+				ht = event['event']['homeName']
+				at = event['event']['awayName']
+				game = (ht, at)
 				games.append(set(game))
 
 				# find the odds for each team in each game
 				offers = event['betOffers'][0]
-				outcomes = offers['outcomes'][0]
-				name = outcomes['label']
-				od = int(outcomes['oddsAmerican'])
-				betting = (name, od)
-				bet_list.append(betting)
+				for i in offers['outcomes']:
+					name = i['label']
+					od = int(i['oddsAmerican'])
+					betting1 = (name, od)
+					bet_list.append(betting1)
 		except IndexError:
 			pass
 
