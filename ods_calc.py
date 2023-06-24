@@ -12,6 +12,12 @@ def prob_to_int_odds(prob: float):
 	return int_odd
 
 
+def int_odds_to_us(odds: float):
+	prob = 1 / odds
+	us = prob_to_us_lines(prob)
+	return us
+
+
 def prob_to_us_lines(prob: float):
 	if prob > 0.5:
 		odd = -(-100 * prob) / (prob - 1)

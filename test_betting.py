@@ -7,7 +7,7 @@ import betting_calcs as bc
 
 def test_website_access():
 	# paste desired url
-	url = 'https://www.pinnacle.com/en/baseball/mlb/matchups/#period:0'
+	url = 'https://www.pinnacle.com/en/baseball/mlb/matchups#period:0'
 	status_code = sc.allow_access(url)
 	assert status_code == 200
 
@@ -98,4 +98,8 @@ def test_write_results():
 	res = bc.add_stake(arbs, 100)
 	ctf.write_results(res)
 
+
+def test_scrape_pin():
+	bet_list, games_p = sc.scrape_pin()
+	assert len(games_p) == len(bet_list) // 2
 

@@ -1,7 +1,14 @@
 from bs4 import BeautifulSoup
+from bs4 import Comment
 import requests
 import datetime
 import math
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import ods_calc as oc
 
 
 def allow_access(url):
@@ -16,28 +23,32 @@ def scrape_dk_mlb(url):
 	:return bet_list: the list of teams and their odds
 	only can be used when no games are bing played
 	"""
-	response = requests.get(url).text
-	soup = BeautifulSoup(response, 'html.parser')
+	response = requests.get(url)
+	assert response.status_code == 200
+	soup = BeautifulSoup(response.text, 'html.parser')
 
 	tbody = soup.tbody
 	tbrs = tbody.contents
 
 	bet_list = []
 	for tr in tbrs:
-		odds = tr.contents[3]
-		odds_info = odds.div.span.string
-		name = tr.contents[0]
-		name_info = name.div.find('div', class_='event-cell__name-text').string
+		try:
+			odds = tr.contents[3]
+			odds_info = odds.div.span.string
+			name = tr.contents[0]
+			name_info = name.div.find('div', class_='event-cell__name-text').string
 
-		# make the odds info able to convert to int
-		lis = list(odds_info)
-		if lis[0] != '+':
-			lis[0] = '-'
-		od = ''.join(lis)
+			# make the odds info able to convert to int
+			lis = list(odds_info)
+			if lis[0] != '+':
+				lis[0] = '-'
+			od = ''.join(lis)
 
-		# append into the betting list
-		betting = (name_info, int(od))
-		bet_list.append(betting)
+			# append into the betting list
+			betting = (name_info, int(od))
+			bet_list.append(betting)
+		except AttributeError:
+			pass
 
 	games = []
 	rn = math.floor(len(bet_list) / 2)
@@ -59,7 +70,9 @@ def scrape_unibet_mlb(url):
 	:return games: the set of games being played
 	"""
 	# get the json script
-	response = requests.get(url).json()
+	response = requests.get(url)
+	assert response.status_code == 200
+	response = response.json()
 	games = []
 	bet_list = []
 	for event in response['events']:
@@ -87,4 +100,43 @@ def scrape_unibet_mlb(url):
 	return bet_list, games
 
 
+def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0'):
+	bet_list = []
+	games = []
+	# Configure Chrome options
+	chrome_options = Options()
+	chrome_options.add_argument("--headless")  # Run Chrome in headless mode
 
+	# Set path to Chromedriver executable
+	chromedriver_path = r"C:\Users\bucks\Downloads\chromedriver_win32\chromedriver.exe"
+
+	# Initialize Chrome WebDriver
+	driver = webdriver.Chrome(options=chrome_options)
+	driver.get(url)
+
+	# Wait for the content to load (adjust the timeout as needed)
+	wait = WebDriverWait(driver, 10)
+	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "style_price__3LrWW")))
+
+	# Get the page source after JavaScript rendering
+	page_source = driver.page_source
+
+	# Create a BeautifulSoup object to parse the HTML
+	soup = BeautifulSoup(page_source, "html.parser")
+
+	# Close the WebDriver
+	driver.quit()
+
+	tr = soup.find_all('div', class_="style_row__21s9o style_row__21_Wa")
+	for rows in tr:
+		teams = rows.a.div.div.find_all('div', class_="ellipsis style_gameInfoLabel__24vcV")
+		tm = [i.span.string for i in teams]
+		buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
+		odds = [i.button.span.string for i in buttons if i.button.span is not None]
+		if len(odds) > 0:
+			for r in range(len(tm)):
+				odds[r] = oc.int_odds_to_us(float(odds[r]))
+				go = [(tm[r], odds[r])]
+				bet_list += go
+			games.append(set(tm))
+	return bet_list, games
