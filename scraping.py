@@ -58,6 +58,8 @@ def scrape_unibet_mlb(url):
 
 
 url = 'https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687557915663&useCombined=true&useCombinedLive=true'
-scrape_unibet_mlb(url)
+r = scrape_unibet_mlb(url)
+print(r)
+
 
 

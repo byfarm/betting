@@ -1,0 +1,35 @@
+Betting odds as of 2023-06-24 11:07:11.209734
+DK
+KC Royals,170
+TB Rays,-210
+ATL Braves,-1200
+CIN Reds,700
+PIT Pirates,340
+MIA Marlins,-450
+MIN Twins,-490
+DET Tigers,360
+NY Mets,-105
+PHI Phillies,-125
+TEX Rangers,-115
+NY Yankees,-115
+OAK Athletics,310
+TOR Blue Jays,-410
+MIL Brewers,110
+CLE Guardians,-130
+SEA Mariners,-115
+BAL Orioles,-105
+UNI
+TB Rays,-200
+CIN Reds,850
+DET Tigers,400
+MIA Marlins,-420
+NY Yankees,-110
+PHI Phillies,-117
+CLE Guardians,-136
+TOR Blue Jays,-315
+BAL Orioles,-108
+CHI White Sox,-106
+COL Rockies,132
+SD Padres,-295
+LA Dodgers,-148
+SF Giants,-182
