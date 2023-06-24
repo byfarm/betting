@@ -2,7 +2,7 @@ import file_man as ctf
 import scraping as sc
 import pytest
 import ods_calc as oc
-import copy
+import betting_calcs as bc
 
 
 def test_website_access():
@@ -10,6 +10,7 @@ def test_website_access():
 	url = 'https://www.pinnacle.com/en/baseball/mlb/matchups/#period:0'
 	status_code = sc.allow_access(url)
 	assert status_code == 200
+
 
 def test_file_open():
 	dk_url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
@@ -47,6 +48,8 @@ def test_read_from_file():
 def test_ods_to_percent():
 	prob = oc.odd_to_prob(-400)
 	assert prob == 0.8
+	prob = oc.odd_to_prob(400)
+	assert prob == 0.2
 
 
 def test_perc_to_odds():
@@ -74,4 +77,25 @@ def test_find_arb():
 	p = oc.arrange_odds(odds, games)
 	oc.arr_od_to_prob(p)
 	arbs = oc.find_arb(p)
+	print(arbs)
 	assert len(arbs) == 0
+
+
+def test_max_bet():
+	odds, games = ctf.read_from_file()
+	p = oc.arrange_odds(odds, games)
+	oc.arr_od_to_prob(p)
+	arbs = oc.find_arb(p)
+	res = bc.add_stake(arbs, 100)
+	assert len(res) == len(arbs)
+
+
+def test_write_results():
+	odds, games = ctf.read_from_file()
+	p = oc.arrange_odds(odds, games)
+	oc.arr_od_to_prob(p)
+	arbs = oc.find_arb(p)
+	res = bc.add_stake(arbs, 100)
+	ctf.write_results(res)
+
+

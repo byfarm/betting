@@ -26,7 +26,7 @@ def winnings_prob(prob: float, stake: float):
 
 
 def det_max_in(max_in: float, p1: float, p2: float):
-	stake2 = (p2 * max_in) / (p1 + p1)
+	stake2 = (p2 * max_in) / (p2 + p1)
 	stake1 = max_in - stake2
 	return stake1, stake2
 
@@ -81,6 +81,7 @@ def find_arb(arr_prob: dict):
 		for team in game.values():
 			sites = list(team.keys())
 			sum_prob = []
+			fs = []
 			for club in teams:
 				mp = game[club][sites[0]]
 				site = sites[0]
@@ -92,13 +93,13 @@ def find_arb(arr_prob: dict):
 						mp = p2
 						site = sites[i]
 				sum_prob.append(mp)
-
+				fs.append(site)
 			# if the sum of the list is less than 1 then there is an arbitrage opportunity
 			if sum(sum_prob) < 1:
 				team_odds = []
 				for i in sum_prob:
 					p = prob_to_us_lines(i)
 					team_odds.append(p)
-				team_prob = list(zip(team_odds, teams))
-				opps.append([keys, team_prob, site])
+				teams_and_odds = list(zip(team_odds, teams, fs))
+				opps.append([keys, teams_and_odds])
 	return opps

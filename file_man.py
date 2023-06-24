@@ -60,3 +60,14 @@ def read_from_file():
 	return odds, games
 
 
+def write_results(arbs: list):
+	with open('results.txt', 'w') as fp:
+		fp.write(f'arbitrage opportunities as of {datetime.datetime.now()}\n')
+		for opps in arbs:
+			t_and_o = opps[1]
+			g1 = t_and_o[0]
+			g2 = t_and_o[1]
+			fp.write(f'{opps[0]}:\n')
+			fp.write(f'{g1}\n')
+			fp.write(f'{g2}\n\n')
+

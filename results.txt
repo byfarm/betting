@@ -1,0 +1,89 @@
+arbitrage opportunities as of 2023-06-25 08:24:45.453060
+STL Cardinals,CHI Cubs:
+(-135, 'CHI Cubs', 'DK', 55.26)
+(115, 'STL Cardinals', 'DK', 44.74)
+
+STL Cardinals,CHI Cubs:
+(-135, 'CHI Cubs', 'DK', 55.26)
+(115, 'STL Cardinals', 'DK', 44.74)
+
+NY Yankees,TEX Rangers:
+(-129, 'TEX Rangers', 'DK', 53.71)
+(106, 'NY Yankees', 'UNI', 46.29)
+
+NY Yankees,TEX Rangers:
+(-129, 'TEX Rangers', 'DK', 53.71)
+(106, 'NY Yankees', 'UNI', 46.29)
+
+BAL Orioles,SEA Mariners:
+(-110, 'SEA Mariners', 'DK', 50.0)
+(-110, 'BAL Orioles', 'DK', 50.0)
+
+BAL Orioles,SEA Mariners:
+(-110, 'SEA Mariners', 'DK', 50.0)
+(-110, 'BAL Orioles', 'DK', 50.0)
+
+PHI Phillies,NY Mets:
+(-129, 'NY Mets', 'DK', 53.95)
+(108, 'PHI Phillies', 'UNI', 46.05)
+
+PHI Phillies,NY Mets:
+(-129, 'NY Mets', 'DK', 53.95)
+(108, 'PHI Phillies', 'UNI', 46.05)
+
+OAK Athletics,TOR Blue Jays:
+(235, 'OAK Athletics', 'DK', 28.74)
+(-285, 'TOR Blue Jays', 'UNI', 71.26)
+
+OAK Athletics,TOR Blue Jays:
+(235, 'OAK Athletics', 'DK', 28.74)
+(-285, 'TOR Blue Jays', 'UNI', 71.26)
+
+PIT Pirates,MIA Marlins:
+(125, 'PIT Pirates', 'DK', 41.82)
+(-162, 'MIA Marlins', 'UNI', 58.18)
+
+PIT Pirates,MIA Marlins:
+(125, 'PIT Pirates', 'DK', 41.82)
+(-162, 'MIA Marlins', 'UNI', 58.18)
+
+MIL Brewers,CLE Guardians:
+(108, 'MIL Brewers', 'UNI', 46.05)
+(-129, 'CLE Guardians', 'DK', 53.95)
+
+MIL Brewers,CLE Guardians:
+(108, 'MIL Brewers', 'UNI', 46.05)
+(-129, 'CLE Guardians', 'DK', 53.95)
+
+BOS Red Sox,CHI White Sox:
+(-121, 'BOS Red Sox', 'UNI', 51.67)
+(-105, 'CHI White Sox', 'DK', 48.33)
+
+BOS Red Sox,CHI White Sox:
+(-121, 'BOS Red Sox', 'UNI', 51.67)
+(-105, 'CHI White Sox', 'DK', 48.33)
+
+CIN Reds,ATL Braves:
+(-148, 'ATL Braves', 'UNI', 56.76)
+(120, 'CIN Reds', 'DK', 43.24)
+
+CIN Reds,ATL Braves:
+(-148, 'ATL Braves', 'UNI', 56.76)
+(120, 'CIN Reds', 'DK', 43.24)
+
+DET Tigers,MIN Twins:
+(-162, 'MIN Twins', 'UNI', 59.23)
+(135, 'DET Tigers', 'DK', 40.77)
+
+DET Tigers,MIN Twins:
+(-162, 'MIN Twins', 'UNI', 59.23)
+(135, 'DET Tigers', 'DK', 40.77)
+
+HOU Astros,LA Dodgers:
+(150, 'HOU Astros', 'DK', 38.13)
+(-185, 'LA Dodgers', 'UNI', 61.87)
+
+HOU Astros,LA Dodgers:
+(150, 'HOU Astros', 'DK', 38.13)
+(-185, 'LA Dodgers', 'UNI', 61.87)
+
