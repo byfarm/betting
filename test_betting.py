@@ -49,6 +49,13 @@ def test_ods_to_percent():
 	assert prob == 0.8
 
 
+def test_perc_to_odds():
+	odd = oc.prob_to_us_lines(0.8)
+	assert odd == -400
+	odd = oc.prob_to_us_lines(0.4)
+	assert odd == 150
+
+
 def test_arr_odes():
 	odds, games = ctf.read_from_file()
 	p = oc.arrange_odds(odds, games)
@@ -61,8 +68,10 @@ def test_odds_to_arr_prob():
 	oc.arr_od_to_prob(p)
 	print(p)
 
+
 def test_find_arb():
 	odds, games = ctf.read_from_file()
 	p = oc.arrange_odds(odds, games)
 	oc.arr_od_to_prob(p)
-	oc.find_arb(p)
+	arbs = oc.find_arb(p)
+	assert len(arbs) == 0

@@ -12,6 +12,14 @@ def prob_to_int_odds(prob: float):
 	return int_odd
 
 
+def prob_to_us_lines(prob: float):
+	if prob > 0.5:
+		odd = -(-100 * prob) / (prob - 1)
+	else:
+		odd = (100 / prob) - 100
+	return int(odd)
+
+
 def winnings_prob(prob: float, stake: float):
 	winning = stake / prob
 	return winning
@@ -62,8 +70,10 @@ def arr_od_to_prob(arr_odd: dict):
 
 
 def find_arb(arr_prob: dict):
+	site = None
 	# the list of opportunities
 	opps = []
+
 	# navigate to the probibilites while saving important info
 	for keys in arr_prob.keys():
 		game = arr_prob[keys]
@@ -73,15 +83,22 @@ def find_arb(arr_prob: dict):
 			sum_prob = []
 			for club in teams:
 				mp = game[club][sites[0]]
+				site = sites[0]
 
 				# find the max probability and add into the list
 				for i in range(1, len(sites)):
 					p2 = game[club][sites[i]]
-					mp = max(p2, mp)
+					if p2 > mp:
+						mp = p2
+						site = sites[i]
 				sum_prob.append(mp)
 
 			# if the sum of the list is less than 1 then there is an arbitrage opportunity
 			if sum(sum_prob) < 1:
-				team_prob = list(zip(sum_prob, teams))
-				opps.append([keys, team_prob])
+				team_odds = []
+				for i in sum_prob:
+					p = prob_to_us_lines(i)
+					team_odds.append(p)
+				team_prob = list(zip(team_odds, teams))
+				opps.append([keys, team_prob, site])
 	return opps
