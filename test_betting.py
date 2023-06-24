@@ -5,6 +5,12 @@ import ods_calc as oc
 import copy
 
 
+def test_website_access():
+	# paste desired url
+	url = 'https://co.betway.com/sports/home/?mediatag=ugntypeintraffic_ugntypeintraffic_7777_undefined_sports'
+	status_code = sc.allow_access(url)
+	assert status_code == 200
+
 def test_file_open():
 	dk_url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
 	uni_url = 'https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687557915663&useCombined=true&useCombinedLive=true'

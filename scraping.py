@@ -5,11 +5,16 @@ import datetime
 
 def allow_access(url):
 	response = requests.get(url)
-	print(response.status_code)
+	return response.status_code
 
 
 def scrape_dk_mlb(url):
-	""""""
+	"""
+	scrapes draftkings
+	:param url: the url to draftkings mlb
+	:return bet_list: the list of teams and their odds
+	only can be used when no games are bing played
+	"""
 	response = requests.get(url).text
 	soup = BeautifulSoup(response, 'html.parser')
 
