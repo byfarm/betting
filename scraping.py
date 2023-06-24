@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import datetime
 
 
 def allow_access(url):
@@ -41,20 +42,33 @@ def scrape_unibet_mlb(url):
 	:param url: request url to the api, named matches.json?lan=en_US...
 	'https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687557915663&useCombined=true&useCombinedLive=true'
 	:return bet_list: the list of teams and their odds
+	:return games: the set of games being played
 	"""
-
+	# get the json script
 	response = requests.get(url).json()
-
+	games = []
 	bet_list = []
 	for event in response['events']:
-		offers = event['betOffers'][0]
-		outcomes = offers['outcomes'][0]
-		name = outcomes['label']
-		od = int(outcomes['oddsAmerican'])
-		betting = (name, od)
-		bet_list.append(betting)
+		try:
+			state = event['event']['state']
+			game_date = event['event']['start'][:10]
+			# take all the games that have not started and is today
+			if state[:3] == 'NOT' and game_date == str(datetime.datetime.now())[:10]:
+				# find the games, and their gamestate
+				game = event['event']['name'].split(' @ ')
+				games.append(set(game))
 
-	return bet_list
+				# find the odds for each team in each game
+				offers = event['betOffers'][0]
+				outcomes = offers['outcomes'][0]
+				name = outcomes['label']
+				od = int(outcomes['oddsAmerican'])
+				betting = (name, od)
+				bet_list.append(betting)
+		except IndexError:
+			pass
+
+	return bet_list, games
 
 
 
