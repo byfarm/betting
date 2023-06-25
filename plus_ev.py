@@ -11,3 +11,18 @@ def calc_ev(prob: float, bet: float):
 	profit = bet * odds - bet
 	ev = profit * prob - (1 - prob) * bet
 	return ev
+
+
+def insert_sort_h_to_l(data: list[list]):
+	"""
+	sorts data from a list of tuples from h to l. value assumed to be in 0th index of tuple
+	:param data: unsorted list of tuple
+	:return data: sorted list of tuples
+	"""
+	for idx in range(1, len(data)):
+		while data[idx][-2] > data[idx - 1][-2] and idx > 0:
+			temp = data[idx]
+			data[idx] = data[idx - 1]
+			data[idx - 1] = temp
+			idx -= 1
+	return data
