@@ -13,6 +13,7 @@ if __name__ == '__main__':
 	dk, games_d = sc.scrape_dk_mlb(dk_url)
 	uni, games_u = sc.scrape_unibet_mlb(uni_url)
 	pin, games_p = sc.scrape_pin(pin_url)
+	bfr, games_b = sc.scrape_betfair()
 	'''
 	# make sure each game is in both books
 	if games_u != games_d:
@@ -24,7 +25,7 @@ if __name__ == '__main__':
 				games_u.remove(i)
 	'''
 	# write the odds and games to the txt file
-	fm.write_new_table_dk_uni(games=games_u, DK_=dk, UNI=uni, PIN=pin)
+	fm.write_new_table_dk_uni(games=games_u, DK_=dk, UNI=uni, PIN=pin, BFR=bfr)
 
 	# read the odds and games from the txt file and arrange them
 	odds, games = fm.read_from_file()

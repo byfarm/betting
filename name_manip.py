@@ -22,6 +22,12 @@ def cang_name(name: str):
 		'Milwaukee Brewers': 'MIL Brewers',
 		'San Francisco Giants': 'SF Giants',
 		'Arizona Diamondbacks': 'ARI Diamondbacks',
+		'Chicago Cubs': 'CHI Cubs',
+		'St. Louis Cardinals': 'STL Cardinals',
+		'Seattle Mariners': 'SEA Mariners',
+		'Baltimore Orioles': 'BAL Orioles',
+		'Atlanta Braves': 'ATL Braves',
+		'Cincinnati Reds': 'CIN Reds'
 		}
 
 	if name not in team_dict.keys():

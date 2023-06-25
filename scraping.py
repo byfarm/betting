@@ -22,7 +22,8 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 	:return bet_list: the list of teams and their odds
 	only can be used when no games are bing played
 	"""
-	bet_list, games = None, None
+	bet_list = []
+	games = []
 	response = requests.get(url)
 	assert response.status_code == 200
 	soup = BeautifulSoup(response.text, 'html.parser')
@@ -32,7 +33,6 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 		time = table.thead.tr.th.div.span.span.span.string[:3]
 
 		tbrs = table.tbody.contents
-		bet_list = []
 		for tr in tbrs:
 			try:
 				odds = tr.contents[3]
@@ -52,7 +52,6 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 			except AttributeError:
 				pass
 
-		games = []
 		rn = len(bet_list) // 2
 		for i in range(rn):
 			t1 = bet_list[2*i][0]
@@ -161,7 +160,7 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 	return bet_list, games
 
 
-def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/en/baseball-betting-7511'):
+def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/competition/11196870'):
 	# Configure Chrome options
 	chrome_options = Options()
 	chrome_options.add_argument("--headless")  # Run Chrome in headless mode
@@ -181,24 +180,41 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/en/baseball-bet
 	soup = BeautifulSoup(page_source, "html.parser")
 	driver.quit()
 
+	bet_list = []
+	games = []
+
 	tables = soup.find_all('div', class_='coupon-table-mod')
 	for table in tables:
 		tbrs = table.tbody.contents
 		for tr in tbrs:
 			try:
+				# get the teams
 				t = tr.td.a.find('ul', class_='runners').contents
 				teams = [i.contents[0] for i in t]
 
+				# get the odds
+				o = str(tr.find('td', class_='coupon-runners').text)
+				r = o.split('\n')
+				odds = [float(i) for i in r if i != '' and i[0] != '$']
+
+				# get the day
+				d = tr.td.a.find('span', class_='label').text
+				time = str(d)[:3]
+				curr_date = datetime.datetime.now(datetime.timezone.utc).strftime('%A')[:3]
+				if time == curr_date:
+					time = 'Tod'
+				else:
+					time = 'Tom'
+
+				# add to the bet list if all info there
+				if len(odds) == 4 and len(teams) == 2 and time is not None:
+					for r in range(2):
+						mean_odd = (odds[r] + odds[(2 * r) + 1]) / 2
+						mean_odd = oc.int_odds_to_us(float(mean_odd))
+						teams[r] = nm.cang_name(teams[r])
+						go = [(teams[r], mean_odd, str(time)[:3])]
+						bet_list += go
+					games.append(tuple(teams))
 			except AttributeError:
 				pass
-			#teams = [i.li.string for i in t]
-
-'''tables = soup.find_all('table', class_='sportsbook-table')
-for table in tables:
-	tbrs = table.tbody.contents
-	bet_list = []
-	for tr in tbrs:
-		try:
-			odds = tr.contents[3]
-			odds_info = odds.div.span.string
-			name = tr.contents[0]'''
+	return bet_list, games
