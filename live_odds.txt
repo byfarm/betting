@@ -1,19 +1,19 @@
-Betting odds as of 2023-06-25 12:18:16.308421
-{'DET Tigers', 'MIN Twins'}:{'HOU Astros', 'LA Dodgers'}:{'WAS Nationals', 'SD Padres'}:{'COL Rockies', 'LA Angels'}:{'DET Tigers', 'MIN Twins'}:{'NY Yankees', 'TEX Rangers'}:{'PHI Phillies', 'NY Mets'}:{'BAL Orioles', 'SEA Mariners'}:{'TOR Blue Jays', 'OAK Athletics'}:{'MIL Brewers', 'CLE Guardians'}:{'PIT Pirates', 'MIA Marlins'}:{'TB Rays', 'KC Royals'}:{'COL Rockies', 'LA Angels'}:{'SF Giants', 'ARI Diamondbacks'}:{'WAS Nationals', 'SD Padres'}:{'HOU Astros', 'LA Dodgers'}:
+Betting odds as of 2023-06-25 12:27:15.786004
+{'MIN Twins', 'DET Tigers'}:{'HOU Astros', 'LA Dodgers'}:{'WAS Nationals', 'SD Padres'}:{'LA Angels', 'COL Rockies'}:{'MIN Twins', 'DET Tigers'}:{'NY Yankees', 'TEX Rangers'}:{'PHI Phillies', 'NY Mets'}:{'SEA Mariners', 'BAL Orioles'}:{'TOR Blue Jays', 'OAK Athletics'}:{'CLE Guardians', 'MIL Brewers'}:{'PIT Pirates', 'MIA Marlins'}:{'TB Rays', 'KC Royals'}:{'LA Angels', 'COL Rockies'}:{'SF Giants', 'ARI Diamondbacks'}:{'WAS Nationals', 'SD Padres'}:{'HOU Astros', 'LA Dodgers'}:
 DK 
-MIN Twins,470
-DET Tigers,-690
-HOU Astros,390
-LA Dodgers,-540
+MIN Twins,440
+DET Tigers,-625
+HOU Astros,-335
+LA Dodgers,260
 UNI
-DET Tigers,-770
-MIN Twins,500
-LA Dodgers,-560
-HOU Astros,380
+DET Tigers,-625
+MIN Twins,420
+LA Dodgers,235
+HOU Astros,-315
 SD Padres,-190
 WAS Nationals,160
-COL Rockies,135
-LA Angels,-159
+COL Rockies,138
+LA Angels,-162
 DET Tigers,128
 MIN Twins,-150
 NY Yankees,-114
@@ -39,14 +39,14 @@ WAS Nationals,175
 LA Dodgers,-136
 HOU Astros,115
 PIN
-MIN Twins,366
-DET Tigers,-469
-HOU Astros,433
-LA Dodgers,-636
-WAS Nationals,154
+MIN Twins,464
+DET Tigers,-617
+HOU Astros,-374
+LA Dodgers,280
+WAS Nationals,156
 SD Padres,-170
-LA Angels,-149
-COL Rockies,137
+LA Angels,-148
+COL Rockies,135
 TEX Rangers,104
 NY Yankees,-114
 NY Mets,146
@@ -54,7 +54,7 @@ PHI Phillies,-159
 OAK Athletics,243
 TOR Blue Jays,-273
 PIT Pirates,150
-MIA Marlins,-165
+MIA Marlins,-163
 KC Royals,218
 TB Rays,-243
 MIN Twins,-135

@@ -23,5 +23,10 @@ def cang_name(name: str):
 		'San Francisco Giants': 'SF Giants',
 		'Arizona Diamondbacks': 'ARI Diamondbacks',
 		}
-	new_name = team_dict[name]
+
+	if name not in team_dict.keys():
+		print(f'add ,{name}, to dictionary')
+		new_name = name
+	else:
+		new_name = team_dict[name]
 	return new_name
