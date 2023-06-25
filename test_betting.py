@@ -64,6 +64,17 @@ def test_perc_to_odds():
 	assert odd == 150
 
 
+def test_int_odds_to_american():
+	america = oc.int_odds_to_us(2)
+	assert america == 100
+	america = oc.int_odds_to_us(3)
+	assert america == 200
+	america = oc.int_odds_to_us(1.4)
+	assert america == -250
+	america = oc.int_odds_to_us(1.83)
+	assert america < 0
+
+
 def test_arr_odes():
 	odds, games = fm.read_from_file()
 	p = bc.arrange_odds(odds, games)

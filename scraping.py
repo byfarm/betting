@@ -32,6 +32,12 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 	for table in tables:
 		time = table.thead.tr.th.div.span.span.span.string[:3]
 
+		# for some reason it is not reading it like it is on the website
+		if time == 'Tod':
+			time = 'Tom'
+		else:
+			time = 'Tom'
+
 		tbrs = table.tbody.contents
 		for tr in tbrs:
 			try:
@@ -86,7 +92,7 @@ def scrape_unibet_mlb(url):
 			# take all the games that have not started and is today or tomorrow
 			if state[:3] == 'NOT' and game_date in av_dates:
 				if game_date == av_dates[0]:
-					time = 'Tod'
+					time = 'Tom'
 				else:
 					time = 'Tom'
 				# find the games, and their gamestate
@@ -120,7 +126,7 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 	driver.get(url)
 
 	# Wait for the content to load (adjust the timeout as needed)
-	wait = WebDriverWait(driver, 10)
+	wait = WebDriverWait(driver, 5)
 	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "style_price__3LrWW")))
 
 	# Get the page source after JavaScript rendering
@@ -170,7 +176,7 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 	driver.get(url)
 
 	# Wait for the content to load (adjust the timeout as needed)
-	wait = WebDriverWait(driver, 10)
+	wait = WebDriverWait(driver, 5)
 	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "name")))
 
 	# Get the page source after JavaScript rendering
@@ -209,10 +215,10 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 				# add to the bet list if all info there
 				if len(odds) == 4 and len(teams) == 2 and time is not None:
 					for r in range(2):
-						mean_odd = (odds[r] + odds[(2 * r) + 1]) / 2
-						mean_odd = oc.int_odds_to_us(float(mean_odd))
+						mean_odd = (odds[2*r] + odds[(2 * r) + 1]) / 2
+						odd_in = oc.int_odds_to_us(float(mean_odd))
 						teams[r] = nm.cang_name(teams[r])
-						go = [(teams[r], mean_odd, str(time)[:3])]
+						go = [(teams[r], odd_in, str(time)[:3])]
 						bet_list += go
 					games.append(tuple(teams))
 			except AttributeError:
