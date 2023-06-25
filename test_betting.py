@@ -8,7 +8,7 @@ import betting_calcs as bc
 
 def test_website_access():
 	# paste desired url
-	url = 'https://www.pinnacle.com/en/baseball/mlb/matchups#period:0'
+	url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
 	status_code = sc.allow_access(url)
 	assert status_code == 200
 

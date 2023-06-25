@@ -15,7 +15,7 @@ def allow_access(url):
 	return response.status_code
 
 
-def scrape_dk_mlb(url):
+def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 	"""
 	scrapes draftkings
 	:param url: the url to draftkings mlb
