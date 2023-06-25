@@ -68,3 +68,12 @@ def write_results(arbs: list):
 			fp.write(f'{g1}\n')
 			fp.write(f'{g2}\n\n')
 
+
+def write_plus_ev(evs: list):
+	with open('plus_ev_opps.txt', 'w') as fp:
+		fp.write(f'Plus EV opportunities as of {datetime.datetime.now()}\n')
+		for opps in evs:
+			fp.write(f'{opps}\n')
+		fp.write('')
+
+

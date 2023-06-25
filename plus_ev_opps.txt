@@ -1,0 +1,3 @@
+Plus EV opportunities as of 2023-06-26 08:10:59.784765
+['LA Dodgers,HOU Astros,Tod', 'HOU Astros', 'DK_', 2.27, 105]
+['LA Dodgers,HOU Astros,Tod', 'LA Dodgers', 'DK_', 2.07, -125]

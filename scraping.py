@@ -31,12 +31,9 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 
 	tables = soup.find_all('table', class_='sportsbook-table')
 	for table in tables:
-		time = table.thead.tr.th.div.span.span.span.string[:3]
-
-		# for some reason it is not reading it like it is on the website
-		if time == 'Tod':
-			time = 'Tom'
-		else:
+		try:
+			time = table.thead.tr.th.div.span.span.span.string[:3]
+		except AttributeError:
 			time = 'Tom'
 
 		tbrs = table.tbody.contents
@@ -93,7 +90,7 @@ def scrape_unibet_mlb(url):
 			# take all the games that have not started and is today or tomorrow
 			if state[:3] == 'NOT' and game_date in av_dates:
 				if game_date == av_dates[0]:
-					time = 'Tom'
+					time = 'Tod'
 				else:
 					time = 'Tom'
 				# find the games, and their gamestate
@@ -143,7 +140,9 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 	headers = soup.find_all('div', class_='contentBlock square')
 	for p in headers:
 		# find the day it says
-		time = p.div.string
+		time = str(p.div.string)[:3]
+		if time == 'Non':
+			time = 'Tod'
 
 		# find all the table rows with the teams and the odds
 		tr = p.find_all('div', class_="style_row__21s9o style_row__21_Wa")
@@ -161,7 +160,7 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 				for r in range(2):
 					odds[r] = oc.int_odds_to_us(float(odds[r]))
 					tm[r] = nm.cang_name(tm[r])
-					go = [(tm[r], odds[r], str(time)[:3])]
+					go = [(tm[r], odds[r], time)]
 					bet_list += go
 				games.append(tuple(tm))
 	return bet_list, games
@@ -210,8 +209,10 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 				curr_date = datetime.datetime.now(datetime.timezone.utc).strftime('%A')[:3]
 				if time == curr_date:
 					time = 'Tod'
-				else:
+				elif time == 'Tom':
 					time = 'Tom'
+				else:
+					time = 'Tod'
 
 				# add to the bet list if all info there
 				if len(odds) == 4 and len(teams) == 2 and time is not None:

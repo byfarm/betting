@@ -9,15 +9,17 @@ if __name__ == '__main__':
 	import plus_ev as pe
 
 	max_stake = 100
-	#mf.scrape_web()
+	mf.scrape_web()
 
 	odds = mf.assemble_from_file()
 
+	# find ev opportunities
 	evs = mf.find_plus_ev(odds)
 	sort_evs = pe.insert_sort_h_to_l(evs)
+	fm.write_plus_ev(sort_evs)
+
 	# find arbitrage opportunities
 	arbs = mf.find_arb(odds)
-
 	if len(arbs) > 0:
 		results = bc.add_stake(arbs, max_stake)
 		fm.write_results(results)

@@ -1,116 +1,58 @@
-Betting odds as of 2023-06-25 23:11:20.108438
-('STL Cardinals', 'CHI Cubs', 'Tom'):('DET Tigers', 'MIN Twins', 'Tom'):('NY Yankees', 'TEX Rangers', 'Tom'):('PHI Phillies', 'NY Mets', 'Tom'):('BAL Orioles', 'SEA Mariners', 'Tom'):('TOR Blue Jays', 'OAK Athletics', 'Tom'):('CLE Guardians', 'MIL Brewers', 'Tom'):('CIN Reds', 'ATL Braves', 'Tom'):('MIA Marlins', 'PIT Pirates', 'Tom'):('TB Rays', 'KC Royals', 'Tom'):('COL Rockies', 'LA Angels', 'Tom'):('SF Giants', 'ARI Diamondbacks', 'Tom'):('SD Padres', 'WAS Nationals', 'Tom'):('LA Dodgers', 'HOU Astros', 'Tom'):
+Betting odds as of 2023-06-26 08:10:59.780608
+('LA Dodgers', 'HOU Astros', 'Tod'):
 DK_
-CHI Cubs,-155,Tom
-STL Cardinals,135,Tom
-MIN Twins,-140,Tom
-DET Tigers,120,Tom
-NY Mets,150,Tom
-PHI Phillies,-175,Tom
-TEX Rangers,100,Tom
-NY Yankees,-120,Tom
-SEA Mariners,-120,Tom
-BAL Orioles,100,Tom
-OAK Athletics,235,Tom
-TOR Blue Jays,-280,Tom
-KC Royals,220,Tom
-TB Rays,-260,Tom
-PIT Pirates,140,Tom
-MIA Marlins,-165,Tom
-MIL Brewers,-110,Tom
-CLE Guardians,-110,Tom
-ATL Braves,-165,Tom
-CIN Reds,140,Tom
-LA Angels,-150,Tom
-COL Rockies,130,Tom
-ARI Diamondbacks,110,Tom
-SF Giants,-130,Tom
-WAS Nationals,165,Tom
-SD Padres,-195,Tom
-HOU Astros,115,Tom
-LA Dodgers,-135,Tom
-CIN Reds,135,Tom
-BAL Orioles,-155,Tom
+NY Mets,-1700,Tod
+PHI Phillies,900,Tod
+TEX Rangers,-185,Tod
+NY Yankees,150,Tod
+ATL Braves,-440,Tod
+CIN Reds,330,Tod
+MIL Brewers,120,Tod
+CLE Guardians,-150,Tod
+BOS Red Sox,1300,Tod
+CHI White Sox,-4000,Tod
+LA Angels,140,Tod
+COL Rockies,-175,Tod
+ARI Diamondbacks,130,Tod
+SF Giants,-160,Tod
+WAS Nationals,160,Tod
+SD Padres,-195,Tod
+HOU Astros,105,Tod
+LA Dodgers,-125,Tod
+CIN Reds,120,Tom
+BAL Orioles,-140,Tom
+MIL Brewers,160,Tom
+NY Mets,-190,Tom
+MIN Twins,160,Tom
+ATL Braves,-190,Tom
+DET Tigers,170,Tom
+TEX Rangers,-200,Tom
+CHI White Sox,115,Tom
+LA Angels,-135,Tom
+WAS Nationals,220,Tom
+SEA Mariners,-260,Tom
 UNI
-STL Cardinals,132,Tom
-CHI Cubs,-155,Tom
-DET Tigers,118,Tom
-MIN Twins,-137,Tom
-NY Yankees,-114,Tom
-TEX Rangers,-104,Tom
-PHI Phillies,-195,Tom
-NY Mets,163,Tom
-BAL Orioles,100,Tom
-SEA Mariners,-118,Tom
-TOR Blue Jays,-295,Tom
-OAK Athletics,245,Tom
-CLE Guardians,-110,Tom
-MIL Brewers,-107,Tom
-CIN Reds,140,Tom
-ATL Braves,-167,Tom
-MIA Marlins,-175,Tom
-PIT Pirates,148,Tom
-TB Rays,-265,Tom
-KC Royals,215,Tom
-COL Rockies,128,Tom
-LA Angels,-152,Tom
-SF Giants,-125,Tom
-ARI Diamondbacks,108,Tom
-SD Padres,-200,Tom
-WAS Nationals,170,Tom
-LA Dodgers,-136,Tom
-HOU Astros,116,Tom
+LA Dodgers,-125,Tod
+HOU Astros,108,Tod
 PIN
-TEX Rangers,100,Tom
-NY Yankees,-108,Tom
-OAK Athletics,245,Tom
-TOR Blue Jays,-275,Tom
-KC Royals,223,Tom
-TB Rays,-249,Tom
-MIL Brewers,-101,Tom
-CLE Guardians,-107,Tom
-NY Mets,154,Tom
-PHI Phillies,-168,Tom
-PIT Pirates,147,Tom
-MIA Marlins,-162,Tom
-MIN Twins,-136,Tom
-DET Tigers,125,Tom
-LA Angels,-152,Tom
-COL Rockies,140,Tom
-ARI Diamondbacks,116,Tom
-SF Giants,-126,Tom
-WAS Nationals,180,Tom
-SD Padres,-198,Tom
-HOU Astros,117,Tom
-LA Dodgers,-127,Tom
+HOU Astros,112,Tod
+LA Dodgers,-121,Tod
 BFR
-CHI Cubs,-153,Tom
-STL Cardinals,154,Tom
-MIN Twins,-131,Tom
-DET Tigers,131,Tom
-NY Mets,166,Tom
-PHI Phillies,-165,Tom
-SEA Mariners,-112,Tom
-BAL Orioles,112,Tom
-TEX Rangers,104,Tom
-NY Yankees,-104,Tom
-OAK Athletics,280,Tom
-TOR Blue Jays,-273,Tom
-ATL Braves,-147,Tom
-CIN Reds,147,Tom
-KC Royals,245,Tom
-TB Rays,-243,Tom
-MIL Brewers,100,Tom
-CLE Guardians,100,Tom
-PIT Pirates,154,Tom
-MIA Marlins,-153,Tom
-BOS Red Socks,5451,Tom
-CHI White Socks,5450,Tom
-LA Angels,-147,Tom
-COL Rockies,147,Tom
-ARI Diamondbacks,126,Tom
-SF Giants,-125,Tom
-WAS Nationals,189,Tom
-SD Padres,-188,Tom
-HOU Astros,125,Tom
-LA Dodgers,-122,Tom
+TEX Rangers,-149,Tod
+NY Yankees,150,Tod
+NY Mets,-1176,Tod
+PHI Phillies,1760,Tod
+KC Royals,50775,Tod
+TB Rays,-2499,Tod
+MIL Brewers,145,Tod
+CLE Guardians,-143,Tod
+BOS Red Socks,1330,Tod
+CHI White Socks,-999,Tod
+LA Angels,113,Tod
+COL Rockies,49972,Tod
+ARI Diamondbacks,137,Tod
+SF Giants,-136,Tod
+WAS Nationals,193,Tod
+SD Padres,-192,Tod
+HOU Astros,115,Tod
+LA Dodgers,-115,Tod
