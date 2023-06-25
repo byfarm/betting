@@ -23,7 +23,7 @@ def test_file_open():
 		if i not in games_u:
 			games_d.remove(i)
 
-	fm.write_new_table_dk_uni(dk, uni, games_u)
+	fm.write_new_table_dk_uni(games=games_u, DK=dk, UNI=uni)
 	assert len(games_d) == len(games_u)
 
 

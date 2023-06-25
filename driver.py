@@ -24,7 +24,7 @@ if __name__ == '__main__':
 				games_u.remove(i)
 	'''
 	# write the odds and games to the txt file
-	fm.write_new_table_dk_uni(dk, uni, pin, games_u)
+	fm.write_new_table_dk_uni(games=games_u, DK_=dk, UNI=uni, PIN=pin)
 
 	# read the odds and games from the txt file and arrange them
 	odds, games = fm.read_from_file()

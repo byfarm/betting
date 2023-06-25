@@ -2,7 +2,7 @@ import scraping as sc
 import datetime
 
 
-def write_new_table_dk_uni(dk_mlb: tuple, uni_mlb: tuple, pin_mlb: tuple=None, games: set=None):
+def write_new_table_dk_uni(games: set, **kwargs):
 	"""
 	writes the odds and games to a txt file
 	:param dk_mlb: (team, odds)
@@ -16,25 +16,14 @@ def write_new_table_dk_uni(dk_mlb: tuple, uni_mlb: tuple, pin_mlb: tuple=None, g
 		fp.write(f'Betting odds as of {datetime.datetime.now()}\n')
 		for i in games:
 			fp.write(f'{i}:')
-		# write in the dk info
-		fp.write('\nDK \n')
-		for i in range(len(dk_mlb)):
-			team = str(dk_mlb[i][0])
-			odds = str(dk_mlb[i][1])
-			fp.write(team + ',' + odds + '\n')
+		fp.write('\n')
 
-		# write in the uni info
-		fp.write('UNI\n')
-		for i in range(len(uni_mlb)):
-			team = str(uni_mlb[i][0])
-			odds = str(uni_mlb[i][1])
-			fp.write(team + ',' + odds + '\n')
-
-		if pin_mlb is not None:
-			fp.write('PIN\n')
-			for i in range(len(pin_mlb)):
-				team = str(pin_mlb[i][0])
-				odds = str(pin_mlb[i][1])
+		for key in kwargs.keys():
+			# write in the dk info
+			fp.write(f'{key}\n')
+			for i in range(len(kwargs[key])):
+				team = str(kwargs[key][i][0])
+				odds = str(kwargs[key][i][1])
 				fp.write(team + ',' + odds + '\n')
 		fp.write('')
 
