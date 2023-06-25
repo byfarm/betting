@@ -8,7 +8,7 @@ import betting_calcs as bc
 
 def test_website_access():
 	# paste desired url
-	url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
+	url = 'https://www.betfair.com.au/exchange/plus/en/baseball-betting-7511'
 	status_code = sc.allow_access(url)
 	assert status_code == 200
 
@@ -107,4 +107,8 @@ def test_write_results():
 def test_scrape_pin():
 	bet_list, games_p = sc.scrape_pin()
 	assert len(games_p) == len(bet_list) // 2
+
+
+def test_scrape_betfair():
+	sc.scrape_betfair()
 

@@ -159,3 +159,46 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 					bet_list += go
 				games.append(tuple(tm))
 	return bet_list, games
+
+
+def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/en/baseball-betting-7511'):
+	# Configure Chrome options
+	chrome_options = Options()
+	chrome_options.add_argument("--headless")  # Run Chrome in headless mode
+
+	# Initialize Chrome WebDriver
+	driver = webdriver.Chrome(options=chrome_options)
+	driver.get(url)
+
+	# Wait for the content to load (adjust the timeout as needed)
+	wait = WebDriverWait(driver, 10)
+	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "name")))
+
+	# Get the page source after JavaScript rendering
+	page_source = driver.page_source
+
+	# Create a BeautifulSoup object to parse the HTML
+	soup = BeautifulSoup(page_source, "html.parser")
+	driver.quit()
+
+	tables = soup.find_all('div', class_='coupon-table-mod')
+	for table in tables:
+		tbrs = table.tbody.contents
+		for tr in tbrs:
+			try:
+				t = tr.td.a.find('ul', class_='runners').contents
+				teams = [i.contents[0] for i in t]
+
+			except AttributeError:
+				pass
+			#teams = [i.li.string for i in t]
+
+'''tables = soup.find_all('table', class_='sportsbook-table')
+for table in tables:
+	tbrs = table.tbody.contents
+	bet_list = []
+	for tr in tbrs:
+		try:
+			odds = tr.contents[3]
+			odds_info = odds.div.span.string
+			name = tr.contents[0]'''
