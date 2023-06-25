@@ -40,7 +40,7 @@ def find_arb(arr_prob: dict):
 				sum_prob.append(mp)
 				fs.append(site)
 			# if the sum of the list is less than 1 then there is an arbitrage opportunity
-			if sum(sum_prob) > 1:
+			if sum(sum_prob) < 1:
 				team_odds = []
 				for i in sum_prob:
 					p = oc.prob_to_us_lines(i)
