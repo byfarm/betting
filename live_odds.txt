@@ -1,5 +1,5 @@
-Betting odds as of 2023-06-25 22:11:19.385509
-('STL Cardinals', 'CHI Cubs', 'Tom'):('DET Tigers', 'MIN Twins', 'Tom'):('PHI Phillies', 'NY Mets', 'Tom'):('BAL Orioles', 'SEA Mariners', 'Tom'):('NY Yankees', 'TEX Rangers', 'Tom'):('TOR Blue Jays', 'OAK Athletics', 'Tom'):('CLE Guardians', 'MIL Brewers', 'Tom'):('TB Rays', 'KC Royals', 'Tom'):('MIA Marlins', 'PIT Pirates', 'Tom'):('COL Rockies', 'LA Angels', 'Tom'):('SF Giants', 'ARI Diamondbacks', 'Tom'):('SD Padres', 'WAS Nationals', 'Tom'):('LA Dodgers', 'HOU Astros', 'Tom'):
+Betting odds as of 2023-06-25 23:11:20.108438
+('STL Cardinals', 'CHI Cubs', 'Tom'):('DET Tigers', 'MIN Twins', 'Tom'):('NY Yankees', 'TEX Rangers', 'Tom'):('PHI Phillies', 'NY Mets', 'Tom'):('BAL Orioles', 'SEA Mariners', 'Tom'):('TOR Blue Jays', 'OAK Athletics', 'Tom'):('CLE Guardians', 'MIL Brewers', 'Tom'):('CIN Reds', 'ATL Braves', 'Tom'):('MIA Marlins', 'PIT Pirates', 'Tom'):('TB Rays', 'KC Royals', 'Tom'):('COL Rockies', 'LA Angels', 'Tom'):('SF Giants', 'ARI Diamondbacks', 'Tom'):('SD Padres', 'WAS Nationals', 'Tom'):('LA Dodgers', 'HOU Astros', 'Tom'):
 DK_
 CHI Cubs,-155,Tom
 STL Cardinals,135,Tom
@@ -11,8 +11,8 @@ TEX Rangers,100,Tom
 NY Yankees,-120,Tom
 SEA Mariners,-120,Tom
 BAL Orioles,100,Tom
-OAK Athletics,240,Tom
-TOR Blue Jays,-285,Tom
+OAK Athletics,235,Tom
+TOR Blue Jays,-280,Tom
 KC Royals,220,Tom
 TB Rays,-260,Tom
 PIT Pirates,140,Tom
@@ -21,8 +21,8 @@ MIL Brewers,-110,Tom
 CLE Guardians,-110,Tom
 ATL Braves,-165,Tom
 CIN Reds,140,Tom
-LA Angels,-155,Tom
-COL Rockies,135,Tom
+LA Angels,-150,Tom
+COL Rockies,130,Tom
 ARI Diamondbacks,110,Tom
 SF Giants,-130,Tom
 WAS Nationals,165,Tom
@@ -32,35 +32,37 @@ LA Dodgers,-135,Tom
 CIN Reds,135,Tom
 BAL Orioles,-155,Tom
 UNI
-STL Cardinals,138,Tom
-CHI Cubs,-162,Tom
-DET Tigers,120,Tom
-MIN Twins,-141,Tom
-PHI Phillies,-180,Tom
-NY Mets,155,Tom
-BAL Orioles,106,Tom
-SEA Mariners,-124,Tom
+STL Cardinals,132,Tom
+CHI Cubs,-155,Tom
+DET Tigers,118,Tom
+MIN Twins,-137,Tom
 NY Yankees,-114,Tom
-TEX Rangers,-103,Tom
-TOR Blue Jays,-305,Tom
-OAK Athletics,250,Tom
+TEX Rangers,-104,Tom
+PHI Phillies,-195,Tom
+NY Mets,163,Tom
+BAL Orioles,100,Tom
+SEA Mariners,-118,Tom
+TOR Blue Jays,-295,Tom
+OAK Athletics,245,Tom
 CLE Guardians,-110,Tom
 MIL Brewers,-107,Tom
-TB Rays,-265,Tom
-KC Royals,220,Tom
+CIN Reds,140,Tom
+ATL Braves,-167,Tom
 MIA Marlins,-175,Tom
 PIT Pirates,148,Tom
+TB Rays,-265,Tom
+KC Royals,215,Tom
 COL Rockies,128,Tom
 LA Angels,-152,Tom
-SF Giants,-134,Tom
-ARI Diamondbacks,115,Tom
+SF Giants,-125,Tom
+ARI Diamondbacks,108,Tom
 SD Padres,-200,Tom
 WAS Nationals,170,Tom
-LA Dodgers,-143,Tom
-HOU Astros,120,Tom
+LA Dodgers,-136,Tom
+HOU Astros,116,Tom
 PIN
 TEX Rangers,100,Tom
-NY Yankees,-109,Tom
+NY Yankees,-108,Tom
 OAK Athletics,245,Tom
 TOR Blue Jays,-275,Tom
 KC Royals,223,Tom
@@ -71,10 +73,10 @@ NY Mets,154,Tom
 PHI Phillies,-168,Tom
 PIT Pirates,147,Tom
 MIA Marlins,-162,Tom
-MIN Twins,-135,Tom
+MIN Twins,-136,Tom
 DET Tigers,125,Tom
-LA Angels,-154,Tom
-COL Rockies,142,Tom
+LA Angels,-152,Tom
+COL Rockies,140,Tom
 ARI Diamondbacks,116,Tom
 SF Giants,-126,Tom
 WAS Nationals,180,Tom
@@ -82,33 +84,33 @@ SD Padres,-198,Tom
 HOU Astros,117,Tom
 LA Dodgers,-127,Tom
 BFR
-CHI Cubs,-148,Tom
-STL Cardinals,150,Tom
+CHI Cubs,-153,Tom
+STL Cardinals,154,Tom
 MIN Twins,-131,Tom
 DET Tigers,131,Tom
-NY Mets,165,Tom
+NY Mets,166,Tom
 PHI Phillies,-165,Tom
-SEA Mariners,-111,Tom
+SEA Mariners,-112,Tom
 BAL Orioles,112,Tom
-TEX Rangers,106,Tom
+TEX Rangers,104,Tom
 NY Yankees,-104,Tom
-OAK Athletics,275,Tom
-TOR Blue Jays,-270,Tom
+OAK Athletics,280,Tom
+TOR Blue Jays,-273,Tom
 ATL Braves,-147,Tom
 CIN Reds,147,Tom
 KC Royals,245,Tom
-TB Rays,-240,Tom
-MIL Brewers,-101,Tom
-CLE Guardians,102,Tom
+TB Rays,-243,Tom
+MIL Brewers,100,Tom
+CLE Guardians,100,Tom
 PIT Pirates,154,Tom
 MIA Marlins,-153,Tom
 BOS Red Socks,5451,Tom
 CHI White Socks,5450,Tom
-LA Angels,-145,Tom
-COL Rockies,146,Tom
-ARI Diamondbacks,125,Tom
-SF Giants,-124,Tom
-WAS Nationals,190,Tom
+LA Angels,-147,Tom
+COL Rockies,147,Tom
+ARI Diamondbacks,126,Tom
+SF Giants,-125,Tom
+WAS Nationals,189,Tom
 SD Padres,-188,Tom
-HOU Astros,124,Tom
+HOU Astros,125,Tom
 LA Dodgers,-122,Tom

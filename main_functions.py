@@ -33,7 +33,7 @@ def assemble_from_file():
 	odds, games = fm.read_from_file()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
-	return odds, games
+	return p
 
 
 def find_arb(arr_prob: dict):
@@ -71,9 +71,33 @@ def find_arb(arr_prob: dict):
 	return opps
 
 
-def find_plus_ev():
+def find_plus_ev(odds: dict[dict]):
 	"""
 	plan: calculate base prob from pinnicle or the market. then, calculate probabilities from everyone. sort based on % diff
 	:return:
 	"""
-	print(4)
+	plus_evs = []
+	for game_k in odds.keys():
+		game_dict = odds[game_k]
+		for club_k in game_dict.keys():
+			club_dict = game_dict[club_k]
+			pin = 1
+			bfr = 1
+			if 'PIN' in club_dict.keys():
+				pin = club_dict['PIN']
+			if 'BFR' in club_dict.keys():
+				bfr = club_dict['BFR']
+			worst_case = min(pin, bfr)
+			max_prob = 0
+			web = None
+			for site in club_dict.keys():
+				prob = club_dict[site]
+				if prob > max_prob:
+					max_prob = prob
+					web = site
+			per_diff = round((max_prob - worst_case) * 100, 2)
+			if per_diff > 0:
+				max_odds = oc.prob_to_us_lines(max_prob)
+				plus_evs.append([game_k, club_k, web, per_diff, max_odds])
+	return plus_evs
+

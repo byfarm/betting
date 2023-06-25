@@ -6,10 +6,11 @@ if __name__ == '__main__':
 	import main_functions as mf
 
 	max_stake = 100
-	mf.scrape_web()
+	#mf.scrape_web()
 
-	odds, games = mf.assemble_from_file()
+	odds = mf.assemble_from_file()
 
+	evs = mf.find_plus_ev(odds)
 	# find arbitrage opportunities
 	arbs = mf.find_arb(odds)
 
