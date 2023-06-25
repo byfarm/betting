@@ -39,6 +39,10 @@ def test_uni_scrape():
 	print(uni)
 	assert uni is not None
 
+def test_pin_scrape():
+	r = sc.scrape_pin()
+	assert r is not None
+
 
 def test_read_from_file():
 	r = fm.read_from_file()

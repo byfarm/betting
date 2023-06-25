@@ -50,6 +50,13 @@ def find_arb(arr_prob: dict):
 	return opps
 
 
+def make_keys_list(dic: dict):
+	keys_lis = list(dic.keys())
+	for i in range(len(keys_lis)):
+		keys_lis[i] = set(keys_lis[i].split(','))
+	return keys_lis
+
+
 def arrange_odds(probs: dict, games: list[set]):
 	"""
 	arranges the odds
@@ -57,21 +64,40 @@ def arrange_odds(probs: dict, games: list[set]):
 	:param games: the games being played
 	:return arr_dic: the arranged dictionary {game: {site: odd}}
 	"""
+	keys_lis = None
 	arr_dic = {}
 	for game in games:
-		n_key = ','.join(game)
+		time = [i for i in game if len(i) == 3][0]
+		game.remove(time)
+		n_key = ','.join(game) + ',' + time
+		game.add(time)
 
+		if keys_lis is None:
+			keys_lis = make_keys_list(arr_dic)
 		# if the key is not already created create a new one
-		if n_key not in arr_dic.keys():
+		if set(n_key.split(',')) not in keys_lis:
 			arr_dic[n_key] = {}
 
 		# go through each key(which will be each site) and go through each team
 		for key in probs.keys():
-			for i in probs[key]:
-				if i in game:
-					if i not in arr_dic[n_key].keys():
-						arr_dic[n_key][i] = {}
-					arr_dic[n_key][i][key] = probs[key][i]
+			for j in probs[key]:
+				# split the club and the time
+				club, day = j.split(',')
+				if club in game and day in game:
+
+					# check if the section of the dictionary has already been made
+					f = False
+					for r in keys_lis:
+						if {club, day} <= r and club in arr_dic[n_key].keys():
+							f = True
+
+					# if it hasn't make a new one
+					if f is False:
+						arr_dic[n_key][club] = {}
+
+					# add the probability in and update the key list
+					arr_dic[n_key][club][key] = probs[key][j]
+					keys_lis = make_keys_list(arr_dic)
 	return arr_dic
 
 

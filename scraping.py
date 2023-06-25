@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 import datetime
-import math
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -23,40 +22,43 @@ def scrape_dk_mlb(url):
 	:return bet_list: the list of teams and their odds
 	only can be used when no games are bing played
 	"""
+	bet_list, games = None, None
 	response = requests.get(url)
 	assert response.status_code == 200
 	soup = BeautifulSoup(response.text, 'html.parser')
 
-	tbody = soup.tbody
-	tbrs = tbody.contents
+	tables = soup.find_all('table', class_='sportsbook-table')
+	for table in tables:
+		time = table.thead.tr.th.div.span.span.span.string[:3]
 
-	bet_list = []
-	for tr in tbrs:
-		try:
-			odds = tr.contents[3]
-			odds_info = odds.div.span.string
-			name = tr.contents[0]
-			name_info = name.div.find('div', class_='event-cell__name-text').string
+		tbrs = table.tbody.contents
+		bet_list = []
+		for tr in tbrs:
+			try:
+				odds = tr.contents[3]
+				odds_info = odds.div.span.string
+				name = tr.contents[0]
+				name_info = name.div.find('div', class_='event-cell__name-text').string
 
-			# make the odds info able to convert to int
-			lis = list(odds_info)
-			if lis[0] != '+':
-				lis[0] = '-'
-			od = ''.join(lis)
+				# make the odds info able to convert to int
+				lis = list(odds_info)
+				if lis[0] != '+':
+					lis[0] = '-'
+				od = ''.join(lis)
 
-			# append into the betting list
-			betting = (name_info, int(od))
-			bet_list.append(betting)
-		except AttributeError:
-			pass
+				# append into the betting list
+				betting = (name_info, int(od), time)
+				bet_list.append(betting)
+			except AttributeError:
+				pass
 
-	games = []
-	rn = math.floor(len(bet_list) / 2)
-	for i in range(rn):
-		t1 = bet_list[2*i][0]
-		t2 = bet_list[2*i + 1][0]
-		game = (t1, t2)
-		games.append(set(game))
+		games = []
+		rn = len(bet_list) // 2
+		for i in range(rn):
+			t1 = bet_list[2*i][0]
+			t2 = bet_list[2*i + 1][0]
+			game = (t1, t2, time)
+			games.append(game)
 
 	return bet_list, games
 
@@ -79,20 +81,27 @@ def scrape_unibet_mlb(url):
 		try:
 			state = event['event']['state']
 			game_date = event['event']['start'][:10]
-			# take all the games that have not started and is today
-			if state[:3] == 'NOT' or len(state[:3]) == 3:
+			curr_date = datetime.datetime.now(datetime.timezone.utc)
+			tom_date = curr_date + datetime.timedelta(days=1)
+			av_dates = [str(curr_date)[:10], str(tom_date)[:10]]
+			# take all the games that have not started and is today or tomorrow
+			if state[:3] == 'NOT' and game_date in av_dates:
+				if game_date == av_dates[0]:
+					time = 'Tod'
+				else:
+					time = 'Tom'
 				# find the games, and their gamestate
 				ht = event['event']['homeName']
 				at = event['event']['awayName']
-				game = (ht, at)
-				games.append(set(game))
+				game = (ht, at, time)
+				games.append(game)
 
 				# find the odds for each team in each game
 				offers = event['betOffers'][0]
 				for i in offers['outcomes']:
 					name = i['label']
 					od = int(i['oddsAmerican'])
-					betting1 = (name, od)
+					betting1 = (name, od, time)
 					bet_list.append(betting1)
 		except IndexError:
 			pass
@@ -106,7 +115,6 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 	# Configure Chrome options
 	chrome_options = Options()
 	chrome_options.add_argument("--headless")  # Run Chrome in headless mode
-
 
 	# Initialize Chrome WebDriver
 	driver = webdriver.Chrome(options=chrome_options)
@@ -125,17 +133,29 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 	# Close the WebDriver
 	driver.quit()
 
-	tr = soup.find_all('div', class_="style_row__21s9o style_row__21_Wa")
-	for rows in tr:
-		teams = rows.a.div.div.find_all('div', class_="ellipsis style_gameInfoLabel__24vcV")
-		tm = [i.span.string for i in teams]
-		buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
-		odds = [i.button.span.string for i in buttons if i.button.span is not None]
-		if len(odds) > 0:
-			for r in range(len(tm)):
-				odds[r] = oc.int_odds_to_us(float(odds[r]))
-				tm[r] = nm.cang_name(tm[r])
-				go = [(tm[r], odds[r])]
-				bet_list += go
-			games.append(set(tm))
+	# find all the table headers
+	headers = soup.find_all('div', class_='contentBlock square')
+	for p in headers:
+		# find the day it says
+		time = p.div.string
+
+		# find all the table rows with the teams and the odds
+		tr = p.find_all('div', class_="style_row__21s9o style_row__21_Wa")
+		for rows in tr:
+			# find the teams and add to a list
+			teams = rows.a.div.div.find_all('div', class_="ellipsis style_gameInfoLabel__24vcV")
+			tm = [i.span.string for i in teams]
+
+			# find the odds and add to a list
+			buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
+			odds = [i.button.span.string for i in buttons if i.button.span is not None]
+
+			# if it is able to pull odds then send them
+			if len(odds) > 0:
+				for r in range(2):
+					odds[r] = oc.int_odds_to_us(float(odds[r]))
+					tm[r] = nm.cang_name(tm[r])
+					go = [(tm[r], odds[r], str(time)[:3])]
+					bet_list += go
+				games.append(tuple(tm))
 	return bet_list, games

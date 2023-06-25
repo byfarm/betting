@@ -24,7 +24,8 @@ def write_new_table_dk_uni(games: set, **kwargs):
 			for i in range(len(kwargs[key])):
 				team = str(kwargs[key][i][0])
 				odds = str(kwargs[key][i][1])
-				fp.write(team + ',' + odds + '\n')
+				time = str(kwargs[key][i][2])
+				fp.write(team + ',' + odds + ',' + time + '\n')
 		fp.write('')
 
 
@@ -50,8 +51,8 @@ def read_from_file():
 				odds[site] = {}
 			else:
 				# if data split it and add to dictionary
-				team, od = line.split(',')
-				odds[site][team] = int(od)
+				team, od, time = line.split(',')
+				odds[site][team + ',' + time] = int(od)
 			line = fp.readline().strip()
 	return odds, games
 
