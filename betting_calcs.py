@@ -1,4 +1,5 @@
 import ods_calc as oc
+import file_man as fm
 
 
 def add_stake(arbs: list, max_stake: int):
@@ -13,42 +14,6 @@ def add_stake(arbs: list, max_stake: int):
 		g2.append(round(s2, 2))
 		games[1] = [tuple(g1), tuple(g2)]
 	return arbs
-
-def find_arb(arr_prob: dict):
-	site = None
-	# the list of opportunities
-	opps = []
-
-	# navigate to the probibilites while saving important info
-	for keys in arr_prob.keys():
-		game = arr_prob[keys]
-		teams = list(game.keys())
-		for team in game.values():
-			sites = list(team.keys())
-			sum_prob = []
-			fs = []
-			for club in teams:
-				mp = game[club][sites[0]]
-				site = sites[0]
-
-				# find the max probability and add into the list
-				for i in range(1, len(sites)):
-					p2 = game[club][sites[i]]
-					if p2 > mp:
-						mp = p2
-						site = sites[i]
-				sum_prob.append(mp)
-				fs.append(site)
-			# if the sum of the list is less than 1 then there is an arbitrage opportunity
-			if sum(sum_prob) < 1:
-				team_odds = []
-				for i in sum_prob:
-					p = oc.prob_to_us_lines(i)
-					team_odds.append(p)
-				teams_and_odds = list(zip(team_odds, teams, fs))
-				opps.append([keys, teams_and_odds])
-	return opps
-
 
 def make_keys_list(dic: dict):
 	keys_lis = list(dic.keys())
@@ -112,3 +77,5 @@ def arr_od_to_prob(arr_odd: dict):
 			for sites in arr_odd[games][teams]:
 				arr_odd[games][teams][sites] = oc.odd_to_prob(arr_odd[games][teams][sites])
 	return arr_odd
+
+

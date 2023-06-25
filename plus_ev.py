@@ -9,5 +9,5 @@ def calc_ev(prob: float, bet: float):
 	"""
 	odds = 1 / prob
 	profit = bet * odds - bet
-	ev = profit * prob + (1 - prob) * bet
+	ev = profit * prob - (1 - prob) * bet
 	return ev

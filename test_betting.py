@@ -3,6 +3,7 @@ import scraping as sc
 import pytest
 import ods_calc as oc
 import betting_calcs as bc
+import main_functions as mf
 
 
 
@@ -92,7 +93,7 @@ def test_find_arb():
 	odds, games = fm.read_from_file()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
-	arbs = bc.find_arb(p)
+	arbs = mf.find_arb(p)
 	print(arbs)
 	assert len(arbs) == 0
 
@@ -101,7 +102,7 @@ def test_max_bet():
 	odds, games = fm.read_from_file()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
-	arbs = bc.find_arb(p)
+	arbs = mf.find_arb(p)
 	res = bc.add_stake(arbs, 100)
 	assert len(res) == len(arbs)
 
@@ -110,7 +111,7 @@ def test_write_results():
 	odds, games = fm.read_from_file()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
-	arbs = bc.find_arb(p)
+	arbs = mf.find_arb(p)
 	res = bc.add_stake(arbs, 100)
 	fm.write_results(res)
 
