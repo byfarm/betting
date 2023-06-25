@@ -1,17 +1,17 @@
-Betting odds as of 2023-06-25 11:47:09.605778
-{'MIN Twins', 'DET Tigers'}:{'LA Dodgers', 'HOU Astros'}:{'WAS Nationals', 'SD Padres'}:{'LA Angels', 'COL Rockies'}:{'MIN Twins', 'DET Tigers'}:{'TEX Rangers', 'NY Yankees'}:{'PHI Phillies', 'NY Mets'}:{'SEA Mariners', 'BAL Orioles'}:{'OAK Athletics', 'TOR Blue Jays'}:{'MIL Brewers', 'CLE Guardians'}:{'PIT Pirates', 'MIA Marlins'}:{'KC Royals', 'TB Rays'}:{'LA Angels', 'COL Rockies'}:{'SF Giants', 'ARI Diamondbacks'}:{'WAS Nationals', 'SD Padres'}:{'LA Dodgers', 'HOU Astros'}:
+Betting odds as of 2023-06-25 12:18:16.308421
+{'DET Tigers', 'MIN Twins'}:{'HOU Astros', 'LA Dodgers'}:{'WAS Nationals', 'SD Padres'}:{'COL Rockies', 'LA Angels'}:{'DET Tigers', 'MIN Twins'}:{'NY Yankees', 'TEX Rangers'}:{'PHI Phillies', 'NY Mets'}:{'BAL Orioles', 'SEA Mariners'}:{'TOR Blue Jays', 'OAK Athletics'}:{'MIL Brewers', 'CLE Guardians'}:{'PIT Pirates', 'MIA Marlins'}:{'TB Rays', 'KC Royals'}:{'COL Rockies', 'LA Angels'}:{'SF Giants', 'ARI Diamondbacks'}:{'WAS Nationals', 'SD Padres'}:{'HOU Astros', 'LA Dodgers'}:
 DK 
-MIN Twins,220
-DET Tigers,-280
-HOU Astros,575
-LA Dodgers,-875
+MIN Twins,470
+DET Tigers,-690
+HOU Astros,390
+LA Dodgers,-540
 UNI
-DET Tigers,-250
-MIN Twins,190
-LA Dodgers,-1115
-HOU Astros,600
-SD Padres,-200
-WAS Nationals,170
+DET Tigers,-770
+MIN Twins,500
+LA Dodgers,-560
+HOU Astros,380
+SD Padres,-190
+WAS Nationals,160
 COL Rockies,135
 LA Angels,-159
 DET Tigers,128
@@ -39,33 +39,33 @@ WAS Nationals,175
 LA Dodgers,-136
 HOU Astros,115
 PIN
-Minnesota Twins,-125
-Detroit Tigers,102
-Houston Astros,603
-Los Angeles Dodgers,-970
-Washington Nationals,161
-San Diego Padres,-176
-Los Angeles Angels,-147
-Colorado Rockies,135
-Texas Rangers,-101
-New York Yankees,-107
-New York Mets,146
-Philadelphia Phillies,-159
-Oakland Athletics,243
-Toronto Blue Jays,-273
-Pittsburgh Pirates,150
-Miami Marlins,-165
-Kansas City Royals,218
-Tampa Bay Rays,-243
-Minnesota Twins,-135
-Detroit Tigers,125
-Milwaukee Brewers,-105
-Cleveland Guardians,-103
-Los Angeles Angels,-142
-Colorado Rockies,129
-Arizona Diamondbacks,116
-San Francisco Giants,-126
-Washington Nationals,170
-San Diego Padres,-187
-Houston Astros,122
-Los Angeles Dodgers,-132
+MIN Twins,366
+DET Tigers,-469
+HOU Astros,433
+LA Dodgers,-636
+WAS Nationals,154
+SD Padres,-170
+LA Angels,-149
+COL Rockies,137
+TEX Rangers,104
+NY Yankees,-114
+NY Mets,146
+PHI Phillies,-159
+OAK Athletics,243
+TOR Blue Jays,-273
+PIT Pirates,150
+MIA Marlins,-165
+KC Royals,218
+TB Rays,-243
+MIN Twins,-135
+DET Tigers,125
+MIL Brewers,-105
+CLE Guardians,-103
+LA Angels,-142
+COL Rockies,129
+ARI Diamondbacks,116
+SF Giants,-126
+WAS Nationals,170
+SD Padres,-187
+HOU Astros,122
+LA Dodgers,-132

@@ -1,41 +1,41 @@
-arbitrage opportunities as of 2023-06-25 11:45:38.700794
-MIN Twins,DET Tigers:
-(-150, 'MIN Twins', 'UNI', 48.53)
-(-175, 'DET Tigers', 'DK', 51.47)
+arbitrage opportunities as of 2023-06-25 12:18:16.309388
+DET Tigers,MIN Twins:
+(-150, 'MIN Twins', 'UNI', 40.72)
+(-690, 'DET Tigers', 'DK', 59.28)
 
-MIN Twins,DET Tigers:
-(-150, 'MIN Twins', 'UNI', 48.53)
-(-175, 'DET Tigers', 'DK', 51.47)
+DET Tigers,MIN Twins:
+(-150, 'MIN Twins', 'UNI', 40.72)
+(-690, 'DET Tigers', 'DK', 59.28)
 
-LA Dodgers,HOU Astros:
-(115, 'HOU Astros', 'UNI', 34.14)
-(-875, 'LA Dodgers', 'DK', 65.86)
+HOU Astros,LA Dodgers:
+(115, 'HOU Astros', 'UNI', 35.54)
+(-540, 'LA Dodgers', 'DK', 64.46)
 
-LA Dodgers,HOU Astros:
-(115, 'HOU Astros', 'UNI', 34.14)
-(-875, 'LA Dodgers', 'DK', 65.86)
+HOU Astros,LA Dodgers:
+(115, 'HOU Astros', 'UNI', 35.54)
+(-540, 'LA Dodgers', 'DK', 64.46)
 
-SD Padres,WAS Nationals:
-(-204, 'SD Padres', 'UNI', 64.86)
-(175, 'WAS Nationals', 'UNI', 35.14)
+WAS Nationals,SD Padres:
+(-204, 'SD Padres', 'UNI', 64.44)
+(170, 'WAS Nationals', 'PIN', 35.56)
 
-SD Padres,WAS Nationals:
-(-204, 'SD Padres', 'UNI', 64.86)
-(175, 'WAS Nationals', 'UNI', 35.14)
+WAS Nationals,SD Padres:
+(-204, 'SD Padres', 'UNI', 64.44)
+(170, 'WAS Nationals', 'PIN', 35.56)
 
-LA Angels,COL Rockies:
+COL Rockies,LA Angels:
 (123, 'COL Rockies', 'UNI', 42.9)
 (-148, 'LA Angels', 'UNI', 57.1)
 
-LA Angels,COL Rockies:
+COL Rockies,LA Angels:
 (123, 'COL Rockies', 'UNI', 42.9)
 (-148, 'LA Angels', 'UNI', 57.1)
 
-TEX Rangers,NY Yankees:
+NY Yankees,TEX Rangers:
 (-113, 'NY Yankees', 'UNI', 51.11)
 (-103, 'TEX Rangers', 'UNI', 48.89)
 
-TEX Rangers,NY Yankees:
+NY Yankees,TEX Rangers:
 (-113, 'NY Yankees', 'UNI', 51.11)
 (-103, 'TEX Rangers', 'UNI', 48.89)
 
@@ -55,37 +55,37 @@ BAL Orioles,SEA Mariners:
 (110, 'BAL Orioles', 'UNI', 45.81)
 (-129, 'SEA Mariners', 'UNI', 54.19)
 
-OAK Athletics,TOR Blue Jays:
-(-294, 'TOR Blue Jays', 'UNI', 72.02)
-(245, 'OAK Athletics', 'UNI', 27.98)
+TOR Blue Jays,OAK Athletics:
+(-294, 'TOR Blue Jays', 'UNI', 71.91)
+(243, 'OAK Athletics', 'PIN', 28.09)
 
-OAK Athletics,TOR Blue Jays:
-(-294, 'TOR Blue Jays', 'UNI', 72.02)
-(245, 'OAK Athletics', 'UNI', 27.98)
-
-CLE Guardians,MIL Brewers:
-(-110, 'CLE Guardians', 'UNI', 50.45)
-(-106, 'MIL Brewers', 'UNI', 49.55)
+TOR Blue Jays,OAK Athletics:
+(-294, 'TOR Blue Jays', 'UNI', 71.91)
+(243, 'OAK Athletics', 'PIN', 28.09)
 
 CLE Guardians,MIL Brewers:
 (-110, 'CLE Guardians', 'UNI', 50.45)
 (-106, 'MIL Brewers', 'UNI', 49.55)
 
-MIA Marlins,PIT Pirates:
+CLE Guardians,MIL Brewers:
+(-110, 'CLE Guardians', 'UNI', 50.45)
+(-106, 'MIL Brewers', 'UNI', 49.55)
+
+PIT Pirates,MIA Marlins:
 (-166, 'MIA Marlins', 'UNI', 60.26)
 (143, 'PIT Pirates', 'UNI', 39.74)
 
-MIA Marlins,PIT Pirates:
+PIT Pirates,MIA Marlins:
 (-166, 'MIA Marlins', 'UNI', 60.26)
 (143, 'PIT Pirates', 'UNI', 39.74)
 
 TB Rays,KC Royals:
-(-274, 'TB Rays', 'UNI', 70.1)
-(220, 'KC Royals', 'UNI', 29.9)
+(-274, 'TB Rays', 'UNI', 69.97)
+(218, 'KC Royals', 'PIN', 30.03)
 
 TB Rays,KC Royals:
-(-274, 'TB Rays', 'UNI', 70.1)
-(220, 'KC Royals', 'UNI', 29.9)
+(-274, 'TB Rays', 'UNI', 69.97)
+(218, 'KC Royals', 'PIN', 30.03)
 
 SF Giants,ARI Diamondbacks:
 (-129, 'SF Giants', 'UNI', 54.19)

@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import ods_calc as oc
+import name_manip as nm
 
 
 def allow_access(url):
@@ -133,6 +134,7 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 		if len(odds) > 0:
 			for r in range(len(tm)):
 				odds[r] = oc.int_odds_to_us(float(odds[r]))
+				tm[r] = nm.cang_name(tm[r])
 				go = [(tm[r], odds[r])]
 				bet_list += go
 			games.append(set(tm))

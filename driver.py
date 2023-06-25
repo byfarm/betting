@@ -37,7 +37,6 @@ if __name__ == '__main__':
 	if len(arbs) > 0:
 		results = bc.add_stake(arbs, max_stake)
 		fm.write_results(results)
-		print(results)
 		print('New Results in!')
 	else:
 		print('No opportunities')
