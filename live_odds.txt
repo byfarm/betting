@@ -1,58 +1,39 @@
-Betting odds as of 2023-06-26 08:10:59.780608
-('LA Dodgers', 'HOU Astros', 'Tod'):
+Betting odds as of 2023-06-26 15:45:45.186873
+('BAL Orioles', 'CIN Reds', 'Tod'):('NY Mets', 'MIL Brewers', 'Tod'):('ATL Braves', 'MIN Twins', 'Tod'):('TEX Rangers', 'DET Tigers', 'Tom'):('LA Angels', 'CHI White Sox', 'Tom'):
 DK_
-NY Mets,-1700,Tod
-PHI Phillies,900,Tod
-TEX Rangers,-185,Tod
-NY Yankees,150,Tod
-ATL Braves,-440,Tod
-CIN Reds,330,Tod
-MIL Brewers,120,Tod
-CLE Guardians,-150,Tod
-BOS Red Sox,1300,Tod
-CHI White Sox,-4000,Tod
-LA Angels,140,Tod
-COL Rockies,-175,Tod
-ARI Diamondbacks,130,Tod
-SF Giants,-160,Tod
-WAS Nationals,160,Tod
-SD Padres,-195,Tod
-HOU Astros,105,Tod
-LA Dodgers,-125,Tod
-CIN Reds,120,Tom
-BAL Orioles,-140,Tom
-MIL Brewers,160,Tom
-NY Mets,-190,Tom
-MIN Twins,160,Tom
-ATL Braves,-190,Tom
-DET Tigers,170,Tom
-TEX Rangers,-200,Tom
+CIN Reds,120,Tod
+BAL Orioles,-140,Tod
+MIL Brewers,155,Tod
+NY Mets,-180,Tod
+MIN Twins,175,Tod
+ATL Braves,-205,Tod
+DET Tigers,160,Tom
+TEX Rangers,-190,Tom
 CHI White Sox,115,Tom
 LA Angels,-135,Tom
 WAS Nationals,220,Tom
 SEA Mariners,-260,Tom
 UNI
-LA Dodgers,-125,Tod
-HOU Astros,108,Tod
+BAL Orioles,-137,Tod
+CIN Reds,117,Tod
+NY Mets,-186,Tod
+MIL Brewers,160,Tod
+ATL Braves,-190,Tod
+MIN Twins,163,Tod
+TEX Rangers,-210,Tom
+DET Tigers,175,Tom
+LA Angels,-134,Tom
+CHI White Sox,115,Tom
 PIN
-HOU Astros,112,Tod
-LA Dodgers,-121,Tod
-BFR
-TEX Rangers,-149,Tod
-NY Yankees,150,Tod
-NY Mets,-1176,Tod
-PHI Phillies,1760,Tod
-KC Royals,50775,Tod
-TB Rays,-2499,Tod
-MIL Brewers,145,Tod
-CLE Guardians,-143,Tod
-BOS Red Socks,1330,Tod
-CHI White Socks,-999,Tod
-LA Angels,113,Tod
-COL Rockies,49972,Tod
-ARI Diamondbacks,137,Tod
-SF Giants,-136,Tod
-WAS Nationals,193,Tod
-SD Padres,-192,Tod
-HOU Astros,115,Tod
-LA Dodgers,-115,Tod
+CIN Reds,124,Tod
+BAL Orioles,-134,Tod
+MIN Twins,181,Tod
+ATL Braves,-199,Tod
+CHI White Socks,120,Tom
+LA Angels,-130,Tom
+MIL Brewers,154,Tod
+NY Mets,-170,Tod
+DET Tigers,173,Tom
+TEX Rangers,-190,Tom
+WAS Nationals,220,Tom
+SEA Mariners,-245,Tom

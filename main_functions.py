@@ -13,7 +13,7 @@ def scrape_web():
 	dk, games_d = sc.scrape_dk_mlb(dk_url)
 	uni, games_u = sc.scrape_unibet_mlb(uni_url)
 	pin, games_p = sc.scrape_pin(pin_url)
-	bfr, games_b = sc.scrape_betfair()
+	#bfr, games_b = sc.scrape_betfair()
 	'''
 	# make sure each game is in both books
 	if games_u != games_d:
@@ -25,7 +25,7 @@ def scrape_web():
 				games_u.remove(i)
 	'''
 	# write the odds and games to the txt file
-	fm.write_new_table_dk_uni(games=games_u, DK_=dk, UNI=uni, PIN=pin, BFR=bfr)
+	fm.write_new_table_dk_uni(games=games_u, DK_=dk, UNI=uni, PIN=pin)
 
 
 def assemble_from_file():
@@ -54,10 +54,11 @@ def find_arb(arr_prob: dict):
 
 				# find the max probability and add into the list
 				for i in range(1, len(sites)):
-					p2 = game[club][sites[i]]
-					if p2 > mp:
-						mp = p2
-						site = sites[i]
+					if sites[i] in game[club].keys():
+						p2 = game[club][sites[i]]
+						if p2 > mp:
+							mp = p2
+							site = sites[i]
 				sum_prob.append(mp)
 				fs.append(site)
 			# if the sum of the list is less than 1 then there is an arbitrage opportunity
@@ -79,6 +80,23 @@ def find_plus_ev(odds: dict[dict]):
 	plus_evs = []
 	for game_k in odds.keys():
 		game_dict = odds[game_k]
+
+		# find the confidence
+		t_play = list(game_dict.keys())
+		acc_books = ['BFR', 'PIN']
+		for book in acc_books:
+			r = game_dict[t_play[0]].keys()
+			p = game_dict[t_play[1]].keys()
+			if book in r and book in p:
+				t1 = oc.prob_to_us_lines(game_dict[t_play[0]][book])
+				t2 = oc.prob_to_us_lines(game_dict[t_play[1]][book])
+				if t1 < 0 and t2 < 0:
+					t1 = int(str(t1)[-2:])
+					t2 = int(str(t2)[-2:])
+					width = abs(t1 + t2)
+				else:
+					width = abs(t1 + t2)
+
 		for club_k in game_dict.keys():
 			club_dict = game_dict[club_k]
 			pin = 1
@@ -98,6 +116,7 @@ def find_plus_ev(odds: dict[dict]):
 			per_diff = round((max_prob - worst_case) * 100, 2)
 			if per_diff > 0:
 				max_odds = oc.prob_to_us_lines(max_prob)
-				plus_evs.append([game_k, club_k, web, per_diff, max_odds])
+				real_odds = oc.prob_to_us_lines(worst_case)
+				plus_evs.append([game_k, club_k, web, per_diff, width, real_odds, max_odds])
 	return plus_evs
 

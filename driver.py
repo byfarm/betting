@@ -1,5 +1,3 @@
-import plus_ev
-
 if __name__ == '__main__':
 	import file_man as fm
 	import ods_calc as oc
@@ -9,7 +7,7 @@ if __name__ == '__main__':
 	import plus_ev as pe
 
 	max_stake = 100
-	mf.scrape_web()
+	#mf.scrape_web()
 
 	odds = mf.assemble_from_file()
 

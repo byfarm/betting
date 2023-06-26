@@ -34,7 +34,7 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 		try:
 			time = table.thead.tr.th.div.span.span.span.string[:3]
 		except AttributeError:
-			time = 'Tom'
+			time = 'Tod'
 
 		tbrs = table.tbody.contents
 		for tr in tbrs:
@@ -143,14 +143,29 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 		time = str(p.div.string)[:3]
 		if time == 'Non':
 			time = 'Tod'
+		current_local_date = datetime.datetime.now().date()
+		if time == 'Tom':
+			current_local_date += datetime.timedelta(days=1)
 
 		# find all the table rows with the teams and the odds
-		tr = p.find_all('div', class_="style_row__21s9o style_row__21_Wa")
-		for rows in tr:
+		trs = p.find_all('div', class_="style_row__21s9o style_row__21_Wa")
+		for rows in trs:
 			# find the teams and add to a list
 			teams = rows.a.div.div.find_all('div', class_="ellipsis style_gameInfoLabel__24vcV")
 			tm = [i.span.string for i in teams]
 
+			clock = str(rows.div.div.a.div.div.contents[2].span.text)
+			clock = datetime.datetime.strptime(clock, "%H:%M").time()
+			current_utc_time = datetime.datetime.utcnow()
+			gametime = datetime.datetime.combine(current_local_date, clock)
+			local_time = datetime.datetime.now()
+			time_gap = abs(current_utc_time - local_time)
+			utc_gametime = gametime - time_gap
+
+			if time == 'Tom' and utc_gametime.date() == local_time.date():
+				g_time = 'Tod'
+			else:
+				g_time = time
 			# find the odds and add to a list
 			buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
 			odds = [i.button.span.string for i in buttons if i.button.span is not None]
@@ -160,9 +175,9 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 				for r in range(2):
 					odds[r] = oc.int_odds_to_us(float(odds[r]))
 					tm[r] = nm.cang_name(tm[r])
-					go = [(tm[r], odds[r], time)]
+					go = [(tm[r], odds[r], g_time)]
 					bet_list += go
-				games.append(tuple(tm))
+				games.append((tm[0], tm[1], g_time))
 	return bet_list, games
 
 
@@ -204,16 +219,13 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 				odds = [float(i) for i in r if i != '' and i[0] != '$']
 
 				# get the day
-				d = tr.td.a.find('span', class_='label').text
+				d = tr.td.a.find('div', class_='start-date-wrapper').span.text
 				time = str(d)[:3]
 				curr_date = datetime.datetime.now(datetime.timezone.utc).strftime('%A')[:3]
-				if time == curr_date:
+				if time == 'I18':
 					time = 'Tod'
-				elif time == 'Tom':
+				elif time != curr_date:
 					time = 'Tom'
-				else:
-					time = 'Tod'
-
 				# add to the bet list if all info there
 				if len(odds) == 4 and len(teams) == 2 and time is not None:
 					for r in range(2):
@@ -222,7 +234,7 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 						teams[r] = nm.cang_name(teams[r])
 						go = [(teams[r], odd_in, str(time)[:3])]
 						bet_list += go
-					games.append(tuple(teams))
+					games.append((teams[0], teams[1], str(time)[:3]))
 			except AttributeError:
 				pass
 	return bet_list, games

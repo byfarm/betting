@@ -15,6 +15,7 @@ def add_stake(arbs: list, max_stake: int):
 		games[1] = [tuple(g1), tuple(g2)]
 	return arbs
 
+
 def make_keys_list(dic: dict):
 	keys_lis = list(dic.keys())
 	for i in range(len(keys_lis)):

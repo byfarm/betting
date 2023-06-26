@@ -41,12 +41,12 @@ def test_uni_scrape():
 	assert uni is not None
 
 def test_pin_scrape():
-	r = sc.scrape_pin()
+	r, p = sc.scrape_pin()
 	assert r is not None
 
 
 def test_read_from_file():
-	r = fm.read_from_file()
+	r, p = fm.read_from_file()
 	print(r)
 	assert len(r) == 2
 
@@ -124,3 +124,6 @@ def test_scrape_pin():
 def test_scrape_betfair():
 	sc.scrape_betfair()
 
+
+def test_sc():
+	mf.scrape_web()

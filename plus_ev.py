@@ -20,7 +20,7 @@ def insert_sort_h_to_l(data: list[list]):
 	:return data: sorted list of tuples
 	"""
 	for idx in range(1, len(data)):
-		while data[idx][-2] > data[idx - 1][-2] and idx > 0:
+		while data[idx][-4] > data[idx - 1][-4] and idx > 0:
 			temp = data[idx]
 			data[idx] = data[idx - 1]
 			data[idx - 1] = temp

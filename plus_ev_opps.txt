@@ -1,3 +1,4 @@
-Plus EV opportunities as of 2023-06-26 08:10:59.784765
-['LA Dodgers,HOU Astros,Tod', 'HOU Astros', 'DK_', 2.27, 105]
-['LA Dodgers,HOU Astros,Tod', 'LA Dodgers', 'DK_', 2.07, -125]
+Plus EV opportunities as of 2023-06-26 13:56:56.865969
+['LA Angels,CHI White Sox,Tom', 'LA Angels', 'UNI', 1.98, 18, -129, -141]
+['TEX Rangers,DET Tigers,Tom', 'TEX Rangers', 'UNI', 1.87, 18, -193, -209]
+['TEX Rangers,DET Tigers,Tom', 'DET Tigers', 'DK_', 0.67, 18, 175, 170]
