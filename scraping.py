@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import datetime
+import copy
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -32,13 +33,15 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 	response = requests.get(url)
 	assert response.status_code == 200
 	soup = BeautifulSoup(response.text, 'html.parser')
-
+	tlist = []
 	tables = soup.find_all('table', class_='sportsbook-table')
 	for table in tables:
+
 		try:
 			time = table.thead.tr.th.div.span.span.span.string[:3]
 		except AttributeError:
-			time = 'Tod'
+			time = 'N/A'
+		tlist.append(time)
 
 		tbrs = table.tbody.contents
 		for tr in tbrs:
@@ -65,7 +68,13 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 			t1 = bet_list[2*i][0]
 			t2 = bet_list[2*i + 1][0]
 			game = (t1, t2, time)
-			games.append(game)
+			in_ = False
+			for p in range(len(tlist)):
+				c_game = (game[0], game[1], tlist[p])
+				if c_game in games:
+					in_ = True
+			if not in_:
+				games.append(game)
 
 	return bet_list, games
 
@@ -86,30 +95,22 @@ def scrape_unibet_mlb(url='https://eu-offering-api.kambicdn.com/offering/v2018/u
 	bet_list = []
 	for event in response['events']:
 		try:
-			state = event['event']['state']
 			game_date = event['event']['start'][:10]
-			curr_date = datetime.datetime.now(datetime.timezone.utc)
-			tom_date = curr_date + datetime.timedelta(days=1)
-			av_dates = [str(curr_date)[:10], str(tom_date)[:10]]
-			# take all the games that have not started and is today or tomorrow
-			if state[:3] == 'NOT' and game_date in av_dates:
-				if game_date == av_dates[0]:
-					time = 'Tod'
-				else:
-					time = 'Tom'
-				# find the games, and their gamestate
-				ht = event['event']['homeName']
-				at = event['event']['awayName']
-				game = (ht, at, time)
-				games.append(game)
+			time = nm.find_start_time(game_date)
 
-				# find the odds for each team in each game
-				offers = event['betOffers'][0]
-				for i in offers['outcomes']:
-					name = i['label']
-					od = int(i['oddsAmerican'])
-					betting1 = (name, od, time)
-					bet_list.append(betting1)
+			# find the games, and their gamestate
+			ht = event['event']['homeName']
+			at = event['event']['awayName']
+			game = (ht, at, time)
+			games.append(game)
+
+			# find the odds for each team in each game
+			offers = event['betOffers'][0]
+			for i in offers['outcomes']:
+				name = i['label']
+				od = int(i['oddsAmerican'])
+				betting1 = (name, od, time)
+				bet_list.append(betting1)
 		except IndexError:
 			pass
 
@@ -149,6 +150,7 @@ def scrape_pin(url='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0')
 		if time == 'Non':
 			time = 'Tod'
 		current_local_date = datetime.datetime.now().date()
+
 		if time == 'Tom':
 			current_local_date += datetime.timedelta(days=1)
 
@@ -159,18 +161,14 @@ def scrape_pin(url='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0')
 			teams = rows.a.div.div.find_all('div', class_="ellipsis style_gameInfoLabel__24vcV")
 			tm = [i.span.string for i in teams]
 
+			# get the time difference then find the gametime
 			clock = str(rows.div.div.a.div.div.contents[2].span.text)
 			clock = datetime.datetime.strptime(clock, "%H:%M").time()
-			current_utc_time = datetime.datetime.utcnow()
-			gametime = datetime.datetime.combine(current_local_date, clock)
-			local_time = datetime.datetime.now()
-			time_gap = abs(current_utc_time - local_time)
-			utc_gametime = gametime - time_gap
+			loc_gametime = datetime.datetime.combine(current_local_date, clock)
+			t_diff = datetime.datetime.utcnow() - datetime.datetime.now()
+			utc_gt = loc_gametime + t_diff
+			g_time = nm.find_start_time(utc_gt)
 
-			if time == 'Tom' and utc_gametime.date() == local_time.date():
-				g_time = 'Tod'
-			else:
-				g_time = time
 			# find the odds and add to a list
 			buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
 			odds = [i.button.span.string for i in buttons if i.button.span is not None]
@@ -333,3 +331,51 @@ def scrape_FD_(url='https://sbapi.nj.sportsbook.fanduel.com/api/content-managed-
 				gms.append(team)
 			games.append(tuple(gms + [time]))
 	return bet_list, games
+
+
+def scrape_FOX(games_lis, url='https://sports.co.foxbet.com/sportsbook/v1/api/getCompetitionEvents?competitionId=8661882&marketTypes=BBPS%2CBASEBALL%3AFTOT%3AAHCP_MAIN%2CBBML%2CBASEBALL%3AFTOT%3AML%2CBBTS%2CBASEBALL%3AFTOT%3AOU_MAIN&includeOutrights=false&skip=0&take=20&channelId=17&locale=en-us&siteId=536870914'):
+	"""
+	scrapes fox betting using a json file. needs game list to find the time of each game
+	:param games_lis: an imported games list from a different scrape
+	:param url: link to fox
+	:return: bet_list, games
+	"""
+	response = requests.get(url)
+	assert response.status_code == 200
+	response = response.json()
+
+	# make the cl copy searchable
+	e_copy_gl = copy.deepcopy(games_lis)
+	copy_gl = copy.deepcopy(games_lis)
+	for p in range(len(copy_gl)):
+		copy_gl[p] = list(({copy_gl[p][0], copy_gl[p][1]}, copy_gl[p][2]))
+
+	events = response['event']
+	bet_list = []
+	games = []
+	for event in events:
+		info = event['markets'][2]
+		assert info['name'] == 'Money Line'
+
+		gms = set()
+		betting = []
+		for i in info['selection']:
+			team = nm.cang_name(i['name'])
+			odds = oc.dec_odds_to_us_odds(float(i['odds']['dec']))
+			gms.add(team)
+			betting.append([team, odds])
+
+		for idx in range(len(copy_gl)):
+			games_t = copy_gl[idx][0]
+			if gms == games_t:
+				game = e_copy_gl[idx]
+				del copy_gl[idx]
+				del e_copy_gl[idx]
+				games.append(game)
+				for bets in betting:
+					bets.append(game[-1])
+					bet_list.append(bets)
+				break
+	return bet_list, games
+
+

@@ -1,34 +1,31 @@
-Plus EV opportunities as of 2023-06-26 20:57:42.587506
+Plus EV opportunities as of 2023-06-27 10:57:58.915685
 
-Game: MIL Brewers,NY Mets,Tod, Club: NY Mets, Website: Caeser
-2.55%, Width: 17 cents, Real Odds: -170, CSB Odds: -190
+Game: MIN Twins,ATL Braves,Tod, Club: MIN Twins, Website: Fox Sports
+4.27%, Width: 20 cents, Real Odds: 195, FOX Odds: 161
 
-Game: MIN Twins,ATL Braves,Tod, Club: MIN Twins, Website: Points Bet
-2.16%, Width: 20 cents, Real Odds: 179, PB_ Odds: 164
+Game: WAS Nationals,SEA Mariners,Tom, Club: SEA Mariners, Website: Fox Sports
+2.8%, Width: 26 cents, Real Odds: -241, FOX Odds: -276
 
-Game: TEX Rangers,DET Tigers,Tom, Club: TEX Rangers, Website: UniBet
-2.04%, Width: 20 cents, Real Odds: -196, UNI Odds: -215
+Game: NY Mets,MIL Brewers,Tod, Club: NY Mets, Website: Fox Sports
+2.73%, Width: 14 cents, Real Odds: -166, FOX Odds: -188
 
-Game: CHI White Sox,LA Angels,Tom, Club: LA Angels, Website: Draft Kings
-2.0%, Width: 20 cents, Real Odds: -129, DK_ Odds: -140
+Game: BAL Orioles,CIN Reds,Tod, Club: BAL Orioles, Website: Fox Sports
+2.63%, Width: 10 cents, Real Odds: -124, FOX Odds: -138
 
-Game: TEX Rangers,DET Tigers,Tom, Club: DET Tigers, Website: Points Bet
-1.78%, Width: 20 cents, Real Odds: 176, PB_ Odds: 164
+Game: TEX Rangers,DET Tigers,Tom, Club: DET Tigers, Website: Fox Sports
+2.61%, Width: 18 cents, Real Odds: 171, FOX Odds: 153
 
-Game: BAL Orioles,CIN Reds,Tod, Club: BAL Orioles, Website: Points Bet
-1.75%, Width: 10 cents, Real Odds: -133, PB_ Odds: -144
+Game: TEX Rangers,DET Tigers,Tom, Club: TEX Rangers, Website: Fox Sports
+2.55%, Width: 18 cents, Real Odds: -189, FOX Odds: -212
 
-Game: WAS Nationals,SEA Mariners,Tom, Club: SEA Mariners, Website: Caeser
-1.74%, Width: 25 cents, Real Odds: -245, CSB Odds: -267
+Game: BAL Orioles,CIN Reds,Tod, Club: CIN Reds, Website: Fox Sports
+2.29%, Width: 10 cents, Real Odds: 114, FOX Odds: 104
 
-Game: MIL Brewers,NY Mets,Tod, Club: MIL Brewers, Website: Points Bet
-1.45%, Width: 17 cents, Real Odds: 153, PB_ Odds: 144
+Game: MIN Twins,ATL Braves,Tod, Club: ATL Braves, Website: Points Bet
+2.25%, Width: 20 cents, Real Odds: -215, PB_ Odds: -238
 
-Game: BAL Orioles,CIN Reds,Tod, Club: CIN Reds, Website: UniBet
-1.44%, Width: 10 cents, Real Odds: 123, UNI Odds: 116
+Game: NY Mets,MIL Brewers,Tod, Club: MIL Brewers, Website: Fox Sports
+2.16%, Width: 14 cents, Real Odds: 152, FOX Odds: 139
 
-Game: MIN Twins,ATL Braves,Tod, Club: ATL Braves, Website: Caeser
-1.19%, Width: 20 cents, Real Odds: -199, CSB Odds: -209
-
-Game: WAS Nationals,SEA Mariners,Tom, Club: WAS Nationals, Website: Points Bet
-1.01%, Width: 25 cents, Real Odds: 220, PB_ Odds: 210
+Game: WAS Nationals,SEA Mariners,Tom, Club: WAS Nationals, Website: Fox Sports
+1.69%, Width: 26 cents, Real Odds: 215, FOX Odds: 200

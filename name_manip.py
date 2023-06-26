@@ -53,7 +53,7 @@ def find_start_time(start):
 	:param start: the utc start time of the event
 	:return time: str , either tod, tom, or n/a
 	"""
-	start = start[:10]
+	start = str(start)[:10]
 	curr_date = datetime.datetime.now(datetime.timezone.utc)
 	tom_date = curr_date + datetime.timedelta(days=1)
 	av_dates = [str(curr_date)[:10], str(tom_date)[:10]]
@@ -79,6 +79,7 @@ def sites_dict(abriv: str):
 		'PIN':	'Pinnacle',
 		'PB_': 'Points Bet',
 		'CSB': 'Caeser',
-		'FD_': 'Fan Duel'
+		'FD_': 'Fan Duel',
+		'FOX': 'Fox Sports'
 	}
 	return sites[abriv]

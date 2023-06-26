@@ -18,7 +18,7 @@ def test_website_access_comp():
 
 
 def test_web_access_simp():
-	url = 'https://api.americanwagering.com/regions/us/locations/co/brands/czr/sb/v3/sports/baseball/events/schedule/?competitionIds=04f90892-3afa-4e84-acce-5b89f151063d'
+	url = 'https://sports.co.foxbet.com/sportsbook/v1/api/getCompetitionEvents?competitionId=8661882&marketTypes=BBPS%2CBASEBALL%3AFTOT%3AAHCP_MAIN%2CBBML%2CBASEBALL%3AFTOT%3AML%2CBBTS%2CBASEBALL%3AFTOT%3AOU_MAIN&includeOutrights=false&skip=0&take=20&channelId=17&locale=en-us&siteId=536870914'
 	response = requests.get(url)
 	assert response.status_code == 200
 
@@ -148,3 +148,8 @@ def test_scrap_CSB():
 
 def test_scrape_FD():
 	sc.scrape_FD_()
+
+
+def test_scrape_FOX():
+	p, l = sc.scrape_unibet_mlb()
+	sc.scrape_FOX(l)
