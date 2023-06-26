@@ -22,7 +22,7 @@ def allow_access(url):
 
 def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 	"""
-	scrapes draftkings
+	scrapes draftkings, type: directly from website, chromedriver not required
 	:param url: the url to draftkings mlb
 	:return bet_list: the list of teams and their odds
 	only can be used when no games are bing played
@@ -70,9 +70,9 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 	return bet_list, games
 
 
-def scrape_unibet_mlb(url):
+def scrape_unibet_mlb(url='https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687638600154&useCombined=true&useCombinedLive=true'):
 	"""
-	scraped the unibet mlb site for its betting data
+	scraped the unibet mlb site for its betting data, type: reads a json file with all the betting info
 	:param url: request url to the api, named matches.json?lan=en_US...
 	'https://eu-offering-api.kambicdn.com/offering/v2018/ubusva/listView/baseball/mlb/all/all/matches.json?lang=en_US&market=US-VA&client_id=2&channel_id=1&ncid=1687557915663&useCombined=true&useCombinedLive=true'
 	:return bet_list: the list of teams and their odds
@@ -116,7 +116,8 @@ def scrape_unibet_mlb(url):
 	return bet_list, games
 
 
-def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0'):
+def scrape_pin(url='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0'):
+	""" scrapes pinnacle sportsbook. type: read directly from website """
 	bet_list = []
 	games = []
 	# Configure Chrome options
@@ -177,7 +178,7 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 			# if it is able to pull odds then send them
 			if len(odds) > 0:
 				for r in range(2):
-					odds[r] = oc.int_odds_to_us(float(odds[r]))
+					odds[r] = oc.dec_odds_to_us_odds(float(odds[r]))
 					tm[r] = nm.cang_name(tm[r])
 					go = [(tm[r], odds[r], g_time)]
 					bet_list += go
@@ -186,6 +187,7 @@ def scrape_pin(url: str='https://www.pinnacle.com/en/baseball/mlb/matchups#perio
 
 
 def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/competition/11196870'):
+	""" scrapes betfair, type: read directly from website"""
 	# Configure Chrome options
 	chrome_options = Options()
 	chrome_options.add_argument("--headless")  # Run Chrome in headless mode
@@ -234,7 +236,7 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 				if len(odds) == 4 and len(teams) == 2 and time is not None:
 					for r in range(2):
 						mean_odd = (odds[2*r] + odds[(2 * r) + 1]) / 2
-						odd_in = oc.int_odds_to_us(float(mean_odd))
+						odd_in = oc.dec_odds_to_us_odds(float(mean_odd))
 						teams[r] = nm.cang_name(teams[r])
 						go = [(teams[r], odd_in, str(time)[:3])]
 						bet_list += go
@@ -245,6 +247,7 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 
 
 def scrape_pointsbet(url='https://api.co.pointsbet.com/api/v2/competitions/6535/events/featured?includeLive=false&page=1'):
+	''' scrapes pointsbet website, type: scrapes a json file'''
 	# get the json script
 	headers = {
 		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
@@ -265,7 +268,7 @@ def scrape_pointsbet(url='https://api.co.pointsbet.com/api/v2/competitions/6535/
 			team = i['name']
 			team = nm.cang_name(team)
 			dec_odds = i['price']
-			usa_odds = oc.int_odds_to_us(dec_odds)
+			usa_odds = oc.dec_odds_to_us_odds(dec_odds)
 			betting = (team, usa_odds, time)
 			bet_list.append(betting)
 			gms.append(team)
@@ -274,6 +277,7 @@ def scrape_pointsbet(url='https://api.co.pointsbet.com/api/v2/competitions/6535/
 
 
 def scrape_CSP(url='https://api.americanwagering.com/regions/us/locations/co/brands/czr/sb/v3/sports/baseball/events/schedule/?competitionIds=04f90892-3afa-4e84-acce-5b89f151063d'):
+	'''scrapes from caesers sportsbook, type: reads json file'''
 	headers = {
 		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
 	}
@@ -302,6 +306,7 @@ def scrape_CSP(url='https://api.americanwagering.com/regions/us/locations/co/bra
 
 
 def scrape_FD_(url='https://sbapi.nj.sportsbook.fanduel.com/api/content-managed-page?page=CUSTOM&customPageId=mlb&_ak=FhMFpcPWXMeyZxOx&timezone=America%2FNew_York'):
+	'''scrapes fanduel website, type: reads a json file'''
 	headers = {
 		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
 	}

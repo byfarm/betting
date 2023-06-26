@@ -1,3 +1,4 @@
+import name_manip as nm
 import scraping as sc
 import datetime
 
@@ -29,7 +30,12 @@ def write_new_table_dk_uni(games: set, **kwargs):
 		fp.write('')
 
 
-def read_from_file():
+def read_from_live_odds():
+	"""
+	reads from the live odds file
+	:return odds: dictionary , like the one that was read in
+	:return games: list , all the games that are being played
+	"""
 	odds = {}
 	with open('live_odds.txt', 'r') as fp:
 		# open and skip first line
@@ -58,6 +64,11 @@ def read_from_file():
 
 
 def write_results(arbs: list):
+	"""
+	writes the arbitage results to a txt file
+	:param arbs: the arbitrage results
+	:return: a new txt file
+	"""
 	with open('results.txt', 'w') as fp:
 		fp.write(f'arbitrage opportunities as of {datetime.datetime.now()}\n')
 		for opps in arbs:
@@ -70,10 +81,15 @@ def write_results(arbs: list):
 
 
 def write_plus_ev(evs: list):
+	"""
+	writes the plus ev opportunities to a txt
+	:param evs: a sorted list of all the ev opportunities
+	:return: a new txt file
+	"""
 	with open('plus_ev_opps.txt', 'w') as fp:
 		fp.write(f'Plus EV opportunities as of {datetime.datetime.now()}\n')
 		for opps in evs:
-			fp.write(f'\nGame: {opps[0]}, Club: {opps[1]}, Website: {opps[2]}\n')
+			fp.write(f'\nGame: {opps[0]}, Club: {opps[1]}, Website: {nm.sites_dict(opps[2])}\n')
 			fp.write(f'{opps[3]}%, Width: {opps[4]} cents, Real Odds: {opps[5]}, {opps[2]} Odds: {opps[6]}\n')
 		fp.write('')
 

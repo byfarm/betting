@@ -2,6 +2,11 @@ import datetime
 
 
 def cang_name(name: str):
+	"""
+	changes the full name to the abreviated name
+	:param name: full name of the team
+	:return: the abreviated name
+	"""
 	team_dict = {
 		'Minnesota Twins': 'MIN Twins',
 		'Detroit Tigers': 'DET Tigers',
@@ -37,13 +42,17 @@ def cang_name(name: str):
 
 	if name not in team_dict.keys():
 		print(f'add ,{name}, to dictionary')
-		new_name = name
 	else:
-		new_name = team_dict[name]
-	return new_name
+		name = team_dict[name]
+	return name
 
 
 def find_start_time(start):
+	"""
+	finds the start time of the event
+	:param start: the utc start time of the event
+	:return time: str , either tod, tom, or n/a
+	"""
 	start = start[:10]
 	curr_date = datetime.datetime.now(datetime.timezone.utc)
 	tom_date = curr_date + datetime.timedelta(days=1)
@@ -56,3 +65,20 @@ def find_start_time(start):
 	else:
 		time = 'N/A'
 	return time
+
+
+def sites_dict(abriv: str):
+	"""
+	changed from the abriviated site name to the full name
+	:param abriv: abriviated site name
+	:return: the full site name
+	"""
+	sites = {
+		'DK_': 'Draft Kings',
+		'UNI':	'UniBet',
+		'PIN':	'Pinnacle',
+		'PB_': 'Points Bet',
+		'CSB': 'Caeser',
+		'FD_': 'Fan Duel'
+	}
+	return sites[abriv]

@@ -7,7 +7,6 @@ import main_functions as mf
 import requests
 
 
-
 def test_website_access_comp():
 	# paste desired url
 	url = 'https://fanduel-app.quantummetric.com/?T=B&u=https%3A%2F%2Fsportsbook.fanduel.com%2Fnavigation%2Fmlb&t=1687763050926&v=1687763123665&H=6bf72df50d01c5cdf524b157&s=25a7eabe3a53e9a3bf6b5ec41850cc2a&z=1&S=665710&N=2046&P=44'
@@ -17,10 +16,12 @@ def test_website_access_comp():
 	response = requests.get(url, headers=headers)
 	assert response.status_code == 200
 
+
 def test_web_access_simp():
 	url = 'https://api.americanwagering.com/regions/us/locations/co/brands/czr/sb/v3/sports/baseball/events/schedule/?competitionIds=04f90892-3afa-4e84-acce-5b89f151063d'
 	response = requests.get(url)
 	assert response.status_code == 200
+
 
 def test_file_open():
 	dk_url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
@@ -54,51 +55,51 @@ def test_pin_scrape():
 
 
 def test_read_from_file():
-	r, p = fm.read_from_file()
+	r, p = fm.read_from_live_odds()
 	print(r)
 	assert len(r) == 2
 
 
 def test_ods_to_percent():
-	prob = oc.odd_to_prob(-400)
+	prob = oc.dec_odd_to_prob(-400)
 	assert prob == 0.8
-	prob = oc.odd_to_prob(400)
+	prob = oc.dec_odd_to_prob(400)
 	assert prob == 0.2
 
 
 def test_perc_to_odds():
-	odd = oc.prob_to_us_lines(0.8)
+	odd = oc.prob_to_us_odds(0.8)
 	assert odd == -400
-	odd = oc.prob_to_us_lines(0.4)
+	odd = oc.prob_to_us_odds(0.4)
 	assert odd == 150
 
 
 def test_int_odds_to_american():
-	america = oc.int_odds_to_us(2)
+	america = oc.dec_odds_to_us_odds(2)
 	assert america == 100
-	america = oc.int_odds_to_us(3)
+	america = oc.dec_odds_to_us_odds(3)
 	assert america == 200
-	america = oc.int_odds_to_us(1.4)
+	america = oc.dec_odds_to_us_odds(1.4)
 	assert america == -250
-	america = oc.int_odds_to_us(1.83)
+	america = oc.dec_odds_to_us_odds(1.83)
 	assert america < 0
 
 
 def test_arr_odes():
-	odds, games = fm.read_from_file()
+	odds, games = fm.read_from_live_odds()
 	p = bc.arrange_odds(odds, games)
 	assert len(p.values()) == 11
 
 
 def test_odds_to_arr_prob():
-	odds, games = fm.read_from_file()
+	odds, games = fm.read_from_live_odds()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
 	print(p)
 
 
 def test_find_arb():
-	odds, games = fm.read_from_file()
+	odds, games = fm.read_from_live_odds()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
 	arbs = mf.find_arb(p)
@@ -107,7 +108,7 @@ def test_find_arb():
 
 
 def test_max_bet():
-	odds, games = fm.read_from_file()
+	odds, games = fm.read_from_live_odds()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
 	arbs = mf.find_arb(p)
@@ -116,7 +117,7 @@ def test_max_bet():
 
 
 def test_write_results():
-	odds, games = fm.read_from_file()
+	odds, games = fm.read_from_live_odds()
 	p = bc.arrange_odds(odds, games)
 	bc.arr_od_to_prob(p)
 	arbs = mf.find_arb(p)

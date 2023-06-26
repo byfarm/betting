@@ -3,20 +3,29 @@ import file_man as fm
 
 
 def add_stake(arbs: list, max_stake: int):
+	"""
+	finds out how much money you should bet on each team for an arbitrage bet
+	:param arbs: the arbitrage opportunity
+	:param max_stake: the max amount you want to put in
+	:return: the arb list with the max amounts added
+	"""
 	for games in arbs:
 		teams_ods = games[1]
 		g1 = list(teams_ods[0])
 		g2 = list(teams_ods[1])
-		p1 = oc.odd_to_prob(g1[0])
-		p2 = oc.odd_to_prob(g2[0])
-		s1, s2 = oc.det_max_in(max_stake, p1, p2)
+		s1, s2 = oc.det_max_in(max_stake, oc.dec_odd_to_prob(g1[0]), oc.dec_odd_to_prob(g2[0]))
 		g1.append(round(s1, 2))
 		g2.append(round(s2, 2))
 		games[1] = [tuple(g1), tuple(g2)]
 	return arbs
 
 
-def make_keys_list(dic: dict):
+def make_keys_set(dic: dict):
+	"""
+	makes the keys into a searchable item by splitting the keys into sets
+	:param dic: the dictionary of the keys you want
+	:return: the list of all the keys in set (and therefore searchable) form
+	"""
 	keys_lis = list(dic.keys())
 	for i in range(len(keys_lis)):
 		keys_lis[i] = set(keys_lis[i].split(','))
@@ -39,7 +48,7 @@ def arrange_odds(probs: dict, games: list[set]):
 		game.add(time)
 
 		if keys_lis is None:
-			keys_lis = make_keys_list(arr_dic)
+			keys_lis = make_keys_set(arr_dic)
 		# if the key is not already created create a new one
 		if set(n_key.split(',')) not in keys_lis:
 			arr_dic[n_key] = {}
@@ -63,7 +72,7 @@ def arrange_odds(probs: dict, games: list[set]):
 
 					# add the probability in and update the key list
 					arr_dic[n_key][club][key] = probs[key][j]
-					keys_lis = make_keys_list(arr_dic)
+					keys_lis = make_keys_set(arr_dic)
 	return arr_dic
 
 
@@ -76,7 +85,7 @@ def arr_od_to_prob(arr_odd: dict):
 	for games in arr_odd.keys():
 		for teams in arr_odd[games].keys():
 			for sites in arr_odd[games][teams]:
-				arr_odd[games][teams][sites] = oc.odd_to_prob(arr_odd[games][teams][sites])
+				arr_odd[games][teams][sites] = oc.dec_odd_to_prob(arr_odd[games][teams][sites])
 	return arr_odd
 
 
