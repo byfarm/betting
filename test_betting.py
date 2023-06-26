@@ -9,7 +9,7 @@ import main_functions as mf
 
 def test_website_access():
 	# paste desired url
-	url = 'https://www.betfair.com.au/exchange/plus/en/baseball-betting-7511'
+	url = 'https://api.co.pointsbet.com/api/v2/competitions/6535/events/featured?includeLive=false&page=1'
 	status_code = sc.allow_access(url)
 	assert status_code == 200
 
@@ -127,3 +127,7 @@ def test_scrape_betfair():
 
 def test_sc():
 	mf.scrape_web()
+
+
+def test_scrape_PB_():
+	odds, games = sc.scrape_pointsbet()

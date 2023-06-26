@@ -1,25 +1,34 @@
-Plus EV opportunities as of 2023-06-26 16:10:02.914333
+Plus EV opportunities as of 2023-06-26 18:34:56.953336
 
-Game: MIL Brewers,NY Mets,Tod, Club: NY Mets, Website UNI
-2.55%, Width: 17 cents, Real Odds: -170, Site Odds: -190
+Game: ATL Braves,MIN Twins,Tod, Club: MIN Twins, Website: PB_
+2.16%, Width: 20 cents, Real Odds: 179, PB_ Odds: 164
 
-Game: MIN Twins,ATL Braves,Tod, Club: MIN Twins, Website UNI
-2.44%, Width: 18 cents, Real Odds: 181, Site Odds: 163
+Game: TEX Rangers,DET Tigers,Tom, Club: TEX Rangers, Website: UNI
+2.15%, Width: 19 cents, Real Odds: -195, UNI Odds: -215
 
-Game: TEX Rangers,DET Tigers,Tom, Club: TEX Rangers, Website UNI
-2.22%, Width: 17 cents, Real Odds: -190, Site Odds: -209
+Game: MIL Brewers,NY Mets,Tod, Club: NY Mets, Website: UNI
+2.07%, Width: 17 cents, Real Odds: -170, UNI Odds: -185
 
-Game: TEX Rangers,DET Tigers,Tom, Club: DET Tigers, Website DK_
-1.83%, Width: 17 cents, Real Odds: 173, Site Odds: 160
+Game: TEX Rangers,DET Tigers,Tom, Club: DET Tigers, Website: PB_
+1.78%, Width: 19 cents, Real Odds: 176, PB_ Odds: 164
 
-Game: CIN Reds,BAL Orioles,Tod, Club: CIN Reds, Website UNI
-1.44%, Width: 9 cents, Real Odds: 124, Site Odds: 117
+Game: BAL Orioles,CIN Reds,Tod, Club: CIN Reds, Website: UNI
+1.64%, Width: 10 cents, Real Odds: 125, UNI Odds: 116
 
-Game: CIN Reds,BAL Orioles,Tod, Club: BAL Orioles, Website DK_
-1.07%, Width: 9 cents, Real Odds: -133, Site Odds: -140
+Game: LA Angels,CHI White Sox,Tom, Club: LA Angels, Website: PB_
+1.64%, Width: 19 cents, Real Odds: -129, PB_ Odds: -139
 
-Game: LA Angels,CHI White Sox,Tom, Club: LA Angels, Website DK_
-0.93%, Width: 17 cents, Real Odds: -129, Site Odds: -135
+Game: SEA Mariners,WAS Nationals,Tom, Club: SEA Mariners, Website: UNI
+1.59%, Width: 25 cents, Real Odds: -245, UNI Odds: -265
 
-Game: MIN Twins,ATL Braves,Tod, Club: ATL Braves, Website DK_
-0.66%, Width: 18 cents, Real Odds: -199, Site Odds: -204
+Game: BAL Orioles,CIN Reds,Tod, Club: BAL Orioles, Website: PB_
+1.57%, Width: 10 cents, Real Odds: -135, PB_ Odds: -144
+
+Game: MIL Brewers,NY Mets,Tod, Club: MIL Brewers, Website: PB_
+1.45%, Width: 17 cents, Real Odds: 153, PB_ Odds: 144
+
+Game: SEA Mariners,WAS Nationals,Tom, Club: WAS Nationals, Website: PB_
+1.01%, Width: 25 cents, Real Odds: 220, PB_ Odds: 210
+
+Game: ATL Braves,MIN Twins,Tod, Club: ATL Braves, Website: DK_
+0.66%, Width: 20 cents, Real Odds: -199, DK_ Odds: -204

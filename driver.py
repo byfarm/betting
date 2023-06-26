@@ -7,7 +7,7 @@ if __name__ == '__main__':
 	import plus_ev as pe
 
 	max_stake = 100
-	#mf.scrape_web()
+	mf.scrape_web()
 
 	odds = mf.assemble_from_file()
 

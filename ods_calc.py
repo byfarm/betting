@@ -22,7 +22,8 @@ def prob_to_us_lines(prob: float):
 	if prob > 0.5:
 		odd = -(-100 * prob) / (prob - 1)
 	else:
-		odd = (100 / prob) - 100
+		odd = (100 // prob) - 100
+	p = int(odd)
 	return int(odd)
 
 

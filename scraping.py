@@ -12,8 +12,12 @@ import file_man as fm
 
 
 def allow_access(url):
-	response = requests.get(url)
-	return response.status_code
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
+	status_code = response.status_code
+	return status_code
 
 
 def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
@@ -237,4 +241,42 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 					games.append((teams[0], teams[1], str(time)[:3]))
 			except AttributeError:
 				pass
+	return bet_list, games
+
+
+def scrape_pointsbet(url='https://api.co.pointsbet.com/api/v2/competitions/6535/events/featured?includeLive=false&page=1'):
+	# get the json script
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
+	assert response.status_code == 200
+	response = response.json()
+	games = []
+	bet_list = []
+	for event in response['events']:
+		# find the time
+		game_date = event['startsAt'][:10]
+		curr_date = datetime.datetime.now(datetime.timezone.utc)
+		tom_date = curr_date + datetime.timedelta(days=1)
+		av_dates = [str(curr_date)[:10], str(tom_date)[:10]]
+		if game_date in av_dates:
+			if game_date == av_dates[0]:
+				time = 'Tod'
+			else:
+				time = 'Tom'
+		else:
+			time = 'N/A'
+
+		gms = []
+		info = event['specialFixedOddsMarkets'][0]['outcomes']
+		for i in info:
+			team = i['name']
+			team = nm.cang_name(team)
+			dec_odds = i['price']
+			usa_odds = oc.int_odds_to_us(dec_odds)
+			betting = (team, usa_odds, time)
+			bet_list.append(betting)
+			gms.append(team)
+		games.append(tuple(gms + [time]))
 	return bet_list, games

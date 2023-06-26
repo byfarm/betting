@@ -73,8 +73,8 @@ def write_plus_ev(evs: list):
 	with open('plus_ev_opps.txt', 'w') as fp:
 		fp.write(f'Plus EV opportunities as of {datetime.datetime.now()}\n')
 		for opps in evs:
-			fp.write(f'\nGame: {opps[0]}, Club: {opps[1]}, Website {opps[2]}\n')
-			fp.write(f'{opps[3]}%, Width: {opps[4]} cents, Real Odds: {opps[5]}, Site Odds: {opps[6]}\n')
+			fp.write(f'\nGame: {opps[0]}, Club: {opps[1]}, Website: {opps[2]}\n')
+			fp.write(f'{opps[3]}%, Width: {opps[4]} cents, Real Odds: {opps[5]}, {opps[2]} Odds: {opps[6]}\n')
 		fp.write('')
 
 
