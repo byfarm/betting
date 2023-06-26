@@ -4,15 +4,23 @@ import pytest
 import ods_calc as oc
 import betting_calcs as bc
 import main_functions as mf
+import requests
 
 
 
-def test_website_access():
+def test_website_access_comp():
 	# paste desired url
-	url = 'https://api.co.pointsbet.com/api/v2/competitions/6535/events/featured?includeLive=false&page=1'
-	status_code = sc.allow_access(url)
-	assert status_code == 200
+	url = 'https://fanduel-app.quantummetric.com/?T=B&u=https%3A%2F%2Fsportsbook.fanduel.com%2Fnavigation%2Fmlb&t=1687763050926&v=1687763123665&H=6bf72df50d01c5cdf524b157&s=25a7eabe3a53e9a3bf6b5ec41850cc2a&z=1&S=665710&N=2046&P=44'
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
+	assert response.status_code == 200
 
+def test_web_access_simp():
+	url = 'https://api.americanwagering.com/regions/us/locations/co/brands/czr/sb/v3/sports/baseball/events/schedule/?competitionIds=04f90892-3afa-4e84-acce-5b89f151063d'
+	response = requests.get(url)
+	assert response.status_code == 200
 
 def test_file_open():
 	dk_url = 'https://sportsbook.draftkings.com/leagues/baseball/mlb'
@@ -131,3 +139,11 @@ def test_sc():
 
 def test_scrape_PB_():
 	odds, games = sc.scrape_pointsbet()
+
+
+def test_scrap_CSB():
+	sc.scrape_CSP()
+
+
+def test_scrape_FD():
+	sc.scrape_FD_()

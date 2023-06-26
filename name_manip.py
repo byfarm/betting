@@ -1,3 +1,6 @@
+import datetime
+
+
 def cang_name(name: str):
 	team_dict = {
 		'Minnesota Twins': 'MIN Twins',
@@ -38,3 +41,18 @@ def cang_name(name: str):
 	else:
 		new_name = team_dict[name]
 	return new_name
+
+
+def find_start_time(start):
+	start = start[:10]
+	curr_date = datetime.datetime.now(datetime.timezone.utc)
+	tom_date = curr_date + datetime.timedelta(days=1)
+	av_dates = [str(curr_date)[:10], str(tom_date)[:10]]
+	if start in av_dates:
+		if start == av_dates[0]:
+			time = 'Tod'
+		else:
+			time = 'Tom'
+	else:
+		time = 'N/A'
+	return time

@@ -257,16 +257,7 @@ def scrape_pointsbet(url='https://api.co.pointsbet.com/api/v2/competitions/6535/
 	for event in response['events']:
 		# find the time
 		game_date = event['startsAt'][:10]
-		curr_date = datetime.datetime.now(datetime.timezone.utc)
-		tom_date = curr_date + datetime.timedelta(days=1)
-		av_dates = [str(curr_date)[:10], str(tom_date)[:10]]
-		if game_date in av_dates:
-			if game_date == av_dates[0]:
-				time = 'Tod'
-			else:
-				time = 'Tom'
-		else:
-			time = 'N/A'
+		time = nm.find_start_time(game_date)
 
 		gms = []
 		info = event['specialFixedOddsMarkets'][0]['outcomes']
@@ -279,4 +270,61 @@ def scrape_pointsbet(url='https://api.co.pointsbet.com/api/v2/competitions/6535/
 			bet_list.append(betting)
 			gms.append(team)
 		games.append(tuple(gms + [time]))
+	return bet_list, games
+
+
+def scrape_CSP(url='https://api.americanwagering.com/regions/us/locations/co/brands/czr/sb/v3/sports/baseball/events/schedule/?competitionIds=04f90892-3afa-4e84-acce-5b89f151063d'):
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
+	assert response.status_code == 200
+	response = response.json()
+
+	games = []
+	bet_list = []
+	for event in response['competitions'][0]['events']:
+		# find what time the game is
+		s_time = event['startTime'][:10]
+		time = nm.find_start_time(s_time)
+
+		# find the team and odds
+		gms = []
+		info = event['markets'][0]['selections']
+		for i in info:
+			team = nm.cang_name(i['name'][1:-1])
+			odds = i['price']['a']
+			betting = (team, odds, time)
+			bet_list.append(betting)
+			gms.append(team)
+		games.append(tuple(gms + [time]))
+	return bet_list, games
+
+
+def scrape_FD_(url='https://sbapi.nj.sportsbook.fanduel.com/api/content-managed-page?page=CUSTOM&customPageId=mlb&_ak=FhMFpcPWXMeyZxOx&timezone=America%2FNew_York'):
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
+	assert response.status_code == 200
+	response = response.json()
+	bet_list = []
+	games = []
+	markets = response['attachments']['markets']
+	for market in markets.values():
+		if market['marketType'] == 'MONEY_LINE' and market['numberOfRunners'] == 2:
+			# find the time
+			event_id = market['eventId']
+			s_time = response['attachments']['events'][str(event_id)]['openDate'][:10]
+			time = nm.find_start_time(s_time)
+
+			gms = []
+			contenders = market['runners']
+			for side in contenders:
+				team = side['nameAbbr']
+				odds = side['winRunnerOdds']['americanDisplayOdds']['americanOdds']
+				betting = (team, odds, time)
+				bet_list.append(betting)
+				gms.append(team)
+			games.append(tuple(gms + [time]))
 	return bet_list, games

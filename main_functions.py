@@ -14,6 +14,8 @@ def scrape_web():
 	uni, games_u = sc.scrape_unibet_mlb(uni_url)
 	pin, games_p = sc.scrape_pin(pin_url)
 	pb, games_pb = sc.scrape_pointsbet()
+	csb, games_csb = sc.scrape_CSP()
+	fd, games_fd = sc.scrape_FD_()
 	#bfr, games_b = sc.scrape_betfair()
 	'''
 	# make sure each game is in both books
@@ -26,7 +28,7 @@ def scrape_web():
 				games_u.remove(i)
 	'''
 	# write the odds and games to the txt file
-	fm.write_new_table_dk_uni(games=games_u, DK_=dk, UNI=uni, PIN=pin, PB_=pb)
+	fm.write_new_table_dk_uni(games=games_u, DK_=dk, UNI=uni, PIN=pin, PB_=pb, CSB=csb, FD_=fd)
 
 
 def assemble_from_file():
