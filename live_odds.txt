@@ -1,4 +1,4 @@
-Betting odds as of 2023-06-26 15:45:45.186873
+Betting odds as of 2023-06-26 16:03:34.831280
 ('BAL Orioles', 'CIN Reds', 'Tod'):('NY Mets', 'MIL Brewers', 'Tod'):('ATL Braves', 'MIN Twins', 'Tod'):('TEX Rangers', 'DET Tigers', 'Tom'):('LA Angels', 'CHI White Sox', 'Tom'):
 DK_
 CIN Reds,120,Tod
@@ -16,7 +16,7 @@ SEA Mariners,-260,Tom
 UNI
 BAL Orioles,-137,Tod
 CIN Reds,117,Tod
-NY Mets,-186,Tod
+NY Mets,-190,Tod
 MIL Brewers,160,Tod
 ATL Braves,-190,Tod
 MIN Twins,163,Tod
@@ -35,5 +35,5 @@ MIL Brewers,154,Tod
 NY Mets,-170,Tod
 DET Tigers,173,Tom
 TEX Rangers,-190,Tom
-WAS Nationals,220,Tom
-SEA Mariners,-245,Tom
+WAS Nationals,218,Tom
+SEA Mariners,-242,Tom

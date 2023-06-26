@@ -1,4 +1,25 @@
-Plus EV opportunities as of 2023-06-26 13:56:56.865969
-['LA Angels,CHI White Sox,Tom', 'LA Angels', 'UNI', 1.98, 18, -129, -141]
-['TEX Rangers,DET Tigers,Tom', 'TEX Rangers', 'UNI', 1.87, 18, -193, -209]
-['TEX Rangers,DET Tigers,Tom', 'DET Tigers', 'DK_', 0.67, 18, 175, 170]
+Plus EV opportunities as of 2023-06-26 16:10:02.914333
+
+Game: MIL Brewers,NY Mets,Tod, Club: NY Mets, Website UNI
+2.55%, Width: 17 cents, Real Odds: -170, Site Odds: -190
+
+Game: MIN Twins,ATL Braves,Tod, Club: MIN Twins, Website UNI
+2.44%, Width: 18 cents, Real Odds: 181, Site Odds: 163
+
+Game: TEX Rangers,DET Tigers,Tom, Club: TEX Rangers, Website UNI
+2.22%, Width: 17 cents, Real Odds: -190, Site Odds: -209
+
+Game: TEX Rangers,DET Tigers,Tom, Club: DET Tigers, Website DK_
+1.83%, Width: 17 cents, Real Odds: 173, Site Odds: 160
+
+Game: CIN Reds,BAL Orioles,Tod, Club: CIN Reds, Website UNI
+1.44%, Width: 9 cents, Real Odds: 124, Site Odds: 117
+
+Game: CIN Reds,BAL Orioles,Tod, Club: BAL Orioles, Website DK_
+1.07%, Width: 9 cents, Real Odds: -133, Site Odds: -140
+
+Game: LA Angels,CHI White Sox,Tom, Club: LA Angels, Website DK_
+0.93%, Width: 17 cents, Real Odds: -129, Site Odds: -135
+
+Game: MIN Twins,ATL Braves,Tod, Club: ATL Braves, Website DK_
+0.66%, Width: 18 cents, Real Odds: -199, Site Odds: -204
