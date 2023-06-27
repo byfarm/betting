@@ -61,9 +61,9 @@ def test_read_from_file():
 
 
 def test_ods_to_percent():
-	prob = oc.dec_odd_to_prob(-400)
+	prob = oc.us_odd_to_prob(-400)
 	assert prob == 0.8
-	prob = oc.dec_odd_to_prob(400)
+	prob = oc.us_odd_to_prob(400)
 	assert prob == 0.2
 
 

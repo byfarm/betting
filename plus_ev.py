@@ -13,7 +13,7 @@ def calc_ev(prob: float, bet: float):
 	return ev
 
 
-def insert_sort_h_to_l(data: list[list]):
+def in_sort_ev_hl(data: list[list]):
 	"""
 	sorts data from a list of tuples from h to l. value assumed to be in 0th index of tuple
 	:param data: unsorted list of tuple

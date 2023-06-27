@@ -51,26 +51,34 @@ def find_arb(arr_prob: dict):
 			sum_prob = []
 			fs = []
 			for club in teams:
-				mp = game[club][sites[0]]
+				min_p = game[club][sites[0]]
 				site = sites[0]
 
 				# find the max probability and add into the list
 				for i in range(1, len(sites)):
 					if sites[i] in game[club].keys():
 						p2 = game[club][sites[i]]
-						if p2 > mp:
-							mp = p2
+						if p2 < min_p:
+							min_p = p2
 							site = sites[i]
-				sum_prob.append(mp)
+				sum_prob.append(min_p)
 				fs.append(site)
-			# if the sum of the list is less than 1 then there is an arbitrage opportunity
-			if sum(sum_prob) < 1:
-				team_odds = []
-				for i in sum_prob:
-					p = oc.prob_to_us_odds(i)
-					team_odds.append(p)
-				teams_and_odds = list(zip(team_odds, teams, fs))
-				opps.append([keys, teams_and_odds])
+		# if the sum of the list is less than 1 then there is an arbitrage opportunity
+		if sum(sum_prob) < 1:
+			team_odds = []
+			for i in sum_prob:
+				p = oc.prob_to_us_odds(i)
+				team_odds.append(p)
+			teams_and_odds = list(zip(team_odds, teams, fs))
+			opps.append([keys, teams_and_odds])
+
+	for op in opps:
+		t_and_o = op[1]
+		tot_advantage = []
+		for f in range(len(t_and_o)):
+			g1 = t_and_o[f]
+			tot_advantage.append(oc.us_odd_to_prob(g1[0]) * 100)
+		op.append(round(100 - sum(tot_advantage), 2))
 	return opps
 
 

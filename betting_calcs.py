@@ -13,7 +13,7 @@ def add_stake(arbs: list, max_stake: int):
 		teams_ods = games[1]
 		g1 = list(teams_ods[0])
 		g2 = list(teams_ods[1])
-		s1, s2 = oc.det_max_in(max_stake, oc.dec_odd_to_prob(g1[0]), oc.dec_odd_to_prob(g2[0]))
+		s1, s2 = oc.det_max_in(max_stake, oc.us_odd_to_prob(g1[0]), oc.us_odd_to_prob(g2[0]))
 		g1.append(round(s1, 2))
 		g2.append(round(s2, 2))
 		games[1] = [tuple(g1), tuple(g2)]
@@ -85,7 +85,20 @@ def arr_od_to_prob(arr_odd: dict):
 	for games in arr_odd.keys():
 		for teams in arr_odd[games].keys():
 			for sites in arr_odd[games][teams]:
-				arr_odd[games][teams][sites] = oc.dec_odd_to_prob(arr_odd[games][teams][sites])
+				arr_odd[games][teams][sites] = oc.us_odd_to_prob(arr_odd[games][teams][sites])
 	return arr_odd
 
 
+def in_sort_arb_hl(data: list[list]):
+	"""
+	sorts data from a list of tuples from h to l. value assumed to be in -1th index
+	:param data: unsorted list of tuple
+	:return data: sorted list of tuples
+	"""
+	for idx in range(1, len(data)):
+		while data[idx][-1] > data[idx - 1][-1] and idx > 0:
+			temp = data[idx]
+			data[idx] = data[idx - 1]
+			data[idx - 1] = temp
+			idx -= 1
+	return data

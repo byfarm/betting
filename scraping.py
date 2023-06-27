@@ -284,20 +284,21 @@ def scrape_CSP(url='https://api.americanwagering.com/regions/us/locations/co/bra
 	games = []
 	bet_list = []
 	for event in response['competitions'][0]['events']:
-		# find what time the game is
-		s_time = event['startTime'][:10]
-		time = nm.find_start_time(s_time)
+		if len(event['markets']) > 0:
+			# find what time the game is
+			s_time = event['startTime'][:10]
+			time = nm.find_start_time(s_time)
 
-		# find the team and odds
-		gms = []
-		info = event['markets'][0]['selections']
-		for i in info:
-			team = nm.cang_name(i['name'][1:-1])
-			odds = i['price']['a']
-			betting = (team, odds, time)
-			bet_list.append(betting)
-			gms.append(team)
-		games.append(tuple(gms + [time]))
+			# find the team and odds
+			gms = []
+			info = event['markets'][0]['selections']
+			for i in info:
+				team = nm.cang_name(i['name'][1:-1])
+				odds = i['price']['a']
+				betting = (team, odds, time)
+				bet_list.append(betting)
+				gms.append(team)
+			games.append(tuple(gms + [time]))
 	return bet_list, games
 
 

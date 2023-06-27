@@ -1,4 +1,4 @@
-def dec_odd_to_prob(odd: int):
+def us_odd_to_prob(odd: int):
 	# converts an int odd to probability
 	if odd > 0:
 		prob = 100 / (odd + 100)
