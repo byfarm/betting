@@ -1,12 +1,12 @@
-Betting odds as of 2023-06-27 14:01:16.636579
+Betting odds as of 2023-06-27 14:30:01.997033
 ('BAL Orioles', 'CIN Reds', 'LIV'):('TEX Rangers', 'DET Tigers', 'LIV'):('LA Angels', 'CHI White Sox', 'LIV'):('SEA Mariners', 'WAS Nationals', 'LIV'):('BAL Orioles', 'CIN Reds', 'Tod'):('PIT Pirates', 'SD Padres', 'Tod'):('NY Mets', 'MIL Brewers', 'Tod'):('BOS Red Sox', 'MIA Marlins', 'Tod'):('ATL Braves', 'MIN Twins', 'Tod'):('KC Royals', 'CLE Guardians', 'Tom'):('COL Rockies', 'LA Dodgers', 'Tom'):('LA Angels', 'CHI White Sox', 'Tom'):('SEA Mariners', 'WAS Nationals', 'Tom'):('OAK Athletics', 'NY Yankees', 'Tom'):
 DK_
-DET Tigers,-810,Tod
-TEX Rangers,540,Tod
-CHI White Sox,-125,Tod
-LA Angels,-105,Tod
-WAS Nationals,140,Tod
-SEA Mariners,-175,Tod
+CIN Reds,470,LIV
+BAL Orioles,-690,LIV
+CHI White Sox,100,Tod
+LA Angels,-130,Tod
+WAS Nationals,-190,Tod
+SEA Mariners,155,Tod
 SD Padres,-170,Tod
 PIT Pirates,145,Tod
 CIN Reds,120,Tod
@@ -32,26 +32,26 @@ OAK Athletics,125,Tom
 WAS Nationals,185,Tom
 SEA Mariners,-215,Tom
 UNI
-BAL Orioles,-305,LIV
-CIN Reds,230,LIV
-TEX Rangers,510,LIV
-DET Tigers,-770,LIV
-LA Angels,-103,LIV
-CHI White Sox,-122,LIV
-SEA Mariners,-175,LIV
-WAS Nationals,138,LIV
+BAL Orioles,-770,LIV
+CIN Reds,500,LIV
+TEX Rangers,118,LIV
+DET Tigers,-152,LIV
+LA Angels,-148,LIV
+CHI White Sox,115,LIV
+SEA Mariners,143,LIV
+WAS Nationals,-182,LIV
 BAL Orioles,-141,Tod
 CIN Reds,120,Tod
 PIT Pirates,150,Tod
 SD Padres,-177,Tod
 NY Mets,-141,Tod
 MIL Brewers,120,Tod
-BOS Red Sox,-117,Tod
-MIA Marlins,100,Tod
+BOS Red Sox,-114,Tod
+MIA Marlins,-104,Tod
 ATL Braves,-143,Tod
 MIN Twins,123,Tod
-KC Royals,118,Tom
-CLE Guardians,-137,Tom
+KC Royals,123,Tom
+CLE Guardians,-143,Tom
 COL Rockies,250,Tom
 LA Dodgers,-305,Tom
 LA Angels,-210,Tom
@@ -61,14 +61,14 @@ WAS Nationals,188,Tom
 OAK Athletics,125,Tom
 NY Yankees,-148,Tom
 PIN
-SD Padres,-172,Tod
-PIT Pirates,157,Tod
 CIN Reds,125,Tod
 BAL Orioles,-136,Tod
-MIL Brewers,122,Tod
-NY Mets,-132,Tod
+SD Padres,-172,Tod
+PIT Pirates,157,Tod
+MIL Brewers,124,Tod
+NY Mets,-134,Tod
 MIN Twins,127,Tod
-ATL Braves,-138,Tod
+ATL Braves,-137,Tod
 CLE Guardians,-136,Tom
 KC Royals,125,Tom
 LA Dodgers,-286,Tom
@@ -78,8 +78,12 @@ OAK Athletics,124,Tom
 WAS Nationals,188,Tom
 SEA Mariners,-207,Tom
 PB_
-TEX Rangers,150,Tod
-DET Tigers,-199,Tod
+BAL Orioles,-749,LIV
+CIN Reds,450,LIV
+TEX Rangers,2200,Tod
+DET Tigers,-9999,Tod
+LA Angels,-139,Tod
+CHI White Socks,104,Tod
 BAL Orioles,-139,Tod
 CIN Reds,115,Tod
 PIT Pirates,150,Tod
@@ -105,14 +109,14 @@ WAS Nationals,185,Tom
 OAK Athletics,125,Tom
 NY Yankees,-149,Tom
 CSB
-CIN Reds,215,LIV
-BAL Orioles,-280,LIV
-DET Tigers,-450,Tod
-TEX Rangers,320,Tod
-CHI White Socks,-110,Tod
-LA Angels,-120,Tod
-WAS Nationals,150,Tod
-SEA Mariners,-190,Tod
+CIN Reds,420,LIV
+BAL Orioles,-650,LIV
+DET Tigers,-5000,Tod
+TEX Rangers,1400,Tod
+CHI White Socks,115,Tod
+LA Angels,-145,Tod
+WAS Nationals,-200,Tod
+SEA Mariners,160,Tod
 CIN Reds,118,Tod
 BAL Orioles,-140,Tod
 SD Padres,-178,Tod
@@ -134,12 +138,12 @@ OAK Athletics,122,Tom
 WAS Nationals,180,Tom
 SEA Mariners,-220,Tom
 FD_
-DET Tigers,-550,Tod
-TEX Rangers,340,Tod
-CHI White Sox,-128,Tod
-LA Angels,100,Tod
-WAS Nationals,140,Tod
-SEA Mariners,-180,Tod
+DET Tigers,-6000,Tod
+TEX Rangers,2500,Tod
+CHI White Sox,108,Tod
+LA Angels,-136,Tod
+WAS Nationals,-190,Tod
+SEA Mariners,148,Tod
 HOU Astros,-120,Tod
 STL Cardinals,102,Tod
 WAS Nationals,198,Tom
@@ -152,8 +156,8 @@ NY Yankees,-142,Tom
 OAK Athletics,120,Tom
 MIA Marlins,-104,Tod
 BOS Red Sox,-112,Tod
-CIN Reds,225,LIV
-BAL Orioles,-320,LIV
+CIN Reds,520,LIV
+BAL Orioles,-850,LIV
 MIN Twins,126,Tod
 ATL Braves,-148,Tod
 SD Padres,-180,Tod
@@ -165,14 +169,18 @@ LA Angels,-205,Tom
 CLE Guardians,-142,Tom
 KC Royals,120,Tom
 FOX
-TEX Rangers,375,LIV
-DET Tigers,-666,LIV
-SEA Mariners,-175,LIV
-WAS Nationals,125,LIV
-BAL Orioles,-149,LIV
-CIN Reds,110,LIV
+BAL Orioles,-833,LIV
+CIN Reds,425,LIV
+TEX Rangers,1000,LIV
+DET Tigers,-9999,LIV
+SEA Mariners,125,LIV
+WAS Nationals,-175,LIV
+BAL Orioles,-149,Tod
+CIN Reds,110,Tod
 SD Padres,-181,Tod
 PIT Pirates,138,Tod
+NY Mets,-153,Tod
+MIL Brewers,115,Tod
 MIN Twins,115,Tod
 ATL Braves,-153,Tod
 CLE Guardians,-153,Tom

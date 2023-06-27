@@ -1,7 +1,7 @@
-Arbitrage opportunities as of 2023-06-27 14:14:59.699078
+Arbitrage opportunities as of 2023-06-27 14:30:02.011250
 
-Game: BAL Orioles vs CIN Reds, LIV:
-Team: BAL Orioles, Site: FOX, Odds: -149, $66.38
-Team: CIN Reds, Site: UNI, Odds: 230, $33.62
-Total advantage: 9.86%
+Game: TEX Rangers vs DET Tigers, LIV:
+Team: TEX Rangers, Site: FOX, Odds: 1000, $13.13
+Team: DET Tigers, Site: UNI, Odds: -151, $86.87
+Total advantage: 30.75%
 
