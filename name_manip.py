@@ -56,12 +56,15 @@ def find_start_time(start):
 	start = str(start)[:10]
 	curr_date = datetime.datetime.now(datetime.timezone.utc)
 	tom_date = curr_date + datetime.timedelta(days=1)
-	av_dates = [str(curr_date)[:10], str(tom_date)[:10]]
+	liv_date = curr_date - datetime.timedelta(days=1)
+	av_dates = [str(liv_date)[:10], str(curr_date)[:10], str(tom_date)[:10]]
 	if start in av_dates:
-		if start == av_dates[0]:
+		if start == av_dates[1]:
 			time = 'Tod'
-		else:
+		elif start == av_dates[2]:
 			time = 'Tom'
+		else:
+			time = 'LIV'
 	else:
 		time = 'N/A'
 	return time
@@ -80,6 +83,6 @@ def sites_dict(abriv: str):
 		'PB_': 'Points Bet',
 		'CSB': 'Caeser',
 		'FD_': 'Fan Duel',
-		'FOX': 'Fox Sports'
+		'FOX': 'Fox Bets'
 	}
 	return sites[abriv]

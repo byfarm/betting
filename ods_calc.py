@@ -22,11 +22,14 @@ def dec_odds_to_us_odds(odds: float):
 
 def prob_to_us_odds(prob: float):
 	# converts a probability to us odds
-	if prob > 0.5:
-		odd = -(-100 * prob) / (prob - 1)
-	else:
-		odd = (100 // prob) - 100
-	p = int(odd)
+	try:
+		if prob > 0.5:
+			odd = -(-100 * prob) / (prob - 1)
+		else:
+			odd = (100 / prob) - 100
+	except ZeroDivisionError:
+		print(prob)
+		odd = 0
 	return int(odd)
 
 

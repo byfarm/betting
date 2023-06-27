@@ -1,159 +1,203 @@
-Betting odds as of 2023-06-27 10:57:58.908577
-('BAL Orioles', 'CIN Reds', 'Tod'):('NY Mets', 'MIL Brewers', 'Tod'):('ATL Braves', 'MIN Twins', 'Tod'):('TEX Rangers', 'DET Tigers', 'Tom'):('LA Angels', 'CHI White Sox', 'Tom'):('SEA Mariners', 'WAS Nationals', 'Tom'):
+Betting odds as of 2023-06-27 13:22:02.742190
+('NY Mets', 'MIL Brewers', 'LIV'):('BAL Orioles', 'CIN Reds', 'LIV'):('ATL Braves', 'MIN Twins', 'LIV'):('TEX Rangers', 'DET Tigers', 'LIV'):('LA Angels', 'CHI White Sox', 'Tod'):('SEA Mariners', 'WAS Nationals', 'Tod'):('BAL Orioles', 'CIN Reds', 'Tod'):('PIT Pirates', 'SD Padres', 'Tod'):('NY Mets', 'MIL Brewers', 'Tod'):('BOS Red Sox', 'MIA Marlins', 'Tod'):('ATL Braves', 'MIN Twins', 'Tod'):('KC Royals', 'CLE Guardians', 'Tom'):('COL Rockies', 'LA Dodgers', 'Tom'):('LA Angels', 'CHI White Sox', 'Tom'):('SEA Mariners', 'WAS Nationals', 'Tom'):('OAK Athletics', 'NY Yankees', 'Tom'):
 DK_
-MIL Brewers,150,Tod
-NY Mets,-175,Tod
-CIN Reds,105,Tod
-BAL Orioles,-125,Tod
-MIN Twins,190,Tod
-ATL Braves,-225,Tod
-DET Tigers,170,Tom
-TEX Rangers,-200,Tom
-CHI White Sox,105,Tom
-LA Angels,-125,Tom
-WAS Nationals,215,Tom
-SEA Mariners,-255,Tom
-SD Padres,-170,Tom
-PIT Pirates,145,Tom
-CIN Reds,110,Tom
-BAL Orioles,-130,Tom
-MIA Marlins,-105,Tom
-BOS Red Sox,-115,Tom
-MIL Brewers,115,Tom
-NY Mets,-135,Tom
-MIN Twins,120,Tom
-ATL Braves,-140,Tom
-HOU Astros,-110,Tom
-STL Cardinals,-110,Tom
-PHI Phillies,-125,N/A
-CHI Cubs,105,N/A
-CLE Guardians,-145,N/A
-KC Royals,125,N/A
-LA Dodgers,-300,N/A
-COL Rockies,250,N/A
-CHI White Sox,180,N/A
-LA Angels,-210,N/A
-NY Yankees,-145,N/A
-OAK Athletics,125,N/A
-WAS Nationals,185,N/A
-SEA Mariners,-215,N/A
+MIL Brewers,-315,LIV
+NY Mets,245,LIV
+MIN Twins,900,LIV
+ATL Braves,-1700,LIV
+DET Tigers,-250,Tod
+TEX Rangers,200,Tod
+CHI White Sox,105,Tod
+LA Angels,-125,Tod
+WAS Nationals,220,Tod
+SEA Mariners,-260,Tod
+SD Padres,-170,Tod
+PIT Pirates,145,Tod
+CIN Reds,120,Tod
+BAL Orioles,-140,Tod
+MIL Brewers,115,Tod
+NY Mets,-135,Tod
+MIA Marlins,-105,Tod
+BOS Red Sox,-115,Tod
+MIN Twins,125,Tod
+ATL Braves,-145,Tod
+HOU Astros,-115,Tod
+STL Cardinals,-105,Tod
+PHI Phillies,-130,Tom
+CHI Cubs,110,Tom
+CLE Guardians,-145,Tom
+KC Royals,125,Tom
+LA Dodgers,-300,Tom
+COL Rockies,250,Tom
+CHI White Sox,180,Tom
+LA Angels,-210,Tom
+NY Yankees,-145,Tom
+OAK Athletics,125,Tom
+WAS Nationals,185,Tom
+SEA Mariners,-215,Tom
 UNI
-BAL Orioles,-130,Tod
-CIN Reds,112,Tod
-NY Mets,-177,Tod
-MIL Brewers,150,Tod
-ATL Braves,-230,Tod
-MIN Twins,190,Tod
-TEX Rangers,-195,Tom
-DET Tigers,163,Tom
-LA Angels,-134,Tom
-CHI White Sox,115,Tom
-SEA Mariners,-265,Tom
-WAS Nationals,220,Tom
+NY Mets,235,LIV
+MIL Brewers,-315,LIV
+BAL Orioles,-315,LIV
+CIN Reds,235,LIV
+ATL Braves,-2000,LIV
+MIN Twins,900,LIV
+TEX Rangers,195,LIV
+DET Tigers,-245,LIV
+LA Angels,-127,Tod
+CHI White Sox,108,Tod
+SEA Mariners,-265,Tod
+WAS Nationals,220,Tod
+BAL Orioles,-141,Tod
+CIN Reds,120,Tod
+PIT Pirates,150,Tod
+SD Padres,-177,Tod
+NY Mets,-141,Tod
+MIL Brewers,120,Tod
+BOS Red Sox,-117,Tod
+MIA Marlins,100,Tod
+ATL Braves,-143,Tod
+MIN Twins,123,Tod
+KC Royals,117,Tom
+CLE Guardians,-137,Tom
+COL Rockies,250,Tom
+LA Dodgers,-305,Tom
+LA Angels,-210,Tom
+CHI White Sox,175,Tom
+SEA Mariners,-225,Tom
+WAS Nationals,188,Tom
+OAK Athletics,125,Tom
+NY Yankees,-148,Tom
 PIN
-CIN Reds,114,Tod
-BAL Orioles,-124,Tod
-Away Runs (6 Games),255,Tod
-Home Runs (6 Games),-312,Tod
-MIL Brewers,152,Tod
-NY Mets,-167,Tod
-MIN Twins,195,Tod
-ATL Braves,-215,Tod
-DET Tigers,172,Tom
-TEX Rangers,-189,Tom
-CHI White Socks,112,Tom
-LA Angels,-122,Tom
-WAS Nationals,216,Tom
-SEA Mariners,-241,Tom
+WAS Nationals,220,Tod
+SEA Mariners,-245,Tod
+SD Padres,-172,Tod
+PIT Pirates,157,Tod
+CIN Reds,125,Tod
+BAL Orioles,-136,Tod
+MIL Brewers,122,Tod
+NY Mets,-132,Tod
+MIN Twins,127,Tod
+ATL Braves,-138,Tod
+CLE Guardians,-134,Tom
+KC Royals,124,Tom
+LA Dodgers,-286,Tom
+COL Rockies,254,Tom
+NY Yankees,-135,Tom
+OAK Athletics,124,Tom
+WAS Nationals,182,Tom
+SEA Mariners,-199,Tom
 PB_
-BAL Orioles,-129,Tod
-CIN Reds,110,Tod
-NY Mets,-174,Tod
-MIL Brewers,145,Tod
-ATL Braves,-239,Tod
-MIN Twins,189,Tod
-TEX Rangers,-199,Tom
-DET Tigers,164,Tom
-LA Angels,-129,Tom
-CHI White Socks,110,Tom
-SEA Mariners,-259,Tom
-WAS Nationals,210,Tom
-CSB
-MIL Brewers,143,Tod
-NY Mets,-170,Tod
-CIN Reds,110,Tod
-BAL Orioles,-130,Tod
-MIN Twins,192,Tod
-ATL Braves,-235,Tod
+NY Mets,200,LIV
+MIL Brewers,-274,LIV
+ATL Braves,-2247,LIV
+MIN Twins,1050,LIV
+TEX Rangers,200,Tod
+DET Tigers,-274,Tod
+LA Angels,-129,Tod
+CHI White Socks,110,Tod
+SEA Mariners,-274,Tod
+WAS Nationals,220,Tod
+BAL Orioles,-139,Tod
+CIN Reds,115,Tod
+PIT Pirates,150,Tod
+SD Padres,-179,Tod
+NY Mets,-149,Tod
+MIL Brewers,125,Tod
+BOS Red Socks,-114,Tod
+MIA Marlins,-104,Tod
+ATL Braves,-149,Tod
+MIN Twins,125,Tod
+TEX Rangers,-209,Tom
 DET Tigers,175,Tom
-TEX Rangers,-210,Tom
-CHI White Socks,110,Tom
-LA Angels,-130,Tom
-WAS Nationals,215,Tom
-SEA Mariners,-267,Tom
-CIN Reds,115,Tom
-BAL Orioles,-135,Tom
-SD Padres,-178,Tom
-PIT Pirates,150,Tom
-MIA Marlins,-105,Tom
-BOS Red Socks,-115,Tom
-MIL Brewers,118,Tom
-NY Mets,-140,Tom
-MIN Twins,118,Tom
-ATL Braves,-140,Tom
-CLE Guardians,-145,N/A
-KC Royals,122,N/A
-LA Dodgers,-305,N/A
-COL Rockies,240,N/A
-CHI White Socks,175,N/A
-LA Angels,-210,N/A
-NY Yankees,-145,N/A
-OAK Athletics,122,N/A
-WAS Nationals,180,N/A
-SEA Mariners,-220,N/A
+KC Royals,120,Tom
+CLE Guardians,-144,Tom
+COL Rockies,240,Tom
+LA Dodgers,-299,Tom
+CSB
+MIL Brewers,-300,LIV
+NY Mets,230,LIV
+CIN Reds,215,LIV
+BAL Orioles,-280,LIV
+MIN Twins,1000,LIV
+ATL Braves,-2500,LIV
+DET Tigers,-250,Tod
+TEX Rangers,195,Tod
+CHI White Socks,105,Tod
+LA Angels,-125,Tod
+WAS Nationals,215,Tod
+SEA Mariners,-267,Tod
+CIN Reds,118,Tod
+BAL Orioles,-140,Tod
+SD Padres,-178,Tod
+PIT Pirates,150,Tod
+MIA Marlins,-105,Tod
+BOS Red Socks,-115,Tod
+MIL Brewers,118,Tod
+NY Mets,-140,Tod
+MIN Twins,122,Tod
+ATL Braves,-145,Tod
+CLE Guardians,-145,Tom
+KC Royals,122,Tom
+LA Dodgers,-305,Tom
+COL Rockies,240,Tom
+CHI White Socks,175,Tom
+LA Angels,-210,Tom
+NY Yankees,-145,Tom
+OAK Athletics,122,Tom
+WAS Nationals,180,Tom
+SEA Mariners,-220,Tom
 FD_
-DET Tigers,168,Tom
-TEX Rangers,-200,Tom
-CHI White Sox,110,Tom
-LA Angels,-130,Tom
-MIL Brewers,146,Tod
-NY Mets,-174,Tod
-HOU Astros,-120,Tom
-STL Cardinals,102,Tom
-CIN Reds,120,Tom
-BAL Orioles,-142,Tom
-LA Dodgers,-320,N/A
-COL Rockies,260,N/A
-SD Padres,-180,Tom
-PIT Pirates,152,Tom
-MIL Brewers,120,Tom
-NY Mets,-142,Tom
-WAS Nationals,215,Tom
-SEA Mariners,-260,Tom
-WAS Nationals,198,N/A
-SEA Mariners,-240,N/A
-NY Yankees,-142,N/A
-OAK Athletics,120,N/A
-MIA Marlins,-112,Tom
-BOS Red Sox,-104,Tom
-MIN Twins,190,Tod
-ATL Braves,-230,Tod
-CIN Reds,110,Tod
-BAL Orioles,-130,Tod
-MIN Twins,126,Tom
-ATL Braves,-148,Tom
-CHI White Sox,172,N/A
-LA Angels,-205,N/A
-CLE Guardians,-142,N/A
-KC Royals,120,N/A
+DET Tigers,-250,Tod
+TEX Rangers,186,Tod
+CHI White Sox,110,Tod
+LA Angels,-130,Tod
+MIL Brewers,-350,LIV
+NY Mets,245,LIV
+HOU Astros,-120,Tod
+STL Cardinals,102,Tod
+CIN Reds,120,Tod
+BAL Orioles,-142,Tod
+LA Dodgers,-320,Tom
+COL Rockies,260,Tom
+SD Padres,-180,Tod
+PIT Pirates,152,Tod
+MIL Brewers,120,Tod
+NY Mets,-142,Tod
+WAS Nationals,215,Tod
+SEA Mariners,-260,Tod
+WAS Nationals,194,Tom
+SEA Mariners,-235,Tom
+NY Yankees,-142,Tom
+OAK Athletics,120,Tom
+MIA Marlins,-104,Tod
+BOS Red Sox,-112,Tod
+MIN Twins,1120,LIV
+ATL Braves,-2400,LIV
+CIN Reds,225,LIV
+BAL Orioles,-320,LIV
+MIN Twins,126,Tod
+ATL Braves,-148,Tod
+CHI White Sox,172,Tom
+LA Angels,-205,Tom
+CLE Guardians,-142,Tom
+KC Royals,120,Tom
 FOX
-BAL Orioles,-138,Tod
-CIN Reds,104,Tod
-NY Mets,-188,Tod
-MIL Brewers,139,Tod
-MIN Twins,162,Tod
-ATL Braves,-227,Tod
-TEX Rangers,-212,Tom
-DET Tigers,154,Tom
-SEA Mariners,-277,Tom
-WAS Nationals,200,Tom
+NY Mets,170,LIV
+MIL Brewers,-250,LIV
+MIN Twins,800,LIV
+ATL Braves,-3333,LIV
+TEX Rangers,204,LIV
+DET Tigers,-303,LIV
+SEA Mariners,-277,Tod
+WAS Nationals,200,Tod
+BAL Orioles,-149,LIV
+CIN Reds,110,LIV
+SD Padres,-181,Tod
+PIT Pirates,138,Tod
+MIN Twins,115,Tod
+ATL Braves,-153,Tod
+CLE Guardians,-153,Tom
+KC Royals,115,Tom
+LA Dodgers,-333,Tom
+COL Rockies,230,Tom

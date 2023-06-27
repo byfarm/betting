@@ -40,7 +40,7 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 		try:
 			time = table.thead.tr.th.div.span.span.span.string[:3]
 		except AttributeError:
-			time = 'N/A'
+			time = 'LIV'
 		tlist.append(time)
 
 		tbrs = table.tbody.contents
@@ -95,9 +95,11 @@ def scrape_unibet_mlb(url='https://eu-offering-api.kambicdn.com/offering/v2018/u
 	bet_list = []
 	for event in response['events']:
 		try:
-			game_date = event['event']['start'][:10]
-			time = nm.find_start_time(game_date)
-
+			if event['event']['state'][:3] == 'NOT':
+				game_date = event['event']['start'][:10]
+				time = nm.find_start_time(game_date)
+			else:
+				time = 'LIV'
 			# find the games, and their gamestate
 			ht = event['event']['homeName']
 			at = event['event']['awayName']
@@ -117,8 +119,14 @@ def scrape_unibet_mlb(url='https://eu-offering-api.kambicdn.com/offering/v2018/u
 	return bet_list, games
 
 
-def scrape_pin(url='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0'):
+def scrape_pin(games_lis, url='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0'):
 	""" scrapes pinnacle sportsbook. type: read directly from website """
+	# make the cl copy searchable
+	e_copy_gl = copy.deepcopy(games_lis)
+	copy_gl = copy.deepcopy(games_lis)
+	for p in range(len(copy_gl)):
+		copy_gl[p] = list(({copy_gl[p][0], copy_gl[p][1]}, copy_gl[p][2]))
+
 	bet_list = []
 	games = []
 	# Configure Chrome options
@@ -145,42 +153,32 @@ def scrape_pin(url='https://www.pinnacle.com/en/baseball/mlb/matchups#period:0')
 	# find all the table headers
 	headers = soup.find_all('div', class_='contentBlock square')
 	for p in headers:
-		# find the day it says
-		time = str(p.div.string)[:3]
-		if time == 'Non':
-			time = 'Tod'
-		current_local_date = datetime.datetime.now().date()
-
-		if time == 'Tom':
-			current_local_date += datetime.timedelta(days=1)
-
 		# find all the table rows with the teams and the odds
 		trs = p.find_all('div', class_="style_row__21s9o style_row__21_Wa")
+
 		for rows in trs:
 			# find the teams and add to a list
 			teams = rows.a.div.div.find_all('div', class_="ellipsis style_gameInfoLabel__24vcV")
-			tm = [i.span.string for i in teams]
-
-			# get the time difference then find the gametime
-			clock = str(rows.div.div.a.div.div.contents[2].span.text)
-			clock = datetime.datetime.strptime(clock, "%H:%M").time()
-			loc_gametime = datetime.datetime.combine(current_local_date, clock)
-			t_diff = datetime.datetime.utcnow() - datetime.datetime.now()
-			utc_gt = loc_gametime + t_diff
-			g_time = nm.find_start_time(utc_gt)
+			tm = [nm.cang_name(i.span.string) for i in teams]
 
 			# find the odds and add to a list
 			buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
-			odds = [i.button.span.string for i in buttons if i.button.span is not None]
+			odds = [oc.dec_odds_to_us_odds(float(i.button.span.string)) for i in buttons if i.button.span is not None]
+			betting = [[tm[0], odds[0]], [tm[1], odds[1]]]
+			tm = set(tm)
 
-			# if it is able to pull odds then send them
-			if len(odds) > 0:
-				for r in range(2):
-					odds[r] = oc.dec_odds_to_us_odds(float(odds[r]))
-					tm[r] = nm.cang_name(tm[r])
-					go = [(tm[r], odds[r], g_time)]
-					bet_list += go
-				games.append((tm[0], tm[1], g_time))
+			for idx in range(len(copy_gl)):
+				games_t = copy_gl[idx][0]
+				if tm == games_t and copy_gl[idx][1] != 'LIV':
+					game = e_copy_gl[idx]
+					del copy_gl[idx]
+					del e_copy_gl[idx]
+					games.append(game)
+					for bets in betting:
+						bets.append(game[-1])
+						bet_list.append(bets)
+					break
+
 	return bet_list, games
 
 
@@ -354,28 +352,29 @@ def scrape_FOX(games_lis, url='https://sports.co.foxbet.com/sportsbook/v1/api/ge
 	bet_list = []
 	games = []
 	for event in events:
-		info = event['markets'][2]
-		assert info['name'] == 'Money Line'
+		if len(event['markets']) == 3:
+			info = event['markets'][2]
+			assert info['name'] == 'Money Line'
 
-		gms = set()
-		betting = []
-		for i in info['selection']:
-			team = nm.cang_name(i['name'])
-			odds = oc.dec_odds_to_us_odds(float(i['odds']['dec']))
-			gms.add(team)
-			betting.append([team, odds])
+			gms = set()
+			betting = []
+			for i in info['selection']:
+				team = nm.cang_name(i['name'])
+				odds = oc.dec_odds_to_us_odds(float(i['odds']['dec']))
+				gms.add(team)
+				betting.append([team, odds])
 
-		for idx in range(len(copy_gl)):
-			games_t = copy_gl[idx][0]
-			if gms == games_t:
-				game = e_copy_gl[idx]
-				del copy_gl[idx]
-				del e_copy_gl[idx]
-				games.append(game)
-				for bets in betting:
-					bets.append(game[-1])
-					bet_list.append(bets)
-				break
+			for idx in range(len(copy_gl)):
+				games_t = copy_gl[idx][0]
+				if gms == games_t:
+					game = e_copy_gl[idx]
+					del copy_gl[idx]
+					del e_copy_gl[idx]
+					games.append(game)
+					for bets in betting:
+						bets.append(game[-1])
+						bet_list.append(bets)
+					break
 	return bet_list, games
 
 

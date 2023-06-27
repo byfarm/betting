@@ -9,9 +9,9 @@ def scrape_web():
 	scrapes the websites for all of their betting info and writes it to a txt file
 	"""
 	# scrape the websites
-	dk, games_dk = sc.scrape_dk_mlb()
 	uni, games_uni = sc.scrape_unibet_mlb()
-	pin, games_pin = sc.scrape_pin()
+	dk, games_dk = sc.scrape_dk_mlb()
+	pin, games_pin = sc.scrape_pin(games_uni)
 	pb, games_pb = sc.scrape_pointsbet()
 	csb, games_csb = sc.scrape_CSP()
 	fd, games_fd = sc.scrape_FD_()
