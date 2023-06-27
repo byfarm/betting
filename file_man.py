@@ -78,7 +78,7 @@ def write_results(arbs: list):
 			fp.write(f'Game: {header[0]} vs {header[1]}, {header[-1]}:\n')
 			for i in range(len(t_and_o)):
 				g1 = t_and_o[i]
-				fp.write(f'Team: {g1[1]}, Site: {g1[2]}, Odds: {g1[0]}, ${g1[2]}\n')
+				fp.write(f'Team: {g1[1]}, Site: {g1[2]}, Odds: {g1[0]}, ${g1[-1]}\n')
 			fp.write(f'Total advantage: {tot_advantage}%\n\n')
 
 def write_plus_ev(evs: list):

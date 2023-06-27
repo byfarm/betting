@@ -1,7 +1,7 @@
-Arbitrage opportunities as of 2023-06-27 14:13:08.794745
+Arbitrage opportunities as of 2023-06-27 14:14:59.699078
 
-Game: CIN Reds vs BAL Orioles, LIV:
-Team: BAL Orioles, Site: FOX, Odds: -149, $FOX
-Team: CIN Reds, Site: UNI, Odds: 230, $UNI
+Game: BAL Orioles vs CIN Reds, LIV:
+Team: BAL Orioles, Site: FOX, Odds: -149, $66.38
+Team: CIN Reds, Site: UNI, Odds: 230, $33.62
 Total advantage: 9.86%
 
