@@ -7,7 +7,7 @@ if __name__ == '__main__':
 	import plus_ev as pe
 
 	# set the maximum you want to bet
-	max_stake = 100
+	max_stake = 5
 
 	# scrape the websites for their betting info
 	mf.scrape_web()

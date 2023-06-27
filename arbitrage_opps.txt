@@ -1,7 +1,27 @@
-Arbitrage opportunities as of 2023-06-27 14:30:02.011250
+Arbitrage opportunities as of 2023-06-27 16:22:25.210404
 
-Game: TEX Rangers vs DET Tigers, LIV:
-Team: TEX Rangers, Site: FOX, Odds: 1000, $13.13
-Team: DET Tigers, Site: UNI, Odds: -151, $86.87
-Total advantage: 30.75%
+Game: SEA Mariners vs WAS Nationals, LIV:
+Team: SEA Mariners, Site: FOX, Odds: -227, $3.84
+Team: WAS Nationals, Site: UNI, Odds: 375, $1.16
+Total advantage: 9.53%
+
+Game: SEA Mariners vs WAS Nationals, Tom:
+Team: WAS Nationals, Site: BFR, Odds: 215, $1.59
+Team: SEA Mariners, Site: BFR, Odds: -212, $3.41
+Total advantage: 0.31%
+
+Game: LA Dodgers vs COL Rockies, Tom:
+Team: LA Dodgers, Site: BFR, Odds: -266, $3.64
+Team: COL Rockies, Site: BFR, Odds: 270, $1.36
+Total advantage: 0.3%
+
+Game: KC Royals vs CLE Guardians, Tom:
+Team: CLE Guardians, Site: BFR, Odds: -129, $2.82
+Team: KC Royals, Site: BFR, Odds: 130, $2.18
+Total advantage: 0.19%
+
+Game: NY Yankees vs OAK Athletics, Tom:
+Team: NY Yankees, Site: BFR, Odds: -126, $2.79
+Team: OAK Athletics, Site: BFR, Odds: 127, $2.21
+Total advantage: 0.19%
 

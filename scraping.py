@@ -29,7 +29,10 @@ def scrape_dk_mlb(url='https://sportsbook.draftkings.com/leagues/baseball/mlb'):
 	"""
 	bet_list = []
 	games = []
-	response = requests.get(url)
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
 	assert response.status_code == 200
 	soup = BeautifulSoup(response.text, 'html.parser')
 	tlist = []
@@ -87,7 +90,10 @@ def scrape_unibet_mlb(url='https://eu-offering-api.kambicdn.com/offering/v2018/u
 	:return games: the set of games being played
 	"""
 	# get the json script
-	response = requests.get(url)
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
 	assert response.status_code == 200
 	response = response.json()
 	games = []
@@ -168,7 +174,7 @@ def scrape_pin(games_lis, url='https://www.pinnacle.com/en/baseball/mlb/matchups
 
 			for idx in range(len(copy_gl)):
 				games_t = copy_gl[idx][0]
-				if tm == games_t and copy_gl[idx][1] != 'LIV':
+				if tm == games_t and copy_gl[idx][-1] != 'LIV':
 					game = e_copy_gl[idx]
 					del copy_gl[idx]
 					del e_copy_gl[idx]
@@ -290,14 +296,16 @@ def scrape_CSP(url='https://api.americanwagering.com/regions/us/locations/co/bra
 
 			# find the team and odds
 			gms = []
-			info = event['markets'][0]['selections']
-			for i in info:
-				team = nm.cang_name(i['name'][1:-1])
-				odds = i['price']['a']
-				betting = (team, odds, time)
-				bet_list.append(betting)
-				gms.append(team)
-			games.append(tuple(gms + [time]))
+
+			info = event['markets'][0]
+			if info['displayName'] == 'Money Line':
+				for i in info['selections']:
+					team = nm.cang_name(i['name'][1:-1])
+					odds = i['price']['a']
+					betting = (team, odds, time)
+					bet_list.append(betting)
+					gms.append(team)
+				games.append(tuple(gms + [time]))
 	return bet_list, games
 
 
@@ -338,7 +346,10 @@ def scrape_FOX(games_lis, url='https://sports.co.foxbet.com/sportsbook/v1/api/ge
 	:param url: link to fox
 	:return: bet_list, games
 	"""
-	response = requests.get(url)
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+	}
+	response = requests.get(url, headers=headers)
 	assert response.status_code == 200
 	response = response.json()
 

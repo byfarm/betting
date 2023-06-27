@@ -36,8 +36,8 @@ def cang_name(name: str):
 		'Baltimore Orioles': 'BAL Orioles',
 		'Atlanta Braves': 'ATL Braves',
 		'Cincinnati Reds': 'CIN Reds',
-		'Boston Red Sox': 'BOS Red Socks',
-		'Chicago White Sox': 'CHI White Socks'
+		'Boston Red Sox': 'BOS Red Sox',
+		'Chicago White Sox': 'CHI White Sox'
 		}
 
 	if name not in team_dict.keys():

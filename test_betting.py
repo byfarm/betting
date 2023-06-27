@@ -6,11 +6,15 @@ import betting_calcs as bc
 import main_functions as mf
 import requests
 
+
 def test_website_access_comp():
 	# paste desired url
-	url = 'https://fanduel-app.quantummetric.com/?T=B&u=https%3A%2F%2Fsportsbook.fanduel.com%2Fnavigation%2Fmlb&t=1687763050926&v=1687763123665&H=6bf72df50d01c5cdf524b157&s=25a7eabe3a53e9a3bf6b5ec41850cc2a&z=1&S=665710&N=2046&P=44'
+	url = 'https://betway.com/api/Events/v2/GetEvents'
 	headers = {
-		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+		'Authority': 'betway.com',
+		'Origin': 'https://betway.com',
+		'Sec-Ch-Ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"'
 	}
 	response = requests.get(url, headers=headers)
 	assert response.status_code == 200
