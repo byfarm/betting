@@ -1,169 +1,181 @@
-Betting odds as of 2023-06-27 16:53:24.374434
-('BAL Orioles', 'CIN Reds', 'Tod'):('PIT Pirates', 'SD Padres', 'Tod'):('BOS Red Sox', 'MIA Marlins', 'Tod'):('NY Mets', 'MIL Brewers', 'Tod'):('ATL Braves', 'MIN Twins', 'Tod'):('KC Royals', 'CLE Guardians', 'Tom'):('COL Rockies', 'LA Dodgers', 'Tom'):('LA Angels', 'CHI White Sox', 'Tom'):('OAK Athletics', 'NY Yankees', 'Tom'):('SEA Mariners', 'WAS Nationals', 'Tom'):
+Betting odds as of 2023-06-29 11:06:33.449411
+('PIT Pirates', 'SD Padres', 'Tod'):('TEX Rangers', 'DET Tigers', 'Tod'):('KC Royals', 'CLE Guardians', 'Tod'):('OAK Athletics', 'NY Yankees', 'Tod'):('ARI Diamondbacks', 'TB Rays', 'Tod'):('LA Angels', 'CHI White Sox', 'Tod'):('BOS Red Sox', 'MIA Marlins', 'Tod'):('TOR Blue Jays', 'SF Giants', 'Tod'):('NY Mets', 'MIL Brewers', 'Tod'):('STL Cardinals', 'HOU Astros', 'Tod'):('CHI Cubs', 'PHI Phillies', 'Tom'):('COL Rockies', 'LA Dodgers', 'Tom'):
 DK_
-SD Padres,-195,Tod
-PIT Pirates,165,Tod
-CIN Reds,120,Tod
-BAL Orioles,-140,Tod
-MIL Brewers,120,Tod
-NY Mets,-140,Tod
-MIA Marlins,100,Tod
-BOS Red Sox,-120,Tod
-MIN Twins,130,Tod
-ATL Braves,-150,Tod
-HOU Astros,-115,Tod
-STL Cardinals,-105,Tod
-PHI Phillies,-130,Tom
-CHI Cubs,110,Tom
-CLE Guardians,-145,Tom
-KC Royals,125,Tom
-LA Dodgers,-300,Tom
-COL Rockies,250,Tom
-CHI White Sox,165,Tom
-LA Angels,-195,Tom
-NY Yankees,-140,Tom
-OAK Athletics,120,Tom
-WAS Nationals,195,Tom
-SEA Mariners,-230,Tom
-TB Rays,105,Tom
-ARI Diamondbacks,-125,Tom
-UNI
-BAL Orioles,-141,Tod
-CIN Reds,120,Tod
-PIT Pirates,148,Tod
-SD Padres,-177,Tod
-BOS Red Sox,-120,Tod
-MIA Marlins,102,Tod
-NY Mets,-141,Tod
-MIL Brewers,120,Tod
-ATL Braves,-148,Tod
-MIN Twins,125,Tod
-KC Royals,123,Tom
-CLE Guardians,-143,Tom
-COL Rockies,250,Tom
-LA Dodgers,-305,Tom
-LA Angels,-210,Tom
-CHI White Sox,175,Tom
-OAK Athletics,120,Tom
-NY Yankees,-141,Tom
-SEA Mariners,-225,Tom
-WAS Nationals,188,Tom
-PIN
-CIN Reds,126,Tod
-BAL Orioles,-137,Tod
-MIA Marlins,104,Tod
-BOS Red Sox,-113,Tod
-SD Padres,-181,Tod
-PIT Pirates,166,Tod
-MIL Brewers,123,Tod
-NY Mets,-133,Tod
-MIN Twins,137,Tod
-ATL Braves,-149,Tod
-CLE Guardians,-136,Tom
-KC Royals,126,Tom
-LA Dodgers,-281,Tom
-COL Rockies,250,Tom
-CHI White Sox,174,Tom
-LA Angels,-191,Tom
-NY Yankees,-131,Tom
-OAK Athletics,121,Tom
-WAS Nationals,201,Tom
-SEA Mariners,-222,Tom
-PB_
-BAL Orioles,-144,Tod
-CIN Reds,120,Tod
-PIT Pirates,160,Tod
-SD Padres,-189,Tod
-NY Mets,-149,Tod
-MIL Brewers,125,Tod
-BOS Red Sox,-125,Tod
-MIA Marlins,104,Tod
-ATL Braves,-149,Tod
-MIN Twins,125,Tod
-STL Cardinals,100,Tod
-HOU Astros,-119,Tod
-TEX Rangers,-209,Tom
-DET Tigers,175,Tom
-KC Royals,120,Tom
-CLE Guardians,-144,Tom
-COL Rockies,240,Tom
-LA Dodgers,-299,Tom
-LA Angels,-209,Tom
-CHI White Sox,175,Tom
-SEA Mariners,-239,Tom
-WAS Nationals,190,Tom
-OAK Athletics,110,Tom
-NY Yankees,-138,Tom
-ARI Diamondbacks,-125,Tom
-TB Rays,104,Tom
-CSB
-CIN Reds,118,Tod
-BAL Orioles,-140,Tod
-SD Padres,-178,Tod
-PIT Pirates,150,Tod
-MIA Marlins,100,Tod
-BOS Red Sox,-120,Tod
-MIL Brewers,118,Tod
-NY Mets,-140,Tod
-MIN Twins,130,Tod
-ATL Braves,-155,Tod
-CLE Guardians,-140,Tom
-KC Royals,118,Tom
-LA Dodgers,-305,Tom
-COL Rockies,240,Tom
-CHI White Sox,170,Tom
-LA Angels,-205,Tom
-NY Yankees,-140,Tom
-OAK Athletics,118,Tom
-WAS Nationals,192,Tom
-SEA Mariners,-235,Tom
-TB Rays,105,Tom
-ARI Diamondbacks,-125,Tom
-FD_
-HOU Astros,-120,Tod
-STL Cardinals,102,Tod
-WAS Nationals,198,Tom
-SEA Mariners,-240,Tom
-DET Tigers,172,Tom
-TEX Rangers,-205,Tom
-CIN Reds,120,Tod
-BAL Orioles,-142,Tod
-LA Dodgers,-320,Tom
-COL Rockies,260,Tom
-NY Yankees,-142,Tom
-OAK Athletics,120,Tom
-MIA Marlins,-104,Tod
-BOS Red Sox,-112,Tod
-TB Rays,100,Tom
-ARI Diamondbacks,-118,Tom
-MIN Twins,126,Tod
-ATL Braves,-148,Tod
-SD Padres,-180,Tod
-PIT Pirates,152,Tod
-MIL Brewers,124,Tod
-NY Mets,-146,Tod
-CHI White Sox,172,Tom
-LA Angels,-205,Tom
-CLE Guardians,-142,Tom
-KC Royals,120,Tom
-FOX
-BAL Orioles,-149,Tod
-CIN Reds,110,Tod
-SD Padres,-199,Tod
-PIT Pirates,150,Tod
-BOS Red Sox,-125,Tod
+SD Padres,-200,Tod
+PIT Pirates,170,Tod
+DET Tigers,125,Tod
+TEX Rangers,-145,Tod
+CLE Guardians,-145,Tod
+KC Royals,125,Tod
+NY Yankees,-180,Tod
+OAK Athletics,155,Tod
+TB Rays,-105,Tod
+ARI Diamondbacks,-115,Tod
+CHI White Sox,110,Tod
+LA Angels,-130,Tod
 MIA Marlins,-105,Tod
-NY Mets,-153,Tod
-MIL Brewers,115,Tod
-MIN Twins,120,Tod
-ATL Braves,-161,Tod
-CLE Guardians,-153,Tom
-KC Royals,115,Tom
-LA Dodgers,-333,Tom
-COL Rockies,230,Tom
-LA Angels,-212,Tom
-CHI White Sox,154,Tom
-NY Yankees,-153,Tom
-OAK Athletics,115,Tom
-WAS Nationals,180,Tom
-SEA Mariners,-250,Tom
+BOS Red Sox,-115,Tod
+SF Giants,130,Tod
+TOR Blue Jays,-150,Tod
+MIL Brewers,160,Tod
+NY Mets,-190,Tod
+HOU Astros,-125,Tod
+STL Cardinals,105,Tod
+PHI Phillies,-120,Tom
+CHI Cubs,100,Tom
+LA Dodgers,-200,Tom
+COL Rockies,170,Tom
+MIN Twins,105,Tom
+BAL Orioles,-125,Tom
+TB Rays,-125,LIV
+SEA Mariners,105,LIV
+UNI
+PIT Pirates,170,Tod
+SD Padres,-200,Tod
+TEX Rangers,-152,Tod
+DET Tigers,128,Tod
+KC Royals,125,Tod
+CLE Guardians,-148,Tod
+OAK Athletics,163,Tod
+NY Yankees,-195,Tod
+ARI Diamondbacks,-109,Tod
+TB Rays,-108,Tod
+LA Angels,-136,Tod
+CHI White Sox,116,Tod
+BOS Red Sox,-108,Tod
+MIA Marlins,-109,Tod
+TOR Blue Jays,-157,Tod
+SF Giants,133,Tod
+NY Mets,-195,Tod
+MIL Brewers,163,Tod
+STL Cardinals,106,Tod
+HOU Astros,-124,Tod
+CHI Cubs,102,Tom
+PHI Phillies,-118,Tom
+COL Rockies,185,Tom
+LA Dodgers,-220,Tom
+PIN
+SD Padres,-201,Tod
+PIT Pirates,184,Tod
+CLE Guardians,-141,Tod
+KC Royals,129,Tod
+CHI White Sox,115,Tod
+LA Angels,-125,Tod
+MIA Marlins,-102,Tod
+BOS Red Sox,-106,Tod
+MIL Brewers,166,Tod
+NY Mets,-182,Tod
+HOU Astros,-117,Tod
+STL Cardinals,108,Tod
+DET Tigers,131,Tod
+TEX Rangers,-143,Tod
+NY Yankees,-178,Tod
+OAK Athletics,163,Tod
+TB Rays,106,Tod
+ARI Diamondbacks,-115,Tod
+SF Giants,139,Tod
+TOR Blue Jays,-151,Tod
+PHI Phillies,-118,Tom
+CHI Cubs,108,Tom
+LA Dodgers,-206,Tom
+COL Rockies,187,Tom
+PB_
+PIT Pirates,165,Tod
+SD Padres,-199,Tod
+TEX Rangers,-160,Tod
+DET Tigers,129,Tod
+KC Royals,125,Tod
+CLE Guardians,-149,Tod
+OAK Athletics,150,Tod
+NY Yankees,-179,Tod
+ARI Diamondbacks,-119,Tod
+TB Rays,100,Tod
+LA Angels,-129,Tod
+CHI White Sox,110,Tod
+BOS Red Sox,-109,Tod
+MIA Marlins,-109,Tod
+TOR Blue Jays,-149,Tod
+SF Giants,125,Tod
+NY Mets,-189,Tod
+MIL Brewers,160,Tod
+STL Cardinals,104,Tod
+HOU Astros,-125,Tod
+CHI Cubs,100,Tom
+PHI Phillies,-119,Tom
+COL Rockies,165,Tom
+LA Dodgers,-199,Tom
+CSB
+SD Padres,-205,Tod
+PIT Pirates,170,Tod
+DET Tigers,135,Tod
+TEX Rangers,-160,Tod
+CLE Guardians,-150,Tod
+KC Royals,126,Tod
+NY Yankees,-190,Tod
+OAK Athletics,158,Tod
+TB Rays,100,Tod
+ARI Diamondbacks,-120,Tod
+CHI White Sox,115,Tod
+LA Angels,-135,Tod
+MIA Marlins,-110,Tod
+BOS Red Sox,-110,Tod
+SF Giants,130,Tod
+TOR Blue Jays,-155,Tod
+MIL Brewers,162,Tod
+NY Mets,-195,Tod
+HOU Astros,-130,Tod
+STL Cardinals,110,Tod
+PHI Phillies,-120,Tom
+CHI Cubs,100,Tom
+LA Dodgers,-210,Tom
+COL Rockies,175,Tom
+FD_
+SD Padres,-205,Tod
+PIT Pirates,172,Tod
+DET Tigers,128,Tod
+TEX Rangers,-152,Tod
+SF Giants,132,Tod
+TOR Blue Jays,-156,Tod
+NY Yankees,-188,Tod
+OAK Athletics,158,Tod
+PHI Phillies,-120,Tom
+CHI Cubs,102,Tom
+TB Rays,-102,Tod
+ARI Diamondbacks,-116,Tod
+MIL Brewers,160,Tod
+NY Mets,-190,Tod
+HOU Astros,-124,Tod
+STL Cardinals,106,Tod
+LA Dodgers,-215,Tom
+COL Rockies,180,Tom
+CLE Guardians,-148,Tod
+KC Royals,126,Tod
+CHI White Sox,112,Tod
+LA Angels,-132,Tod
+MIA Marlins,-108,Tod
+BOS Red Sox,-108,Tod
+FOX
+SD Padres,-212,Tod
+PIT Pirates,154,Tod
+TEX Rangers,-161,Tod
+DET Tigers,120,Tod
+KC Royals,120,Tod
+CLE Guardians,-161,Tod
+NY Yankees,-199,Tod
+OAK Athletics,145,Tod
+TB Rays,-109,Tod
+ARI Diamondbacks,-120,Tod
+CHI White Sox,110,Tod
+LA Angels,-142,Tod
+BOS Red Sox,-120,Tod
+MIA Marlins,-109,Tod
+TOR Blue Jays,-161,Tod
+SF Giants,120,Tod
+NY Mets,-199,Tod
+MIL Brewers,150,Tod
+HOU Astros,-133,Tod
+STL Cardinals,100,Tod
+PHI Phillies,-125,Tom
+CHI Cubs,-105,Tom
+LA Dodgers,-212,Tom
+COL Rockies,154,Tom

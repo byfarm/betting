@@ -41,45 +41,41 @@ def find_arb(arr_prob: dict):
 	"""
 	# the list of opportunities
 	opps = []
+	for key in arr_prob.keys():
+		game = arr_prob[key]
 
-	# navigate to the probibilites while saving important info
-	for keys in arr_prob.keys():
-		game = arr_prob[keys]
+		best_p = []
+		best_s = []
 		teams = list(game.keys())
-		for team in game.values():
-			sites = list(team.keys())
-			sum_prob = []
-			fs = []
-			for club in teams:
-				min_p = game[club][sites[0]]
-				site = sites[0]
+		for team in game.keys():
+			team_prob = game[team]
+			sites = list(team_prob.keys())
+			min_p = 1
+			i_site = None
+			for site in sites:
+				if team_prob[site] < min_p:
+					min_p = team_prob[site]
+					i_site = site
+			best_p.append(min_p)
+			best_s.append(i_site)
 
-				# find the max probability and add into the list
-				for i in range(1, len(sites)):
-					if sites[i] in game[club].keys():
-						p2 = game[club][sites[i]]
-						if p2 < min_p:
-							min_p = p2
-							site = sites[i]
-				sum_prob.append(min_p)
-				fs.append(site)
-		# if the sum of the list is less than 1 then there is an arbitrage opportunity
-		if sum(sum_prob) < 1:
-			team_odds = []
-			for i in sum_prob:
-				p = oc.prob_to_us_odds(i)
-				team_odds.append(p)
-			teams_and_odds = list(zip(team_odds, teams, fs))
-			opps.append([keys, teams_and_odds])
+		if sum(best_p) < 1:
+			for i in range(len(best_p)):
+				best_p[i] = oc.prob_to_us_odds(best_p[i])
+			od_and_prob = list(zip(teams, best_s, best_p))
+			opps.append([key, od_and_prob])
 
 	for op in opps:
 		t_and_o = op[1]
 		tot_advantage = []
 		for f in range(len(t_and_o)):
 			g1 = t_and_o[f]
-			tot_advantage.append(oc.us_odd_to_prob(g1[0]) * 100)
+			tot_advantage.append(oc.us_odd_to_prob(g1[-1]) * 100)
 		op.append(round(100 - sum(tot_advantage), 2))
 	return opps
+
+
+
 
 
 def find_plus_ev(odds: dict[dict]):

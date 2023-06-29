@@ -1,27 +1,62 @@
-Arbitrage opportunities as of 2023-06-27 16:22:25.210404
+Arbitrage opportunities as of 2023-06-29 11:03:36.629517
 
-Game: SEA Mariners vs WAS Nationals, LIV:
-Team: SEA Mariners, Site: FOX, Odds: -227, $3.84
-Team: WAS Nationals, Site: UNI, Odds: 375, $1.16
-Total advantage: 9.53%
+Game: CHI Cubs vs PHI Phillies, Tom:
+Team: DK_, Site: -114, Odds: PHI Phillies, $2.63
+Team: PIN, Site: 108, Odds: CHI Cubs, $2.37
+Total advantage: -1.35%
 
-Game: SEA Mariners vs WAS Nationals, Tom:
-Team: WAS Nationals, Site: BFR, Odds: 215, $1.59
-Team: SEA Mariners, Site: BFR, Odds: -212, $3.41
-Total advantage: 0.31%
+Game: PIT Pirates vs SD Padres, Tod:
+Team: PIN, Site: -186, Odds: SD Padres, $3.21
+Team: CSB, Site: 175, Odds: PIT Pirates, $1.79
+Total advantage: -1.4%
+
+Game: HOU Astros vs STL Cardinals, Tod:
+Team: UNI, Site: -117, Odds: HOU Astros, $2.66
+Team: CSB, Site: 110, Odds: STL Cardinals, $2.34
+Total advantage: -1.54%
 
 Game: LA Dodgers vs COL Rockies, Tom:
-Team: LA Dodgers, Site: BFR, Odds: -266, $3.64
-Team: COL Rockies, Site: BFR, Odds: 270, $1.36
-Total advantage: 0.3%
+Team: PB_, Site: -199, Odds: LA Dodgers, $3.27
+Team: PIN, Site: 185, Odds: COL Rockies, $1.73
+Total advantage: -1.64%
 
-Game: KC Royals vs CLE Guardians, Tom:
-Team: CLE Guardians, Site: BFR, Odds: -129, $2.82
-Team: KC Royals, Site: BFR, Odds: 130, $2.18
-Total advantage: 0.19%
+Game: OAK Athletics vs NY Yankees, Tod:
+Team: PB_, Site: -178, Odds: NY Yankees, $3.15
+Team: PIN, Site: 165, Odds: OAK Athletics, $1.85
+Total advantage: -1.76%
 
-Game: NY Yankees vs OAK Athletics, Tom:
-Team: NY Yankees, Site: BFR, Odds: -126, $2.79
-Team: OAK Athletics, Site: BFR, Odds: 127, $2.21
-Total advantage: 0.19%
+Game: TEX Rangers vs DET Tigers, Tod:
+Team: PIN, Site: 150, Odds: DET Tigers, $1.96
+Team: FD_, Site: -162, Odds: TEX Rangers, $3.04
+Total advantage: -1.83%
+
+Game: KC Royals vs CLE Guardians, Tod:
+Team: PIN, Site: -151, Odds: CLE Guardians, $2.95
+Team: CSB, Site: 140, Odds: KC Royals, $2.05
+Total advantage: -1.83%
+
+Game: TOR Blue Jays vs SF Giants, Tod:
+Team: PIN, Site: 135, Odds: SF Giants, $2.09
+Team: PIN, Site: -146, Odds: TOR Blue Jays, $2.91
+Total advantage: -1.9%
+
+Game: ARI Diamondbacks vs TB Rays, Tod:
+Team: PIN, Site: -102, Odds: TB Rays, $2.48
+Team: PIN, Site: -106, Odds: ARI Diamondbacks, $2.52
+Total advantage: -1.95%
+
+Game: MIA Marlins vs BOS Red Sox, Tod:
+Team: PIN, Site: -105, Odds: MIA Marlins, $2.51
+Team: PIN, Site: -103, Odds: BOS Red Sox, $2.49
+Total advantage: -1.96%
+
+Game: LA Angels vs CHI White Sox, Tod:
+Team: PIN, Site: 115, Odds: CHI White Sox, $2.28
+Team: DK_, Site: -125, Odds: LA Angels, $2.72
+Total advantage: -2.07%
+
+Game: MIL Brewers vs NY Mets, Tod:
+Team: PIN, Site: 169, Odds: MIL Brewers, $1.82
+Team: PIN, Site: -185, Odds: NY Mets, $3.18
+Total advantage: -2.09%
 

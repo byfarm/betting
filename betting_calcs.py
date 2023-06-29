@@ -13,7 +13,7 @@ def add_stake(arbs: list, max_stake: int):
 		teams_ods = games[1]
 		g1 = list(teams_ods[0])
 		g2 = list(teams_ods[1])
-		s1, s2 = oc.det_max_in(max_stake, oc.us_odd_to_prob(g1[0]), oc.us_odd_to_prob(g2[0]))
+		s1, s2 = oc.det_max_in(max_stake, oc.us_odd_to_prob(g1[-1]), oc.us_odd_to_prob(g2[-1]))
 		g1.append(round(s1, 2))
 		g2.append(round(s2, 2))
 		games[1] = [tuple(g1), tuple(g2)]
