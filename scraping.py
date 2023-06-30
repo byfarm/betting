@@ -173,7 +173,7 @@ def scrape_pin(games_lis, url='https://www.pinnacle.com/en/baseball/mlb/matchups
 
 			# find the odds and add to a list
 			buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
-			odds = [oc.dec_odds_to_us_odds(float(i.button.span.string)) for i in buttons if i.button.span is not None]
+			odds = [oc.dec_odds_to_us_odds(float(i.button.span.string)) for i in buttons if i.button.span is not None and float(i.button.span.string) > 1]
 			betting = [[tm[0], odds[0]], [tm[1], odds[1]]]
 			tm = set(tm)
 
@@ -277,10 +277,11 @@ def scrape_pointsbet(url='https://api.co.pointsbet.com/api/v2/competitions/6535/
 			team = i['name']
 			team = nm.cang_name(team)
 			dec_odds = i['price']
-			usa_odds = oc.dec_odds_to_us_odds(dec_odds)
-			betting = (team, usa_odds, time)
-			bet_list.append(betting)
-			gms.append(team)
+			if dec_odds > 1:
+				usa_odds = oc.dec_odds_to_us_odds(dec_odds)
+				betting = (team, usa_odds, time)
+				bet_list.append(betting)
+				gms.append(team)
 		games.append(tuple(gms + [time]))
 	return bet_list, games
 
@@ -383,9 +384,11 @@ def scrape_FOX(games_lis, url='https://sports.co.foxbet.com/sportsbook/v1/api/ge
 				for i in info['selection']:
 					try:
 						team = nm.cang_name(i['name'])
-						odds = oc.dec_odds_to_us_odds(float(i['odds']['dec']))
-						gms.add(team)
-						betting.append([team, odds])
+						odds = float(i['odds']['dec'])
+						if odds > 1:
+							odds = oc.dec_odds_to_us_odds(odds)
+							gms.add(team)
+							betting.append([team, odds])
 					except ValueError:
 						pass
 

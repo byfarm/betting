@@ -1,12 +1,12 @@
-Arbitrage opportunities as of 2023-06-29 18:21:06.757687
+Arbitrage opportunities as of 2023-06-29 19:34:59.107980
 
-Game: HOU Astros vs STL Cardinals, LIV:
-Team: HOU Astros, Site: UNI, Odds: -114, $89.5
-Team: STL Cardinals, Site: DK_, Odds: 1500, $10.5
-Total advantage: 40.48%
+Game: STL Cardinals vs HOU Astros, LIV:
+Team: STL Cardinals, Site: PB_, Odds: 35000, $0.61
+Team: HOU Astros, Site: UNI, Odds: 114, $99.39
+Total advantage: 52.99%
 
-Game: BOS Red Sox vs MIA Marlins, LIV:
-Team: MIA Marlins, Site: FOX, Odds: -554, $89.89
-Team: BOS Red Sox, Site: UNI, Odds: 950, $10.11
-Total advantage: 5.77%
+Game: MIL Brewers vs NY Mets, LIV:
+Team: MIL Brewers, Site: FOX, Odds: -276, $79.24
+Team: NY Mets, Site: DK_, Odds: 420, $20.76
+Total advantage: 7.36%
 

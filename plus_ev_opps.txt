@@ -1,31 +1,49 @@
-Plus EV opportunities as of 2023-06-29 18:21:06.756717
+Plus EV opportunities as of 2023-06-29 19:34:59.106984
 
-Game: DET Tigers,COL Rockies,Tom, Club: DET Tigers, Website: Fox Bets
-4.7%, Width: 10 cents, Real Odds: -110, FOX Odds: -133
+Game: STL Cardinals,NY Yankees,Tom, Club: NY Yankees, Website: Fox Bets
+4.05%, Width: 7 cents, Real Odds: -102, FOX Odds: -119
 
-Game: PIT Pirates,MIL Brewers,Tod, Club: MIL Brewers, Website: Fox Bets
+Game: MIN Twins,BAL Orioles,Tom, Club: MIN Twins, Website: Fox Bets
+3.92%, Width: 8 cents, Real Odds: 100, FOX Odds: -117
+
+Game: PIT Pirates,MIL Brewers,Tom, Club: MIL Brewers, Website: Fox Bets
 3.76%, Width: 10 cents, Real Odds: -131, FOX Odds: -152
 
-Game: LA Dodgers,COL Rockies,Tod, Club: COL Rockies, Website: Fox Bets
-3.24%, Width: 16 cents, Real Odds: 172, FOX Odds: 150
+Game: SD Padres,CIN Reds,Tom, Club: SD Padres, Website: UniBet
+3.48%, Width: 9 cents, Real Odds: -129, UNI Odds: -150
 
-Game: BOS Red Sox,TOR Blue Jays,Tod, Club: BOS Red Sox, Website: Fox Bets
+Game: BOS Red Sox,TOR Blue Jays,Tom, Club: BOS Red Sox, Website: Fox Bets
 3.17%, Width: 10 cents, Real Odds: 125, FOX Odds: 110
 
-Game: LA Dodgers,COL Rockies,Tod, Club: LA Dodgers, Website: Caeser
-2.98%, Width: 16 cents, Real Odds: -188, CSB Odds: -215
+Game: LA Dodgers,COL Rockies,Tod, Club: COL Rockies, Website: Fox Bets
+2.69%, Width: 15 cents, Real Odds: 168, FOX Odds: 150
 
-Game: MIN Twins,BAL Orioles,Tod, Club: MIN Twins, Website: Fox Bets
-2.94%, Width: 6 cents, Real Odds: -103, FOX Odds: -117
+Game: CHI Cubs,CLE Guardians,Tom, Club: CLE Guardians, Website: Fox Bets
+2.6%, Width: 12 cents, Real Odds: 139, FOX Odds: 125
 
-Game: MIN Twins,BAL Orioles,Tod, Club: BAL Orioles, Website: Fox Bets
-2.94%, Width: 6 cents, Real Odds: -103, FOX Odds: -117
+Game: SF Giants,NY Mets,Tom, Club: SF Giants, Website: Fox Bets
+2.5%, Width: 9 cents, Real Odds: -113, FOX Odds: -125
 
-Game: BOS Red Sox,TOR Blue Jays,Tod, Club: TOR Blue Jays, Website: Points Bet
+Game: BOS Red Sox,TOR Blue Jays,Tom, Club: TOR Blue Jays, Website: Points Bet
 2.39%, Width: 10 cents, Real Odds: -135, PB_ Odds: -149
 
-Game: PIT Pirates,MIL Brewers,Tod, Club: PIT Pirates, Website: Fox Bets
-1.26%, Width: 10 cents, Real Odds: 121, FOX Odds: 115
+Game: CHI Cubs,CLE Guardians,Tom, Club: CHI Cubs, Website: Fox Bets
+2.25%, Width: 12 cents, Real Odds: -151, FOX Odds: -166
 
-Game: DET Tigers,COL Rockies,Tom, Club: COL Rockies, Website: Points Bet
-0.98%, Width: 10 cents, Real Odds: 100, PB_ Odds: -103
+Game: SF Giants,NY Mets,Tom, Club: NY Mets, Website: Fox Bets
+2.2%, Width: 9 cents, Real Odds: 104, FOX Odds: -105
+
+Game: SD Padres,CIN Reds,Tom, Club: CIN Reds, Website: Points Bet
+2.16%, Width: 9 cents, Real Odds: 120, PB_ Odds: 110
+
+Game: MIN Twins,BAL Orioles,Tom, Club: BAL Orioles, Website: Fox Bets
+1.99%, Width: 8 cents, Real Odds: -108, FOX Odds: -117
+
+Game: LA Dodgers,COL Rockies,Tod, Club: LA Dodgers, Website: Fox Bets
+1.89%, Width: 15 cents, Real Odds: -183, FOX Odds: -199
+
+Game: STL Cardinals,NY Yankees,Tom, Club: STL Cardinals, Website: Points Bet
+1.81%, Width: 7 cents, Real Odds: -105, PB_ Odds: -113
+
+Game: PIT Pirates,MIL Brewers,Tom, Club: PIT Pirates, Website: Fox Bets
+1.26%, Width: 10 cents, Real Odds: 121, FOX Odds: 115

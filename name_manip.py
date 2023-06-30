@@ -54,8 +54,8 @@ def find_start_time(start):
 	:return time: str , either tod, tom, or n/a
 	"""
 	# find the important times
-	start = datetime.datetime.fromisoformat(start).replace(tzinfo=None)
-	curr_date_utc = datetime.datetime.utcnow()
+	start = datetime.datetime.fromisoformat(start).replace(tzinfo=None) - datetime.timedelta(hours=-6)
+	curr_date_utc = datetime.datetime.utcnow() - datetime.timedelta(hours=-6)
 	tom_date = curr_date_utc + datetime.timedelta(days=1)
 
 	# use logic to find what day it is on
