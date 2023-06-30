@@ -3,6 +3,7 @@ import scraping as sc
 import datetime
 import ods_calc as oc
 
+
 def write_new_table_dk_uni(games: set, **kwargs):
 	"""
 	writes the odds and games to a txt file
@@ -78,7 +79,7 @@ def write_results(arbs: list):
 			fp.write(f'Game: {header[0]} vs {header[1]}, {header[-1]}:\n')
 			for i in range(len(t_and_o)):
 				g1 = t_and_o[i]
-				fp.write(f'Team: {g1[1]}, Site: {g1[2]}, Odds: {g1[0]}, ${g1[-1]}\n')
+				fp.write(f'Team: {g1[0]}, Site: {g1[1]}, Odds: {g1[2]}, ${g1[-1]}\n')
 			fp.write(f'Total advantage: {tot_advantage}%\n\n')
 
 def write_plus_ev(evs: list):

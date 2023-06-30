@@ -24,13 +24,12 @@ def prob_to_us_odds(prob: float):
 	# converts a probability to us odds
 	try:
 		if prob > 0.5:
-			odd = -(-100 * prob) / (prob - 1)
+			odd = int(-(-100 * prob) / (prob - 1))
 		else:
-			odd = (100 / prob) - 100
+			odd = int((100 / prob) - 100)
 	except ZeroDivisionError:
-		print(prob)
-		odd = 0
-	return int(odd)
+		odd = None
+	return odd
 
 
 def winnings_prob(prob: float, stake: float):
@@ -41,8 +40,11 @@ def winnings_prob(prob: float, stake: float):
 
 def det_max_in(max_in: float, p1: float, p2: float):
 	# determines each stake for a arbitrage bet
-	stake2 = (p2 * max_in) / (p2 + p1)
-	stake1 = max_in - stake2
+	try:
+		stake2 = (p2 * max_in) / (p2 + p1)
+		stake1 = max_in - stake2
+	except ZeroDivisionError:
+		stake1 = stake2 = max_in / 2
 	return stake1, stake2
 
 

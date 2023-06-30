@@ -10,15 +10,15 @@ def scrape_web():
 	"""
 	# scrape the websites
 	uni, games_uni = sc.scrape_unibet_mlb()
-	dk, games_dk = sc.scrape_dk_mlb()
-	pin, games_pin = sc.scrape_pin(games_uni)
-	pb, games_pb = sc.scrape_pointsbet()
-	csb, games_csb = sc.scrape_CSP()
 	fd, games_fd = sc.scrape_FD_()
-	fox, games_fox = sc.scrape_FOX(games_uni)
+	csb, games_csb = sc.scrape_CSP()
+	pb, games_pb = sc.scrape_pointsbet()
+	dk, games_dk = sc.scrape_dk_mlb(games_pb)
+	fox, games_fox = sc.scrape_FOX(games_pb)
+	pin, games_pin = sc.scrape_pin(games_pb)
 	#bfr, games_b = sc.scrape_betfair()
 	# write the odds and games to the txt file
-	fm.write_new_table_dk_uni(games=games_uni, DK_=dk, UNI=uni, PIN=pin, PB_=pb, CSB=csb, FD_=fd, FOX=fox)
+	fm.write_new_table_dk_uni(games=games_pb, DK_=dk, UNI=uni, PIN=pin, PB_=pb, CSB=csb, FD_=fd, FOX=fox)
 
 
 def assemble_from_file():

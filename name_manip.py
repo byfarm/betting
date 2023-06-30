@@ -53,18 +53,18 @@ def find_start_time(start):
 	:param start: the utc start time of the event
 	:return time: str , either tod, tom, or n/a
 	"""
-	start = str(start)[:10]
-	curr_date = datetime.datetime.now(datetime.timezone.utc)
-	tom_date = curr_date + datetime.timedelta(days=1)
-	liv_date = curr_date - datetime.timedelta(days=1)
-	av_dates = [str(liv_date)[:10], str(curr_date)[:10], str(tom_date)[:10]]
-	if start in av_dates:
-		if start == av_dates[1]:
-			time = 'Tod'
-		elif start == av_dates[2]:
-			time = 'Tom'
-		else:
-			time = 'LIV'
+	# find the important times
+	start = datetime.datetime.fromisoformat(start).replace(tzinfo=None)
+	curr_date_utc = datetime.datetime.utcnow()
+	tom_date = curr_date_utc + datetime.timedelta(days=1)
+
+	# use logic to find what day it is on
+	if start < curr_date_utc:
+		time = 'LIV'
+	elif start.date() == curr_date_utc.date():
+		time = 'Tod'
+	elif start.date() == tom_date.date():
+		time = 'Tom'
 	else:
 		time = 'N/A'
 	return time

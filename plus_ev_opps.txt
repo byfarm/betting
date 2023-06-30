@@ -1,73 +1,31 @@
-Plus EV opportunities as of 2023-06-29 11:06:33.453398
+Plus EV opportunities as of 2023-06-29 18:21:06.756717
 
-Game: LA Dodgers,COL Rockies,Tom, Club: COL Rockies, Website: Fox Bets
-4.53%, Width: 19 cents, Real Odds: 187, FOX Odds: 153
+Game: DET Tigers,COL Rockies,Tom, Club: DET Tigers, Website: Fox Bets
+4.7%, Width: 10 cents, Real Odds: -110, FOX Odds: -133
 
-Game: PIT Pirates,SD Padres,Tod, Club: PIT Pirates, Website: Fox Bets
-4.16%, Width: 17 cents, Real Odds: 184, FOX Odds: 153
+Game: PIT Pirates,MIL Brewers,Tod, Club: MIL Brewers, Website: Fox Bets
+3.76%, Width: 10 cents, Real Odds: -131, FOX Odds: -152
 
-Game: TB Rays,ARI Diamondbacks,Tod, Club: TB Rays, Website: Fox Bets
-3.61%, Width: 8 cents, Real Odds: 106, FOX Odds: -108
+Game: LA Dodgers,COL Rockies,Tod, Club: COL Rockies, Website: Fox Bets
+3.24%, Width: 16 cents, Real Odds: 172, FOX Odds: 150
 
-Game: SF Giants,TOR Blue Jays,Tod, Club: SF Giants, Website: Fox Bets
-3.61%, Width: 12 cents, Real Odds: 139, FOX Odds: 120
+Game: BOS Red Sox,TOR Blue Jays,Tod, Club: BOS Red Sox, Website: Fox Bets
+3.17%, Width: 10 cents, Real Odds: 125, FOX Odds: 110
 
-Game: KC Royals,CLE Guardians,Tod, Club: CLE Guardians, Website: Fox Bets
-3.18%, Width: 12 cents, Real Odds: -141, FOX Odds: -160
+Game: LA Dodgers,COL Rockies,Tod, Club: LA Dodgers, Website: Caeser
+2.98%, Width: 16 cents, Real Odds: -188, CSB Odds: -215
 
-Game: HOU Astros,STL Cardinals,Tod, Club: HOU Astros, Website: Fox Bets
-3.16%, Width: 9 cents, Real Odds: -117, FOX Odds: -133
+Game: MIN Twins,BAL Orioles,Tod, Club: MIN Twins, Website: Fox Bets
+2.94%, Width: 6 cents, Real Odds: -103, FOX Odds: -117
 
-Game: CHI Cubs,PHI Phillies,Tom, Club: CHI Cubs, Website: Fox Bets
-3.14%, Width: 9 cents, Real Odds: 108, FOX Odds: -105
+Game: MIN Twins,BAL Orioles,Tod, Club: BAL Orioles, Website: Fox Bets
+2.94%, Width: 6 cents, Real Odds: -103, FOX Odds: -117
 
-Game: LA Angels,CHI White Sox,Tod, Club: LA Angels, Website: Fox Bets
-3.12%, Width: 10 cents, Real Odds: -125, FOX Odds: -142
+Game: BOS Red Sox,TOR Blue Jays,Tod, Club: TOR Blue Jays, Website: Points Bet
+2.39%, Width: 10 cents, Real Odds: -135, PB_ Odds: -149
 
-Game: MIA Marlins,BOS Red Sox,Tod, Club: BOS Red Sox, Website: Fox Bets
-3.09%, Width: 7 cents, Real Odds: -105, FOX Odds: -119
+Game: PIT Pirates,MIL Brewers,Tod, Club: PIT Pirates, Website: Fox Bets
+1.26%, Width: 10 cents, Real Odds: 121, FOX Odds: 115
 
-Game: DET Tigers,TEX Rangers,Tod, Club: TEX Rangers, Website: Fox Bets
-2.84%, Width: 12 cents, Real Odds: -143, FOX Odds: -160
-
-Game: NY Yankees,OAK Athletics,Tod, Club: OAK Athletics, Website: Fox Bets
-2.79%, Width: 15 cents, Real Odds: 163, FOX Odds: 145
-
-Game: NY Yankees,OAK Athletics,Tod, Club: NY Yankees, Website: Fox Bets
-2.53%, Width: 15 cents, Real Odds: -178, FOX Odds: -199
-
-Game: NY Mets,MIL Brewers,Tod, Club: MIL Brewers, Website: Fox Bets
-2.41%, Width: 16 cents, Real Odds: 166, FOX Odds: 150
-
-Game: DET Tigers,TEX Rangers,Tod, Club: DET Tigers, Website: Fox Bets
-2.16%, Width: 12 cents, Real Odds: 131, FOX Odds: 120
-
-Game: NY Mets,MIL Brewers,Tod, Club: NY Mets, Website: Fox Bets
-2.02%, Width: 16 cents, Real Odds: -182, FOX Odds: -199
-
-Game: HOU Astros,STL Cardinals,Tod, Club: STL Cardinals, Website: Fox Bets
-1.92%, Width: 9 cents, Real Odds: 108, FOX Odds: 100
-
-Game: MIA Marlins,BOS Red Sox,Tod, Club: MIA Marlins, Website: Caeser
-1.89%, Width: 7 cents, Real Odds: -102, CSB Odds: -110
-
-Game: KC Royals,CLE Guardians,Tod, Club: KC Royals, Website: Fox Bets
-1.79%, Width: 12 cents, Real Odds: 129, FOX Odds: 120
-
-Game: SF Giants,TOR Blue Jays,Tod, Club: TOR Blue Jays, Website: Fox Bets
-1.53%, Width: 12 cents, Real Odds: -151, FOX Odds: -160
-
-Game: CHI Cubs,PHI Phillies,Tom, Club: PHI Phillies, Website: Fox Bets
-1.43%, Width: 9 cents, Real Odds: -117, FOX Odds: -125
-
-Game: LA Dodgers,COL Rockies,Tom, Club: LA Dodgers, Website: UniBet
-1.43%, Width: 19 cents, Real Odds: -206, UNI Odds: -220
-
-Game: PIT Pirates,SD Padres,Tod, Club: SD Padres, Website: Fox Bets
-1.17%, Width: 17 cents, Real Odds: -201, FOX Odds: -212
-
-Game: LA Angels,CHI White Sox,Tod, Club: CHI White Sox, Website: Draft Kings
-1.11%, Width: 10 cents, Real Odds: 115, DK_ Odds: 110
-
-Game: TB Rays,ARI Diamondbacks,Tod, Club: ARI Diamondbacks, Website: Caeser
-1.06%, Width: 8 cents, Real Odds: -114, CSB Odds: -119
+Game: DET Tigers,COL Rockies,Tom, Club: COL Rockies, Website: Points Bet
+0.98%, Width: 10 cents, Real Odds: 100, PB_ Odds: -103
