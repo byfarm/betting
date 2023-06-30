@@ -406,3 +406,10 @@ def scrape_FOX(games_lis, url='https://sports.co.foxbet.com/sportsbook/v1/api/ge
 	return bet_list, games
 
 
+def scrape_BRV(url='https://eu-offering-api.kambicdn.com/offering/v2018/rsi2uspa/event/live/open.json?lang=en_US&market=US-PA&client_id=2&channel_id=1&ncid=1688090172843'):
+	url = 'https://eu-offering-api.kambicdn.com/offering/v2018/rsi2uspa/event/live/open.json?lang=en_US&market=US-PA&client_id=2&channel_id=1&ncid=1688090172843'
+	headers = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+	}
+	response = requests.get(url, headers=headers)
+	assert response.status_code == 200

@@ -1,20 +1,20 @@
-Betting odds as of 2023-06-29 19:34:59.103992
-('NY Mets', 'MIL Brewers', 'LIV'):('STL Cardinals', 'HOU Astros', 'LIV'):('CHI Cubs', 'PHI Phillies', 'LIV'):('COL Rockies', 'LA Dodgers', 'Tod'):('CHI Cubs', 'CLE Guardians', 'Tom'):('CIN Reds', 'SD Padres', 'Tom'):('PHI Phillies', 'WAS Nationals', 'Tom'):('BAL Orioles', 'MIN Twins', 'Tom'):('PIT Pirates', 'MIL Brewers', 'Tom'):('TOR Blue Jays', 'BOS Red Sox', 'Tom'):('NY Mets', 'SF Giants', 'Tom'):('COL Rockies', 'DET Tigers', 'Tom'):('KC Royals', 'LA Dodgers', 'Tom'):('STL Cardinals', 'NY Yankees', 'Tom'):
+Betting odds as of 2023-06-29 19:54:57.933274
+('NY Mets', 'MIL Brewers', 'LIV'):('CHI Cubs', 'PHI Phillies', 'LIV'):('COL Rockies', 'LA Dodgers', 'Tod'):('CHI Cubs', 'CLE Guardians', 'Tom'):('CIN Reds', 'SD Padres', 'Tom'):('PHI Phillies', 'WAS Nationals', 'Tom'):('BAL Orioles', 'MIN Twins', 'Tom'):('PIT Pirates', 'MIL Brewers', 'Tom'):('TOR Blue Jays', 'BOS Red Sox', 'Tom'):('NY Mets', 'SF Giants', 'Tom'):('COL Rockies', 'DET Tigers', 'Tom'):('KC Royals', 'LA Dodgers', 'Tom'):('STL Cardinals', 'NY Yankees', 'Tom'):
 DK_
-MIL Brewers,-585,LIV
-NY Mets,420,LIV
-PHI Phillies,-585,LIV
-CHI Cubs,420,LIV
+MIL Brewers,-750,LIV
+NY Mets,500,LIV
+PHI Phillies,-950,LIV
+CHI Cubs,600,LIV
 LA Dodgers,-190,Tod
 COL Rockies,160,Tod
-CLE Guardians,130,Tom
-CHI Cubs,-150,Tom
+CLE Guardians,135,Tom
+CHI Cubs,-155,Tom
 SD Padres,-140,Tom
 CIN Reds,120,Tom
 MIN Twins,-110,Tom
 BAL Orioles,-110,Tom
-MIL Brewers,-145,Tom
-PIT Pirates,125,Tom
+MIL Brewers,-140,Tom
+PIT Pirates,120,Tom
 BOS Red Sox,120,Tom
 TOR Blue Jays,-140,Tom
 SF Giants,-120,Tom
@@ -24,12 +24,12 @@ COL Rockies,105,Tom
 NY Yankees,-115,Tom
 STL Cardinals,-105,Tom
 UNI
-NY Mets,300,LIV
-MIL Brewers,-420,LIV
-STL Cardinals,-148,LIV
-HOU Astros,114,LIV
-CHI Cubs,340,LIV
-PHI Phillies,-480,LIV
+NY Mets,390,LIV
+MIL Brewers,-590,LIV
+STL Cardinals,-375,LIV
+HOU Astros,265,LIV
+CHI Cubs,750,LIV
+PHI Phillies,-1667,LIV
 COL Rockies,160,Tod
 LA Dodgers,-190,Tod
 CHI Cubs,-165,Tom
@@ -51,29 +51,27 @@ ARI Diamondbacks,132,Tom
 SEA Mariners,120,Tom
 TB Rays,-141,Tom
 PIN
-LA Dodgers,-183,Tod
+LA Dodgers,-184,Tod
 COL Rockies,168,Tod
-SD Padres,-130,Tom
-CIN Reds,120,Tom
-CLE Guardians,139,Tom
-CHI Cubs,-151,Tom
+SD Padres,-132,Tom
+CIN Reds,122,Tom
+CLE Guardians,140,Tom
+CHI Cubs,-152,Tom
 MIL Brewers,-131,Tom
 PIT Pirates,121,Tom
 MIN Twins,100,Tom
 BAL Orioles,-108,Tom
 BOS Red Sox,125,Tom
 TOR Blue Jays,-135,Tom
-SF Giants,-113,Tom
-NY Mets,104,Tom
+SF Giants,-111,Tom
+NY Mets,102,Tom
 NY Yankees,-102,Tom
 STL Cardinals,-106,Tom
 PB_
-NY Mets,280,LIV
-MIL Brewers,-400,LIV
-STL Cardinals,35000,LIV
-HOU Astros,-999999,LIV
-CHI Cubs,350,LIV
-PHI Phillies,-549,LIV
+NY Mets,450,LIV
+MIL Brewers,-749,LIV
+CHI Cubs,550,LIV
+PHI Phillies,-999,LIV
 COL Rockies,160,Tod
 LA Dodgers,-189,Tod
 CHI Cubs,-160,Tom
@@ -97,8 +95,8 @@ LA Dodgers,-224,Tom
 STL Cardinals,-114,Tom
 NY Yankees,-104,Tom
 CSB
-LA Dodgers,-195,Tod
-COL Rockies,162,Tod
+LA Dodgers,-190,Tod
+COL Rockies,158,Tod
 CLE Guardians,135,Tom
 CHI Cubs,-160,Tom
 SD Padres,-140,Tom
@@ -111,8 +109,8 @@ BOS Red Sox,118,Tom
 TOR Blue Jays,-140,Tom
 SF Giants,-120,Tom
 NY Mets,100,Tom
-HOU Astros,135,Tom
-TEX Rangers,-160,Tom
+HOU Astros,140,Tom
+TEX Rangers,-165,Tom
 DET Tigers,-120,Tom
 COL Rockies,100,Tom
 NY Yankees,-110,Tom
@@ -122,30 +120,32 @@ LA Angels,-155,Tom
 TB Rays,-135,Tom
 SEA Mariners,115,Tom
 FD_
-LA Dodgers,-235,Tom
-KC Royals,194,Tom
-NY Yankees,-112,Tom
-STL Cardinals,-104,Tom
-ARI Diamondbacks,134,Tom
-LA Angels,-158,Tom
-PHI Phillies,-600,LIV
-CHI Cubs,370,LIV
-MIL Brewers,-550,LIV
-NY Mets,350,LIV
-HOU Astros,-20000,LIV
-STL Cardinals,3500,LIV
+HOU Astros,136,Tom
+TEX Rangers,-162,Tom
+PHI Phillies,-1450,LIV
+CHI Cubs,760,LIV
 SD Padres,-142,Tom
 CIN Reds,120,Tom
-LA Dodgers,-198,Tod
-COL Rockies,166,Tod
-DET Tigers,-124,Tom
-COL Rockies,106,Tom
 SF Giants,-116,Tom
 NY Mets,-102,Tom
 CLE Guardians,132,Tom
 CHI Cubs,-156,Tom
 TB Rays,-144,Tom
 SEA Mariners,122,Tom
+LA Dodgers,-235,Tom
+KC Royals,194,Tom
+NY Yankees,-112,Tom
+STL Cardinals,-104,Tom
+ARI Diamondbacks,134,Tom
+LA Angels,-158,Tom
+MIL Brewers,-650,LIV
+NY Mets,420,LIV
+HOU Astros,-20000,LIV
+STL Cardinals,3500,LIV
+LA Dodgers,-198,Tod
+COL Rockies,166,Tod
+DET Tigers,-124,Tom
+COL Rockies,106,Tom
 MIL Brewers,-148,Tom
 PIT Pirates,126,Tom
 BOS Red Sox,116,Tom
@@ -153,18 +153,18 @@ TOR Blue Jays,-136,Tom
 MIN Twins,-108,Tom
 BAL Orioles,-108,Tom
 FOX
-NY Mets,188,LIV
-MIL Brewers,-277,LIV
-PHI Phillies,-555,LIV
-CHI Cubs,333,LIV
+NY Mets,500,LIV
+MIL Brewers,-1111,LIV
+PHI Phillies,-999,LIV
+CHI Cubs,475,LIV
 LA Dodgers,-199,Tod
 COL Rockies,150,Tod
 CLE Guardians,125,Tom
 CHI Cubs,-166,Tom
 MIN Twins,-117,Tom
 BAL Orioles,-117,Tom
-MIL Brewers,-153,Tom
-PIT Pirates,115,Tom
+MIL Brewers,-149,Tom
+PIT Pirates,110,Tom
 BOS Red Sox,110,Tom
 TOR Blue Jays,-149,Tom
 SF Giants,-125,Tom
