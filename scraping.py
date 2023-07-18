@@ -149,7 +149,7 @@ def scrape_pin(games_lis, url='https://www.pinnacle.com/en/baseball/mlb/matchups
 
 	# Wait for the content to load (adjust the timeout as needed)
 	wait = WebDriverWait(driver, 5)
-	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "style_price__3LrWW")))
+	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "style_price__3Haa9")))
 
 	# Get the page source after JavaScript rendering
 	page_source = driver.page_source
@@ -164,16 +164,17 @@ def scrape_pin(games_lis, url='https://www.pinnacle.com/en/baseball/mlb/matchups
 	headers = soup.find_all('div', class_='contentBlock square')
 	for p in headers:
 		# find all the table rows with the teams and the odds
-		trs = p.find_all('div', class_="style_row__21s9o style_row__21_Wa")
+		trs = p.find_all('div', class_="style_row__yBzX8 style_row__12oAB")
 
 		for rows in trs:
 			# find the teams and add to a list
-			teams = rows.a.div.div.find_all('div', class_="ellipsis style_gameInfoLabel__24vcV")
-			tm = [nm.cang_name(i.span.string) for i in teams]
+
+			teams = rows.find_all("span", class_="ellipsis event-row-participant style_participant__2BBhy")
+			tm = [nm.cang_name(i.text) for i in teams]
 
 			# find the odds and add to a list
-			buttons = rows.find_all('div', class_="style_button-wrapper__2pKZZ")
-			odds = [oc.dec_odds_to_us_odds(float(i.button.span.string)) for i in buttons if i.button.span is not None and float(i.button.span.string) > 1]
+			buttons = rows.find_all('span', class_="style_price__3Haa9")
+			odds = [oc.dec_odds_to_us_odds(float(i.text)) for i in buttons if i.text is not None and float(i.text) > 1]
 			betting = [[tm[0], odds[0]], [tm[1], odds[1]]]
 			tm = set(tm)
 
@@ -204,7 +205,7 @@ def scrape_betfair(url='https://www.betfair.com.au/exchange/plus/baseball/compet
 
 	# Wait for the content to load (adjust the timeout as needed)
 	wait = WebDriverWait(driver, 5)
-	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "name")))
+	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "section")))
 
 	# Get the page source after JavaScript rendering
 	page_source = driver.page_source
@@ -342,7 +343,11 @@ def scrape_FD_(url='https://sbapi.nj.sportsbook.fanduel.com/api/content-managed-
 			gms = []
 			contenders = market['runners']
 			for side in contenders:
-				team = side['nameAbbr']
+				try:
+					team = side['nameAbbr']
+				except KeyError:
+					team = side["runnerName"]
+					team = nm.cang_name(team)
 				odds = side['winRunnerOdds']['americanDisplayOdds']['americanOdds']
 				betting = (team, odds, time)
 				bet_list.append(betting)
@@ -406,10 +411,31 @@ def scrape_FOX(games_lis, url='https://sports.co.foxbet.com/sportsbook/v1/api/ge
 	return bet_list, games
 
 
-def scrape_BRV(url='https://eu-offering-api.kambicdn.com/offering/v2018/rsi2uspa/event/live/open.json?lang=en_US&market=US-PA&client_id=2&channel_id=1&ncid=1688090172843'):
-	url = 'https://eu-offering-api.kambicdn.com/offering/v2018/rsi2uspa/event/live/open.json?lang=en_US&market=US-PA&client_id=2&channel_id=1&ncid=1688090172843'
+def scrape_betrivers(url="https://eu-offering-api.kambicdn.com/offering/v2018/rsi2uspa/event/live/open.json?lang=en_US&market=US-PA&client_id=2&channel_id=1&ncid=1689643196188"):
+	# type is api
 	headers = {
 		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
 	}
 	response = requests.get(url, headers=headers)
 	assert response.status_code == 200
+	response = response.json()
+
+	bet_list = []
+	games = []
+	for gm in response['liveEvents']:
+		try:
+			info = gm["mainBetOffer"]
+			if info['criterion']['label'] == 'Moneyline' and gm['event']['group'] == "MLB":
+				time = gm["event"]['start']
+				time = nm.find_start_time(time)
+				tms = [team['label'] for team in info['outcomes']]
+				odds = [int(team['oddsAmerican']) for team in info['outcomes']]
+				bet_list.append([tms[0], odds[0], time])
+				bet_list.append([tms[1], odds[1], time])
+				games.append((tms[0], tms[1], time))
+		except KeyError:
+			pass
+	return bet_list, games
+
+
+

@@ -83,6 +83,7 @@ def sites_dict(abriv: str):
 		'PB_': 'Points Bet',
 		'CSB': 'Caeser',
 		'FD_': 'Fan Duel',
-		'FOX': 'Fox Bets'
+		'FOX': 'Fox Bets',
+		'BRV': "BetRivers"
 	}
 	return sites[abriv]

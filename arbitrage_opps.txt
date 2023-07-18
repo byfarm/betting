@@ -1,7 +1,17 @@
-Arbitrage opportunities as of 2023-06-29 19:42:03.493452
+Arbitrage opportunities as of 2023-07-17 19:47:20.590064
 
-Game: HOU Astros vs STL Cardinals, LIV:
-Team: STL Cardinals, Site: PB_, Odds: 40000, $0.46
-Team: HOU Astros, Site: UNI, Odds: -117, $99.54
-Total advantage: 45.83%
+Game: CLE Guardians vs PIT Pirates, LIV:
+Team: PIT Pirates, Site: PB_, Odds: 50000, $0.46
+Team: CLE Guardians, Site: UNI, Odds: 130, $99.54
+Total advantage: 56.32%
+
+Game: CIN Reds vs SF Giants, Tom:
+Team: SF Giants, Site: FD_, Odds: -133, $65.32
+Team: CIN Reds, Site: FOX, Odds: 230, $34.68
+Total advantage: 12.62%
+
+Game: WAS Nationals vs CHI Cubs, LIV:
+Team: WAS Nationals, Site: FOX, Odds: -212, $72.6
+Team: CHI Cubs, Site: FD_, Odds: 290, $27.4
+Total advantage: 6.41%
 

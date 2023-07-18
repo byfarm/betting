@@ -13,12 +13,18 @@ def scrape_web():
 	fd, games_fd = sc.scrape_FD_()
 	csb, games_csb = sc.scrape_CSP()
 	pb, games_pb = sc.scrape_pointsbet()
-	dk, games_dk = sc.scrape_dk_mlb(games_pb)
-	fox, games_fox = sc.scrape_FOX(games_pb)
-	pin, games_pin = sc.scrape_pin(games_pb)
-	#bfr, games_b = sc.scrape_betfair()
+	brv, games_brv = sc.scrape_betrivers()
+	best_gms = games_pb
+
+	for i in best_gms:
+		best_gms.remove(i) if len(i) != 3 else None
+
+	dk, games_dk = sc.scrape_dk_mlb(best_gms)
+	fox, games_fox = sc.scrape_FOX(best_gms)
+	pin, games_pin = sc.scrape_pin(best_gms)
+#	bfr, games_b = sc.scrape_betfair()
 	# write the odds and games to the txt file
-	fm.write_new_table_dk_uni(games=games_pb, DK_=dk, UNI=uni, PIN=pin, PB_=pb, CSB=csb, FD_=fd, FOX=fox)
+	fm.write_new_table_dk_uni(games=best_gms, DK_=dk, UNI=uni, PIN=pin, PB_=pb, CSB=csb, FD_=fd, FOX=fox, BRV=brv)
 
 
 def assemble_from_file():
@@ -73,8 +79,6 @@ def find_arb(arr_prob: dict):
 			tot_advantage.append(oc.us_odd_to_prob(g1[-1]) * 100)
 		op.append(round(100 - sum(tot_advantage), 2))
 	return opps
-
-
 
 
 
