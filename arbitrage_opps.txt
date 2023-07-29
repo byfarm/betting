@@ -1,17 +1,32 @@
-Arbitrage opportunities as of 2023-07-17 19:47:20.590064
+Arbitrage opportunities as of 2023-07-17 20:25:52.527520
 
-Game: CLE Guardians vs PIT Pirates, LIV:
-Team: PIT Pirates, Site: PB_, Odds: 50000, $0.46
-Team: CLE Guardians, Site: UNI, Odds: 130, $99.54
-Total advantage: 56.32%
+Game: SEA Mariners vs MIN Twins, Tom:
+Team: MIN Twins, Site: PIN, Odds: 116, $54.62
+Team: SEA Mariners, Site: FOX, Odds: 160, $45.38
+Total advantage: 15.24%
 
 Game: CIN Reds vs SF Giants, Tom:
-Team: SF Giants, Site: FD_, Odds: -133, $65.32
-Team: CIN Reds, Site: FOX, Odds: 230, $34.68
-Total advantage: 12.62%
+Team: SF Giants, Site: PIN, Odds: -131, $65.85
+Team: CIN Reds, Site: DK_, Odds: 240, $34.15
+Total advantage: 13.88%
+
+Game: PIT Pirates vs CLE Guardians, LIV:
+Team: PIT Pirates, Site: PB_, Odds: 50000, $0.23
+Team: CLE Guardians, Site: UNI, Odds: -715, $99.77
+Total advantage: 12.07%
+
+Game: DET Tigers vs KC Royals, LIV:
+Team: KC Royals, Site: FD_, Odds: 250, $32.32
+Team: DET Tigers, Site: FOX, Odds: -149, $67.68
+Total advantage: 11.59%
 
 Game: WAS Nationals vs CHI Cubs, LIV:
-Team: WAS Nationals, Site: FOX, Odds: -212, $72.6
-Team: CHI Cubs, Site: FD_, Odds: 290, $27.4
-Total advantage: 6.41%
+Team: WAS Nationals, Site: DK_, Odds: -240, $79.52
+Team: CHI Cubs, Site: FOX, Odds: 450, $20.48
+Total advantage: 11.23%
+
+Game: LA Angels vs NY Yankees, LIV:
+Team: LA Angels, Site: FD_, Odds: -164, $62.65
+Team: NY Yankees, Site: UNI, Odds: 170, $37.35
+Total advantage: 0.84%
 

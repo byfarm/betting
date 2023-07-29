@@ -43,6 +43,7 @@ def scrape_dk_mlb(games_lis, url='https://sportsbook.draftkings.com/leagues/base
 	assert response.status_code == 200
 	soup = BeautifulSoup(response.text, 'html.parser')
 	tables = soup.find_all('table', class_='sportsbook-table')
+
 	for table in tables:
 		tbrs = table.tbody.contents
 		for tr in tbrs:
@@ -148,8 +149,8 @@ def scrape_pin(games_lis, url='https://www.pinnacle.com/en/baseball/mlb/matchups
 	driver.get(url)
 
 	# Wait for the content to load (adjust the timeout as needed)
-	wait = WebDriverWait(driver, 5)
-	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "style_price__3Haa9")))
+	wait = WebDriverWait(driver, 10)
+	wait.until(EC.presence_of_element_located((By.CLASS_NAME, "mb")))
 
 	# Get the page source after JavaScript rendering
 	page_source = driver.page_source
@@ -164,16 +165,16 @@ def scrape_pin(games_lis, url='https://www.pinnacle.com/en/baseball/mlb/matchups
 	headers = soup.find_all('div', class_='contentBlock square')
 	for p in headers:
 		# find all the table rows with the teams and the odds
-		trs = p.find_all('div', class_="style_row__yBzX8 style_row__12oAB")
+		trs = p.contents[2:]
 
 		for rows in trs:
 			# find the teams and add to a list
 
-			teams = rows.find_all("span", class_="ellipsis event-row-participant style_participant__2BBhy")
+			teams = rows.find_all("span", class_="ellipsis event-row-participant style_participant__1W3B4")
 			tm = [nm.cang_name(i.text) for i in teams]
 
 			# find the odds and add to a list
-			buttons = rows.find_all('span', class_="style_price__3Haa9")
+			buttons = rows.find_all('span', class_="style_price__1-7o_")
 			odds = [oc.dec_odds_to_us_odds(float(i.text)) for i in buttons if i.text is not None and float(i.text) > 1]
 			betting = [[tm[0], odds[0]], [tm[1], odds[1]]]
 			tm = set(tm)

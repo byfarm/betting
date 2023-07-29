@@ -9,7 +9,7 @@ import requests
 
 def test_website_access_comp():
 	# paste desired url
-	url = 'https://eu-offering-api.kambicdn.com/offering/v2018/rsi2uspa/event/live/open.json?lang=en_US&market=US-PA&client_id=2&channel_id=1&ncid=1689643196188'
+	url = "https://www.pinnacle.com/en/baseball/mlb/matchups/#period:0:moneyline"
 	headers = {
 		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
 	}

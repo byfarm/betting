@@ -1,49 +1,85 @@
-Plus EV opportunities as of 2023-06-29 19:54:57.935267
+Plus EV opportunities as of 2023-07-28 16:57:10.165936
 
-Game: NY Yankees,STL Cardinals,Tom, Club: NY Yankees, Website: Fox Bets
-4.05%, Width: 7 cents, Real Odds: -102, FOX Odds: -119
+Game: COL Rockies,OAK Athletics,Tod, Club: COL Rockies, Website: Fox Bets
+4.07%, Width: 9 cents, Real Odds: -117, FOX Odds: -138
 
-Game: BAL Orioles,MIN Twins,Tom, Club: MIN Twins, Website: Fox Bets
-3.92%, Width: 8 cents, Real Odds: 100, FOX Odds: -117
+Game: LA Dodgers,CIN Reds,Tod, Club: CIN Reds, Website: Fox Bets
+3.66%, Width: 20 cents, Real Odds: 191, FOX Odds: 163
 
-Game: BOS Red Sox,TOR Blue Jays,Tom, Club: BOS Red Sox, Website: Fox Bets
-3.17%, Width: 10 cents, Real Odds: 125, FOX Odds: 110
+Game: SEA Mariners,ARI Diamondbacks,Tod, Club: ARI Diamondbacks, Website: Fox Bets
+3.15%, Width: 9 cents, Real Odds: 118, FOX Odds: 104
 
-Game: PIT Pirates,MIL Brewers,Tom, Club: MIL Brewers, Website: Fox Bets
+Game: CLE Guardians,CHI White Sox,Tod, Club: CLE Guardians, Website: Fox Bets
 3.13%, Width: 10 cents, Real Odds: -131, FOX Odds: -149
 
-Game: SD Padres,CIN Reds,Tom, Club: SD Padres, Website: UniBet
-3.1%, Width: 10 cents, Real Odds: -132, UNI Odds: -150
+Game: KC Royals,MIN Twins,Tod, Club: KC Royals, Website: Fox Bets
+3.06%, Width: 13 cents, Real Odds: 159, FOX Odds: 140
 
-Game: SF Giants,NY Mets,Tom, Club: SF Giants, Website: Fox Bets
-2.95%, Width: 9 cents, Real Odds: -111, FOX Odds: -125
+Game: BAL Orioles,NY Yankees,Tod, Club: NY Yankees, Website: Fox Bets
+2.93%, Width: 10 cents, Real Odds: -126, FOX Odds: -142
 
-Game: CLE Guardians,CHI Cubs,Tom, Club: CLE Guardians, Website: Fox Bets
-2.78%, Width: 11 cents, Real Odds: 140, FOX Odds: 125
+Game: PIT Pirates,PHI Phillies,Tod, Club: PHI Phillies, Website: Fox Bets
+2.85%, Width: 11 cents, Real Odds: -154, FOX Odds: -175
 
-Game: LA Dodgers,COL Rockies,Tod, Club: COL Rockies, Website: Fox Bets
-2.69%, Width: 16 cents, Real Odds: 168, FOX Odds: 150
+Game: TOR Blue Jays,LA Angels,Tod, Club: TOR Blue Jays, Website: UniBet
+2.8%, Width: 16 cents, Real Odds: -181, UNI Odds: -204
 
-Game: SD Padres,CIN Reds,Tom, Club: CIN Reds, Website: Points Bet
-2.57%, Width: 10 cents, Real Odds: 122, PB_ Odds: 110
+Game: BOS Red Sox,SF Giants,Tod, Club: BOS Red Sox, Website: Fox Bets
+2.78%, Width: 10 cents, Real Odds: 123, FOX Odds: 110
 
-Game: BOS Red Sox,TOR Blue Jays,Tom, Club: TOR Blue Jays, Website: Points Bet
-2.39%, Width: 10 cents, Real Odds: -135, PB_ Odds: -149
+Game: STL Cardinals,CHI Cubs,Tod, Club: STL Cardinals, Website: Fox Bets
+2.73%, Width: 13 cents, Real Odds: -148, FOX Odds: -166
 
-Game: PIT Pirates,MIL Brewers,Tom, Club: PIT Pirates, Website: Fox Bets
+Game: SD Padres,TEX Rangers,Tod, Club: TEX Rangers, Website: Fox Bets
+2.68%, Width: 13 cents, Real Odds: 144, FOX Odds: 129
+
+Game: ATL Braves,MIL Brewers,Tod, Club: ATL Braves, Website: Fox Bets
+2.59%, Width: 15 cents, Real Odds: -168, FOX Odds: -188
+
+Game: BOS Red Sox,SF Giants,Tod, Club: SF Giants, Website: Fox Bets
+2.57%, Width: 10 cents, Real Odds: -133, FOX Odds: -149
+
+Game: SD Padres,TEX Rangers,Tod, Club: SD Padres, Website: Fox Bets
+2.55%, Width: 13 cents, Real Odds: -157, FOX Odds: -175
+
+Game: NY Mets,WAS Nationals,Tod, Club: NY Mets, Website: Fox Bets
+2.53%, Width: 15 cents, Real Odds: -178, FOX Odds: -199
+
+Game: PIT Pirates,PHI Phillies,Tod, Club: PIT Pirates, Website: Fox Bets
+2.52%, Width: 11 cents, Real Odds: 143, FOX Odds: 129
+
+Game: HOU Astros,TB Rays,Tod, Club: TB Rays, Website: Fox Bets
+2.39%, Width: 8 cents, Real Odds: -108, FOX Odds: -119
+
+Game: HOU Astros,TB Rays,Tod, Club: HOU Astros, Website: Caeser
+2.38%, Width: 8 cents, Real Odds: 100, CSB Odds: -110
+
+Game: CLE Guardians,CHI White Sox,Tod, Club: CHI White Sox, Website: Fox Bets
 2.37%, Width: 10 cents, Real Odds: 121, FOX Odds: 110
 
-Game: CLE Guardians,CHI Cubs,Tom, Club: CHI Cubs, Website: Fox Bets
-2.09%, Width: 11 cents, Real Odds: -151, FOX Odds: -166
+Game: ATL Braves,MIL Brewers,Tod, Club: MIL Brewers, Website: Fox Bets
+2.3%, Width: 15 cents, Real Odds: 153, FOX Odds: 140
 
-Game: BAL Orioles,MIN Twins,Tom, Club: BAL Orioles, Website: Fox Bets
-1.99%, Width: 8 cents, Real Odds: -108, FOX Odds: -117
+Game: TOR Blue Jays,LA Angels,Tod, Club: LA Angels, Website: Fox Bets
+2.26%, Width: 16 cents, Real Odds: 165, FOX Odds: 150
 
-Game: NY Yankees,STL Cardinals,Tom, Club: STL Cardinals, Website: Points Bet
-1.81%, Width: 7 cents, Real Odds: -105, PB_ Odds: -113
+Game: SEA Mariners,ARI Diamondbacks,Tod, Club: SEA Mariners, Website: Fox Bets
+2.04%, Width: 9 cents, Real Odds: -127, FOX Odds: -138
 
-Game: LA Dodgers,COL Rockies,Tod, Club: LA Dodgers, Website: Fox Bets
-1.77%, Width: 16 cents, Real Odds: -184, FOX Odds: -199
+Game: KC Royals,MIN Twins,Tod, Club: MIN Twins, Website: Points Bet
+2.03%, Width: 13 cents, Real Odds: -172, PB_ Odds: -189
 
-Game: SF Giants,NY Mets,Tom, Club: NY Mets, Website: Fox Bets
-1.71%, Width: 9 cents, Real Odds: 102, FOX Odds: -105
+Game: NY Mets,WAS Nationals,Tod, Club: WAS Nationals, Website: Fox Bets
+1.98%, Width: 15 cents, Real Odds: 163, FOX Odds: 150
+
+Game: COL Rockies,OAK Athletics,Tod, Club: OAK Athletics, Website: Points Bet
+1.92%, Width: 9 cents, Real Odds: 108, PB_ Odds: 100
+
+Game: STL Cardinals,CHI Cubs,Tod, Club: CHI Cubs, Website: Fox Bets
+1.89%, Width: 13 cents, Real Odds: 135, FOX Odds: 125
+
+Game: BAL Orioles,NY Yankees,Tod, Club: BAL Orioles, Website: UniBet
+1.78%, Width: 10 cents, Real Odds: 116, UNI Odds: 108
+
+Game: LA Dodgers,CIN Reds,Tod, Club: LA Dodgers, Website: Fox Bets
+1.57%, Width: 20 cents, Real Odds: -211, FOX Odds: -227
